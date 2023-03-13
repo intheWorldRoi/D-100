@@ -6,7 +6,18 @@ using UnityEngine.UIElements;
 
 public class scheduler : MonoBehaviour
 {
-    private bool isClick = false;
+    private void OnMouseDown()
+    {
+        callScheduler();
+    }
+
+    void callScheduler()
+    {
+        GameObject.Find("Canvas").transform.Find("weekly").gameObject.SetActive(true);
+    }
+}
+
+/*private bool isClick = false;
 
     private void OnMouseDown()
     {
@@ -31,6 +42,4 @@ public class scheduler : MonoBehaviour
         {
             GameObject.Find("Canvas").transform.Find("weekly").gameObject.SetActive(true);
         }
-    }
-
-}
+    }*/
