@@ -9,12 +9,12 @@ public class StatusManager : MonoBehaviour
     //주하님 보면 배열로 구현할지 아님 그냥 일일히 변수 선언할지 알려줘용 ♡
     // + 시작스탯 0으로할건지 1로할건지 아님 이미 어느정도 줘놓고 시작할지
 
-    public int Depress = 1;
-    public int Stress = 1;
-    public int Lonely = 1;
-    public int Anxiety = 1;
-    public int Willingness = 1;
-    public int Happyness = 1;
+    public static int Depress = 1;
+    public static int Stress = 1;
+    public static int Lonely = 1;
+    public static int Anxiety = 1;
+    public static int Willingness = 1;
+    public static int Happyness = 1;
 
 
     public TextMeshProUGUI DepNum;

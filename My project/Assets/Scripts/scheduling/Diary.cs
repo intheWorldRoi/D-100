@@ -13,7 +13,7 @@ public class Diary : MonoBehaviour
     {   selectedActionItemIndex = -1;       //인덱스를 활용하기 때문에 -1로 초기화
         actionList = new int[transform.GetChild(0).transform.childCount];   //
     
-        for (int i = 0; i < actionList.Length; i++)
+        for (int i = 0; i < actionList.Length; i++) // actionList 초기화
         {
             actionList[i] = -1;
         }

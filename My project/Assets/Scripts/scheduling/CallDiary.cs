@@ -9,4 +9,4 @@ public class CallDiary : MonoBehaviour
     {
         diary.SetActive(true);
     }
-}
+}   
