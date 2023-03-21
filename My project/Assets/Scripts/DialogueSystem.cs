@@ -90,6 +90,6 @@ public class DialogueSystem : MonoBehaviour
     {
         TextBox.SetActive(false);
 
-        o.transform.GetChild(1).gameObject.SetActive(true);        
+        o.transform.GetChild(0).gameObject.SetActive(true);        
     }
 }
