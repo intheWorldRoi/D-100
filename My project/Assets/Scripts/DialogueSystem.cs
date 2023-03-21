@@ -10,10 +10,9 @@ public class DialogueSystem : MonoBehaviour
 
     public GameObject txtName;
     public GameObject txtSentence;
-
     public TypeEffect effectTxt;
-
     public GameObject TextBox;
+
     
 
     Queue<string> sentences = new Queue<string>(); //순차적으로 dialogue 클래스에서 문장을 받아 보여줘야하므로 queue 사용
@@ -34,6 +33,23 @@ public class DialogueSystem : MonoBehaviour
         Next();
     }
 
+    public void Begin(Dialogue info, GameObject o)
+    {
+        
+        
+        sentences.Clear();
+
+        txtName.GetComponent<TextMeshProUGUI>().text = info.name;
+
+        foreach (var sentence in info.sentences)
+        {
+            sentences.Enqueue(sentence);
+
+        }
+
+        Next(o);
+    }
+    
     public void Next()
     {
         if(sentences.Count == 0)
@@ -46,8 +62,34 @@ public class DialogueSystem : MonoBehaviour
         effectTxt.SetMsg(sentences.Dequeue());  
     }
 
+    public void Next(GameObject o)
+    {
+        
+        if (sentences.Count == 0)
+        {
+            End(o);
+            
+            return;
+        }
+
+        //txtSentence.GetComponent<TextMeshProUGUI>().text = sentences.Dequeue();
+        effectTxt.SetMsg(sentences.Dequeue());
+    }
+
     private void End()
     {
+        
         TextBox.SetActive(false);
+
+        
+
+
+    }
+
+    private void End(GameObject o)
+    {
+        TextBox.SetActive(false);
+
+        o.transform.GetChild(1).gameObject.SetActive(true);        
     }
 }

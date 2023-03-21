@@ -35,7 +35,7 @@ public class TypeEffect : MonoBehaviour
         index = 0;
         endcursor.SetActive(false);
         interval = 1.0f / CPS;
-        Debug.Log(interval);
+        //Debug.Log(interval);
 
         Invoke("Effecting", 1/CPS); 
     }

@@ -8,23 +8,9 @@ public class GameManager : MonoBehaviour
 {
     public static int Day = 0;
 
-    //stat
-    public static int dep = 1;
-    public static int str = 1;
-    public static int lon = 1;
-    public static int anx = 1;
-    public static int wil = 1;
-    public static int hap = 1;
+    public static string TODAY; // 오늘은 무슨 요일인가
 
-    //UI
-    public GameObject depression;
-    public GameObject stress;
-    public GameObject lonely;
-    public GameObject anxiety;
-    public GameObject willingness;
-    public GameObject happy;
-
-    
+    public static int week; // 몇번째 주 인가
 
     // Start is called before the first frame update
     void Start()
@@ -33,13 +19,7 @@ public class GameManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update()   
     {
-        depression.GetComponent<TextMeshProUGUI>().text = dep.ToString();
-        stress.GetComponent<TextMeshProUGUI>().text = str.ToString();
-        lonely.GetComponent<TextMeshProUGUI>().text = lon.ToString();
-        anxiety.GetComponent<TextMeshProUGUI>().text = anx.ToString();
-        willingness.GetComponent<TextMeshProUGUI>().text = wil.ToString();
-        happy.GetComponent<TextMeshProUGUI>().text = hap.ToString();
     }
 }

@@ -6,10 +6,13 @@ using System;
 public class Planning : MonoBehaviour
 {
     int plannedAction;
+
+    
     GameObject objDiary;
     private void OnMouseDown()
     {
-        objDiary = transform.parent.gameObject.transform.parent.gameObject;
+        
+        objDiary = transform.parent.gameObject.transform.parent.gameObject; // ¹«Á¶°Ç Diary
         plannedAction = objDiary.GetComponent<Diary>().selectedActionItemIndex;
         objDiary.GetComponent<Diary>().actionList[transform.GetSiblingIndex()] = plannedAction;
         if (Array.Exists(objDiary.GetComponent<Diary>().actionList, el => el == -1) == false)
