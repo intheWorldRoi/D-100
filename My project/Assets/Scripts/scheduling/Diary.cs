@@ -7,26 +7,50 @@ using UnityEngine;
 public class Diary : MonoBehaviour
 {
     public int selectedActionItemIndex;
-    public int[][] actionList;
-    public Queue<int> dayPlan = new Queue<int>();
-    public Queue<Queue<int>> weekPlan = new Queue<Queue<int>>();
+    static public List<List<int>> actionList = new List<List<int>>();
+    bool check = false; 
     void OnEnable()
     {
         transform.GetChild(4).gameObject.SetActive(false); //실행버튼 비활성화로 초기 설정
         EpisodeChecker(GameManager.week);   //에피소드 있는 날 스케줄 편성 방지(요일 활성화 비활성화)
         selectedActionItemIndex = -1;       //인덱스를 활용하기 때문에 -1로 초기화 (초기화 안 할 시 0이 기본 값이기 때문에 아무 값 넣음)  
-        actionList = new int[7][];          //일주일 7일. 하루당 행동 3개가 기본, 그러나 에피소드시 행동 1개
+        
+        if (actionList.Count == 0){
+            for (int i = 0; i < 7; i++)
+            {
+                actionList.Add(new List<int>());
 
-        for (int i = 0; i < 7; i++)         
+                if (transform.GetChild(0).transform.GetChild(i).gameObject.activeSelf)   //요일 활성화 체크
+                {
+                    for(int j = 0; j < 3; j++)
+                        actionList[i].Add(-1);
+                }
+                else
+                {
+                    actionList[i].Add(9);
+                }
+            }
+        }
+        Go();
+    }
+    void Go()
+    {     
+        for (int i = 0; i < 7; i++)
         {
-            if (transform.GetChild(0).transform.GetChild(i).gameObject.activeSelf)   //요일 활성화 체크
+            for (int j = 0; j < actionList[i].Count; j++)
             {
-                actionList[i] = new int[] { -1, -1, -1 };
+                if (actionList[i][j] == -1)
+                {
+                    check = false;
+                    return;
+                }
+                else
+                    check = true;
             }
-            else
-            {
-                actionList[i] = new int[] { -1 };
-            }
+        }
+        if (check)
+        {
+            transform.GetChild(4).gameObject.SetActive(true);
         }
     }
     public void EpisodeChecker(int week)
