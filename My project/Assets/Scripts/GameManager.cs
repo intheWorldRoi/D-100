@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     public static int week =1; // 몇번째 주 인가
 
+    public static int money = 100000;
     // Start is called before the first frame update
     void Start()
     {

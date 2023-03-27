@@ -30,11 +30,12 @@ public class Diary : MonoBehaviour
                     actionList[i].Add(9);
                 }
             }
-        }
+        }   
         Go();                                              //플래너 껐다 켰다 해도 plan 클릭 없이 기존편성대로 go 버튼이 있어야 함
     }
     void Go()                                                    //go 버튼 활성화하는 함수 Panning 에 함수와 동일함
-    {     
+    {
+        
         for (int i = 0; i < 7; i++)
         {
             for (int j = 0; j < actionList[i].Count; j++)

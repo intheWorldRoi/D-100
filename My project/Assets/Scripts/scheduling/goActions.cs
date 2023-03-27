@@ -8,11 +8,13 @@ public class goActions : MonoBehaviour
     public int actionIndex;
     public GameObject Desk;
 
+    
+
     void OnEnable()
     {
         dayIndex = 0;                                   //go 버튼 클릭시 활성화되는 오브젝트입니
         actionIndex = 0;
-        transform.GetChild(0).gameObject.SetActive(true);
+        //transform.GetChild(0).gameObject.SetActive(true);
     }
     public void nextPlay()                              //스케줄의 연쇄적 실행 
     {
@@ -22,6 +24,7 @@ public class goActions : MonoBehaviour
             actionIndex = 0;
             dayIndex++;
             GameManager.Day++;
+            StatusManager.Lonely += 3;
         }
         if (dayIndex == 7)                                                            //일주일치 액션을 다 수행했는지
         {   GameManager.week++;
@@ -31,6 +34,33 @@ public class goActions : MonoBehaviour
         }
         
         transform.GetChild(Diary.actionList[dayIndex][actionIndex]).gameObject.SetActive(true);         //다음 스케줄 활성화
+        switch (Diary.actionList[dayIndex][actionIndex])
+        {
+            case 0:
+                ActionManager.Toeic();
+                gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                break;
+            case 1: 
+                ActionManager.Fitness();
+                gameObject.transform.GetChild(1).gameObject.SetActive(true);
+                break;
+            case 2:
+                ActionManager.Reading();
+                gameObject.transform.GetChild(2).gameObject.SetActive(true);
+                break;
+            case 3:
+                ActionManager.Rest();
+                gameObject.transform.GetChild(3).gameObject.SetActive(true);
+                break;
+            case 4:
+                ActionManager.GoOut();
+                gameObject.transform.GetChild(4).gameObject.SetActive(true);
+                break;
+            case 5:
+                ActionManager.Partjob();
+                gameObject.transform.GetChild(5).gameObject.SetActive(true);
+                break;
+        }
     }
 }
 
