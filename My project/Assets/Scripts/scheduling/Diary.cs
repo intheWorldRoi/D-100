@@ -15,7 +15,7 @@ public class Diary : MonoBehaviour
         EpisodeChecker(GameManager.week);   //에피소드 있는 날 스케줄 편성 방지(요일 활성화 비활성화)
         selectedActionItemIndex = -1;       //인덱스를 활용하기 때문에 -1로 초기화 (초기화 안 할 시 0이 기본 값이기 때문에 아무 값 넣음)  
         
-        if (actionList.Count == 0){
+        if (actionList.Count == 0){                                 //다이어리 껐다 켜도 ㄱㅊ
             for (int i = 0; i < 7; i++)
             {
                 actionList.Add(new List<int>());
@@ -31,9 +31,9 @@ public class Diary : MonoBehaviour
                 }
             }
         }
-        Go();
+        Go();                                              //플래너 껐다 켰다 해도 plan 클릭 없이 기존편성대로 go 버튼이 있어야 함
     }
-    void Go()
+    void Go()                                                    //go 버튼 활성화하는 함수 Panning 에 함수와 동일함
     {     
         for (int i = 0; i < 7; i++)
         {
@@ -53,7 +53,7 @@ public class Diary : MonoBehaviour
             transform.GetChild(4).gameObject.SetActive(true);
         }
     }
-    public void EpisodeChecker(int week)
+    public void EpisodeChecker(int week)                                        //에피소드 처리
     {
         transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(true);
         transform.GetChild(0).transform.GetChild(6).gameObject.SetActive(true);
