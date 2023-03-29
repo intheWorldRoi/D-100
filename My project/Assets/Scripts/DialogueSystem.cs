@@ -6,12 +6,13 @@ using TMPro;
 
 public class DialogueSystem : MonoBehaviour
 {
-
+    public static bool IsInAction;
 
     public GameObject txtName;
     public GameObject txtSentence;
     public TypeEffect effectTxt;
     public GameObject TextBox;
+    public GameObject goActions;
 
     
 
@@ -36,7 +37,7 @@ public class DialogueSystem : MonoBehaviour
     public void Begin(Dialogue info, GameObject o)
     {
         
-        
+        IsInAction = false;
         sentences.Clear();
 
         txtName.GetComponent<TextMeshProUGUI>().text = info.name;
@@ -49,14 +50,34 @@ public class DialogueSystem : MonoBehaviour
 
         Next(o);
     }
-    
+
+    public void BeginSchedule(Dialogue info)
+    {
+        sentences.Clear();
+        Debug.Log(IsInAction);
+        txtName.GetComponent<TextMeshProUGUI>().text = info.name;
+
+        foreach (var sentence in info.sentences)
+        {
+            sentences.Enqueue(sentence);
+
+        }
+
+        Next();
+    }
     public void Next()
     {
+        if((sentences.Count == 0)&&(IsInAction))
+        {
+            EndSchedule();
+            return;
+        }
         if(sentences.Count == 0)
         {
             End();
             return;
         }
+
 
         //txtSentence.GetComponent<TextMeshProUGUI>().text = sentences.Dequeue();
         effectTxt.SetMsg(sentences.Dequeue());  
@@ -75,7 +96,6 @@ public class DialogueSystem : MonoBehaviour
         //txtSentence.GetComponent<TextMeshProUGUI>().text = sentences.Dequeue();
         effectTxt.SetMsg(sentences.Dequeue());
     }
-
     private void End()
     {
         
@@ -89,7 +109,17 @@ public class DialogueSystem : MonoBehaviour
     private void End(GameObject o)
     {
         TextBox.SetActive(false);
+        if (IsInAction == false) {
+            o.transform.GetChild(0).gameObject.SetActive(true);
+        }
+               
+    }
+    private void EndSchedule()
+    {
 
-        o.transform.GetChild(0).gameObject.SetActive(true);        
+        TextBox.SetActive(false);
+        goActions.GetComponent<goActions>().nextPlay();
+
+
     }
 }

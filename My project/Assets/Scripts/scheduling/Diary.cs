@@ -27,7 +27,7 @@ public class Diary : MonoBehaviour
                 }
                 else
                 {
-                    actionList[i].Add(9);
+                    actionList[i].Add(6);
                 }
             }
         }   
