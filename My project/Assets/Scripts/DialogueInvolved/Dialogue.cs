@@ -9,4 +9,5 @@ public class Dialogue
 
     public string name;
     public List<string> sentences;
+    
 }
