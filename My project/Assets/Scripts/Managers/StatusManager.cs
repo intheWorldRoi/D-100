@@ -32,6 +32,11 @@ public class StatusManager : MonoBehaviour
     public static float patience = 0.4f; // 0 ~ 1 까지의 수치, 지금 적어놓은 세부수치는 다 밸런스패치 필요함 ㅠ
     public static int healthy = 30; // 1~100 , 건강수치
 
+    //날짜ui
+    public TextMeshProUGUI orderday;
+    public TextMeshProUGUI month;
+    public TextMeshProUGUI day;
+
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +48,7 @@ public class StatusManager : MonoBehaviour
     void Update()
     {
         StatusIndicate();
+        DayIndicate();
     }
 
 
@@ -55,9 +61,43 @@ public class StatusManager : MonoBehaviour
         WilNum.text = Willingness.ToString();
         HapNum.text = Happyness.ToString();
     }
-    public void StatusChange(int stat)
+
+    public static void DayCalculate() //날짜 계산. 월별로 30일 31일 달라서 계산필요 ..
     {
-        // 매개변수를 스탯종류랑 절대값 같이 받을지 아님 그냥 switch써서 할지 모르겠음
+        if (GameManager.month == 11 && GameManager.monthday < 30)
+        {
+            GameManager.monthday++;
+        }
+        else if (GameManager.month == 11 && GameManager.monthday == 30)
+        {
+            GameManager.month++;
+            GameManager.monthday = 1;
+        }
+        else if ((GameManager.month == 12 || GameManager.monthday == 1) && GameManager.monthday < 31)
+        {
+            GameManager.monthday++;
+        }
+        else if ((GameManager.month == 12 || GameManager.monthday == 1) && GameManager.monthday == 31)
+        {
+            GameManager.month++;
+            GameManager.monthday = 1;
+        }
+        else if (GameManager.month == 2 && GameManager.monthday < 28)
+        {
+            GameManager.monthday++;
+        }
+        else if (GameManager.month == 2 && GameManager.monthday == 28)
+        {
+            GameManager.month++;
+            GameManager.monthday = 1;
+        }
+    }
+    private void DayIndicate()
+    {
+        
+        orderday.text = GameManager.Day.ToString() + "일째";
+        month.text = GameManager.month.ToString() + "월";
+        day.text = GameManager.monthday.ToString() + "일";
     }
 
 }

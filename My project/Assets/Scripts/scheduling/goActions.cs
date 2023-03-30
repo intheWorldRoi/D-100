@@ -23,6 +23,7 @@ public class goActions : MonoBehaviour
             actionIndex = 0;
             dayIndex++;
             GameManager.Day++;
+            StatusManager.DayCalculate();
             StatusManager.Lonely += 3;
         }
         if (dayIndex == 7)                                                            //일주일치 액션을 다 수행했는지

@@ -8,13 +8,16 @@ public class GameManager : MonoBehaviour
 {
     public static string playername;
 
-    public static int Day = 1;
+    public static int Day = 1; //며칠이나 지났나
+    public static int month = 11; //월
+    public static int monthday = 22; //일
 
-    public static string TODAY; // 오늘은 무슨 요일인가
-
+    public static string TODAY; // 오늘은 무슨 요일인
     public static int week =1; // 몇번째 주 인가
 
     public static int money = 100000;
+
+
     // Start is called before the first frame update
     void Start()
     {
