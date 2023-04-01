@@ -11,8 +11,6 @@ public class goActions : MonoBehaviour
 
     
 
-    
-
     void OnEnable()
     {
         dayIndex = 0;                                   //go 버튼 클릭시 활성화되는 오브젝트입니
@@ -35,6 +33,7 @@ public class goActions : MonoBehaviour
             Desk.SetActive(true);
             Diary.actionList.Clear();
             DialogueSystem.IsInAction = false;
+            DialogueSystem.NewLoop = true;
         }
         
         
@@ -52,6 +51,7 @@ public class goActions : MonoBehaviour
                 break;
             case 2:
                 //ActionManager.Reading();
+                DialogueSystem.IsInAction = false; //안 넘어가게 하기, 이벤트 처리 후 true로 바꾸고 NextSchedule()을 부른다.
                 transform.GetComponent<ActionDialog>().ReadingDialogue();
                 break;
             case 3:
@@ -60,6 +60,7 @@ public class goActions : MonoBehaviour
                 break;
             case 4:
                 ActionManager.GoOut();
+                DialogueSystem.IsInAction = false;  //안 넘어가게 하기, 이벤트 처리 후 true로 바꾸고 NextSchedule()을 부른다.
                 transform.GetComponent<ActionDialog>().GoOutDialogue();
                 break;
             case 5:

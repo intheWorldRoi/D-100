@@ -5,12 +5,13 @@ using UnityEngine;
 public class ActionDialog : MonoBehaviour
 {
     public Dialogue ActionDialogues;
+    public List<Dialogue> paragragh = new List<Dialogue>();
 
     public void ToeicDialogue() {
         ActionDialogues.sentences.Clear();
         ActionDialogues.name = "jay";
         ActionDialogues.sentences.Add("토익 인강은 해커스~");
-}
+    }
     public void FitnessDialogue()
     {
         ActionDialogues.sentences.Clear();

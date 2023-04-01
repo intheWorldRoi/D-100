@@ -25,9 +25,8 @@ public class books : MonoBehaviour
         var system = FindObjectOfType<DialogueSystem>();
         if (gameObject.transform.name == "choice1")
         {
-            DialogueSystem.StopNextPlay = false;
             ActionManager.Reading(0);
-            system.GetComponent<DialogueSystem>().BeginSchedule(data.ReadingBooks[0]);
+            system.GetComponent<DialogueSystem>().Begin(data.ReadingBooks[0]);
               
             
         }

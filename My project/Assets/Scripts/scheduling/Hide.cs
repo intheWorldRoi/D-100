@@ -15,13 +15,14 @@ public class Hide : MonoBehaviour
     {
         diary.SetActive(false);
     }
+
     public void HideAndReveal()      //Go 버튼에 달려 있고 버튼 누르면 다이어리 숨기고 데스크 숨김.
     {                                //데스크가 다이어리 부모지만 루틴 돌 때 꼬이지 말라고 다이어리, 데스크 둘 다 비활성화
         DialogueSystem.IsInAction = true;
         Debug.Log(Diary.actionList[0][0]);
         diary.SetActive(false);
         desk.SetActive(false);
-        
+        DialogueSystem.NewLoop = false;
 
         switch (Diary.actionList[0][0])
         {
@@ -39,7 +40,7 @@ public class Hide : MonoBehaviour
                 break;
             case 2:
                 //ActionManager.Reading();
-                
+                DialogueSystem.IsInAction = false;      //안 넘어가게 하기, 이벤트 처리 후 true로 바꾸고 NextSchedule()을 부른다.
                 playActions.GetComponent<ActionDialog>().ReadingDialogue();
                 playActions.gameObject.transform.GetChild(2).gameObject.SetActive(true);
                 
@@ -52,6 +53,7 @@ public class Hide : MonoBehaviour
                 break;
             case 4:
                 ActionManager.GoOut();
+                DialogueSystem.IsInAction = false;      //안 넘어가게 하기, 이벤트 처리 후 true로 바꾸고 NextSchedule()을 부른다.
                 playActions.GetComponent<ActionDialog>().GoOutDialogue();
                 playActions.gameObject.transform.GetChild(4).gameObject.SetActive(true);
                 

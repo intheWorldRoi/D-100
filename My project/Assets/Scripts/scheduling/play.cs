@@ -4,10 +4,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.VirtualTexturing;
 
-public class playAuto : MonoBehaviour
+public class play : MonoBehaviour
 {
     public GameObject TextBox;
-    public GameObject TextBox2;
     /*private void OnEnale()      //세부구현 필요.
     {
         
@@ -16,17 +15,16 @@ public class playAuto : MonoBehaviour
     }*/
     private void OnEnable()
     {
-        TextBox2.SetActive(true);
+        //TextBox.SetActive(true);
         var system = FindObjectOfType<DialogueSystem>();
-        Debug.Log("오토실행");
         if(gameObject.transform.name == "playReadingBook")
         {
-            system.BeginSchedule(transform.parent.gameObject.GetComponent<ActionDialog>().ActionDialogues);
+            system.Begin(transform.parent.gameObject.GetComponent<ActionDialog>().ActionDialogues);
             
         }
         else
         {
-            system.BeginSchedule(transform.parent.gameObject.GetComponent<ActionDialog>().ActionDialogues);
+            system.Begin(transform.parent.gameObject.GetComponent<ActionDialog>().ActionDialogues);
         }
         
     }

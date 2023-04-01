@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -8,22 +9,8 @@ public class DialogueData : MonoBehaviour
     string myname;
 
     Dictionary<int, string[]> TextData;
-
+    
     public List<Dialogue> ReadingBooks;
-
-    private void Awake()
-    {
-        
-        
-
-    }
-
-    private void OnMouseDown()
-    {
-        //TextData[100];
-    }
-
-
 
     void GenerateData()
     {
