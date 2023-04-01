@@ -7,7 +7,7 @@ public class ActionManager : MonoBehaviour
 
     StatusManager manager;
 
-    public static string readingBook;
+    //public static string readingBook;
 
 
     public static void Toeic()
@@ -23,21 +23,26 @@ public class ActionManager : MonoBehaviour
         StatusManager.healthy += 5 * (int)(StatusManager.focus * (StatusManager.Stress / 100) * StatusManager.Willingness); //건강이 집중력 * 스트레스 /100 * 의지에 따라 증가
     }
 
-    public static void Reading()
+    public static void Reading(int index)
     {
-        if (readingBook == "자기계발서")
-        {
-            StatusManager.Anxiety += 5;
-            StatusManager.Willingness += 5;
-            StatusManager.Happyness -= 3;
-        }
-        else if (readingBook == "에세이")
-        {
-            StatusManager.Depress -= (int)(5 * (StatusManager.Stress / 100 * StatusManager.Happyness / 10));
-        }
-        else if (readingBook == "소설")
-        {
-            StatusManager.Happyness += (int)(5 * StatusManager.Stress / 100 * StatusManager.Willingness /10);
+        switch (index) {
+            case 0:
+                {
+                    StatusManager.Anxiety += 5;
+                    StatusManager.Willingness += 5;
+                    StatusManager.Happyness -= 3;
+                    break;
+                }
+            case 1:
+                {
+                    StatusManager.Depress -= (int)(5 * (StatusManager.Stress / 100 * StatusManager.Happyness / 10));
+                    break;
+                }
+            case 2:
+                {
+                    StatusManager.Happyness += (int)(5 * StatusManager.Stress / 100 * StatusManager.Willingness / 10);
+                    break;
+                }
         }
     }
 

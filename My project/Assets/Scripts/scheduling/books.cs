@@ -7,23 +7,39 @@ public class books : MonoBehaviour
 {
     public int bookIndex =-1;
 
-    public void OnMousedown()
+    public GameObject ReadingUI;
+
+    public GameObject dataManager;
+
+    DialogueData data;
+
+  
+
+    private void Start()
     {
-        bookIndex = transform.GetSiblingIndex();
-
-        switch (bookIndex)
-        {
-            case 0:
-                ActionManager.readingBook = "자기계발서";
-                break;
-            case 1:
-                ActionManager.readingBook = "에세이";
-                break;
-            case 2:
-                ActionManager.readingBook = "소설";
-                break;
-        }
+        
     }
+    public void BookChoice()
+    {
+        data = dataManager.GetComponent<DialogueData>();
+        var system = FindObjectOfType<DialogueSystem>();
+        if (gameObject.transform.name == "choice1")
+        {
+            DialogueSystem.StopNextPlay = false;
+            ActionManager.Reading(0);
+            system.GetComponent<DialogueSystem>().BeginSchedule(data.ReadingBooks[0]);
+              
+            
+        }
+        else if (gameObject.transform.name == "choice2")
+        {
+            ActionManager.Reading(1);
+        }
+        else if (gameObject.transform.name == "choice3")
+        {
+            ActionManager.Reading(2);
+        }
 
 
+    }
 }

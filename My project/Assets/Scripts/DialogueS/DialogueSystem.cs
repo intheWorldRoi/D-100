@@ -7,11 +7,14 @@ using TMPro;
 public class DialogueSystem : MonoBehaviour
 {
     public static bool IsInAction;
+    public static bool StopNextPlay; // 선택지가 있는 액션에서 텍스트 박스를 눌러도 넘어가지 않기 위함
+
 
     public GameObject txtName;
     public GameObject txtSentence;
     public TypeEffect effectTxt;
     public GameObject TextBox;
+    public GameObject TextBox2;
     public GameObject goActions;
 
     
@@ -22,13 +25,14 @@ public class DialogueSystem : MonoBehaviour
     public void Begin(Dialogue info)
     {
         sentences.Clear();
+        
 
         txtName.GetComponent<TextMeshProUGUI>().text = info.name;
 
         foreach(var sentence in info.sentences)
         {
             sentences.Enqueue(sentence);
-            
+            Debug.Log(sentence);
         }
         
         Next();
@@ -60,19 +64,21 @@ public class DialogueSystem : MonoBehaviour
         foreach (var sentence in info.sentences)
         {
             sentences.Enqueue(sentence);
+            Debug.Log(sentences);
 
         }
-
+        
         Next();
     }
     public void Next()
     {
+            
         if((sentences.Count == 0)&&(IsInAction))
         {
             EndSchedule();
             return;
         }
-        if(sentences.Count == 0)
+        else if(sentences.Count == 0 && !IsInAction)
         {
             End();
             return;
@@ -80,20 +86,27 @@ public class DialogueSystem : MonoBehaviour
 
 
         //txtSentence.GetComponent<TextMeshProUGUI>().text = sentences.Dequeue();
-        effectTxt.SetMsg(sentences.Dequeue());  
+        effectTxt.SetMsg(sentences.Dequeue());
+        
     }
 
     public void Next(GameObject o)
     {
         
-        if (sentences.Count == 0)
+        if ((sentences.Count == 0))
         {
             End(o);
             
             return;
         }
+        else if ((sentences.Count == 0) && (!IsInAction))
+        {
 
-        //txtSentence.GetComponent<TextMeshProUGUI>().text = sentences.Dequeue();
+            EndSchedule();
+            return;
+        }
+
+        
         effectTxt.SetMsg(sentences.Dequeue());
     }
     private void End()
@@ -116,7 +129,7 @@ public class DialogueSystem : MonoBehaviour
     }
     private void EndSchedule()
     {
-
+            
         TextBox.SetActive(false);
         goActions.GetComponent<goActions>().nextPlay();
 

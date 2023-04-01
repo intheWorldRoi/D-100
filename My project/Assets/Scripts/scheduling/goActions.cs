@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class goActions : MonoBehaviour
 {
     public int dayIndex;                                //list[dayIndex][actionIndex] 접근 값이 childindex와 같음을 이용
     public int actionIndex;
     public GameObject Desk;
+
+    
 
     
 
@@ -48,7 +51,7 @@ public class goActions : MonoBehaviour
                 
                 break;
             case 2:
-                ActionManager.Reading();
+                //ActionManager.Reading();
                 transform.GetComponent<ActionDialog>().ReadingDialogue();
                 break;
             case 3:

@@ -38,7 +38,8 @@ public class Hide : MonoBehaviour
                 
                 break;
             case 2:
-                ActionManager.Reading();
+                //ActionManager.Reading();
+                
                 playActions.GetComponent<ActionDialog>().ReadingDialogue();
                 playActions.gameObject.transform.GetChild(2).gameObject.SetActive(true);
                 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 6f25e337595a56f40b3586ab68e95d7a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - KIMM_Bold
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 8f6adc9ec3eb4d044ae8bbc7b7de501d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

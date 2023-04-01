@@ -7,6 +7,7 @@ using UnityEngine.Rendering.VirtualTexturing;
 public class playAuto : MonoBehaviour
 {
     public GameObject TextBox;
+    public GameObject TextBox2;
     /*private void OnEnale()      //세부구현 필요.
     {
         
@@ -15,10 +16,19 @@ public class playAuto : MonoBehaviour
     }*/
     private void OnEnable()
     {
-        TextBox.SetActive(true);
+        TextBox2.SetActive(true);
         var system = FindObjectOfType<DialogueSystem>();
         Debug.Log("오토실행");
-        system.BeginSchedule(transform.parent.gameObject.GetComponent<ActionDialog>().ActionDialogues);
+        if(gameObject.transform.name == "playReadingBook")
+        {
+            system.BeginSchedule(transform.parent.gameObject.GetComponent<ActionDialog>().ActionDialogues);
+            
+        }
+        else
+        {
+            system.BeginSchedule(transform.parent.gameObject.GetComponent<ActionDialog>().ActionDialogues);
+        }
+        
     }
 
 }
