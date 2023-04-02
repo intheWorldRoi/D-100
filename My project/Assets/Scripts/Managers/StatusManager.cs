@@ -10,7 +10,7 @@ public class StatusManager : MonoBehaviour
     // + 시작스탯 0으로할건지 1로할건지 아님 이미 어느정도 줘놓고 시작할지
 
     public static int Depress = 20;
-    public static int Stress = 20;
+    public static int Stress = 75;
     public static int Lonely = 20;
     public static int Anxiety = 20;
     public static int Willingness = 20;

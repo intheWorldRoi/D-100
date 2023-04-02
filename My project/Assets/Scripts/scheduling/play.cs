@@ -7,6 +7,8 @@ using UnityEngine.Rendering.VirtualTexturing;
 public class play : MonoBehaviour
 {
     public GameObject TextBox;
+    public GameObject ReadingUI;
+    public GameObject GoOutUI;
     /*private void OnEnale()      //세부구현 필요.
     {
         
@@ -19,8 +21,16 @@ public class play : MonoBehaviour
         var system = FindObjectOfType<DialogueSystem>();
         if(gameObject.transform.name == "playReadingBook")
         {
+            ReadingUI.SetActive(true);
             system.Begin(transform.parent.gameObject.GetComponent<ActionDialog>().ActionDialogues);
             
+        }
+        else if(gameObject.transform.name == "playGoOut")
+        {
+            
+            GoOutUI.SetActive(true);
+            system.Begin(transform.parent.gameObject.GetComponent<ActionDialog>().ActionDialogues);
+
         }
         else
         {

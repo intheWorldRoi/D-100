@@ -48,6 +48,7 @@ public class ActionManager : MonoBehaviour
 
     public static void Rest()
     {
+        StatusManager.Stress -= 20;
         StatusManager.Anxiety += 5;
         StatusManager.Willingness += 5;
         StatusManager.Happyness += 5; // 근데 쉴 때 행복 증가하는것도 스트레스에 영향을 받아야하나...?ㅋㅋㅋㅋㅋㅋㅋ    

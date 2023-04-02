@@ -10,6 +10,7 @@ public class DialogueSystem : MonoBehaviour
 {
     public static bool IsInAction = false;
     public static bool NewLoop = true;
+    public static bool SwitchGoOut = false;
 
     public GameObject txtName;
     public GameObject txtSentence;
@@ -80,7 +81,7 @@ public class DialogueSystem : MonoBehaviour
     
     private void NextSchedule()
     {
-            
+        SwitchGoOut = true;   
         TextBox.SetActive(false);
         goActions.GetComponent<goActions>().nextPlay();
 
