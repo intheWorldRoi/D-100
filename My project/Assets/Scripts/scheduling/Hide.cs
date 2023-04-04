@@ -24,47 +24,6 @@ public class Hide : MonoBehaviour
         desk.SetActive(false);
         DialogueSystem.NewLoop = false;
 
-        switch (Diary.actionList[0][0])
-        {
-            case 0:
-                ActionManager.Toeic();
-                playActions.GetComponent<ActionDialog>().ToeicDialogue();
-                playActions.gameObject.transform.GetChild(0).gameObject.SetActive(true);
-                
-                break;
-            case 1:
-                ActionManager.Fitness();
-                playActions.GetComponent<ActionDialog>().FitnessDialogue();
-                playActions.gameObject.transform.GetChild(1).gameObject.SetActive(true);
-                
-                break;
-            case 2:
-                //ActionManager.Reading();
-                DialogueSystem.IsInAction = false;      //안 넘어가게 하기, 이벤트 처리 후 true로 바꾸고 NextSchedule()을 부른다.
-                playActions.GetComponent<ActionDialog>().ReadingDialogue();
-                playActions.gameObject.transform.GetChild(2).gameObject.SetActive(true);
-                
-                break;
-            case 3:
-                ActionManager.Rest();
-                playActions.GetComponent<ActionDialog>().RestDialogue();
-                playActions.gameObject.transform.GetChild(3).gameObject.SetActive(true);
-                
-                break;
-            case 4:
-                ActionManager.GoOut();
-                DialogueSystem.IsInAction = false;      //안 넘어가게 하기, 이벤트 처리 후 true로 바꾸고 NextSchedule()을 부른다.
-                playActions.GetComponent<ActionDialog>().GoOutDialogue();
-                playActions.gameObject.transform.GetChild(4).gameObject.SetActive(true);
-                
-                break;
-            case 5:
-                ActionManager.Partjob();
-                playActions.GetComponent<ActionDialog>().AlbaDialogue();
-                playActions.gameObject.transform.GetChild(5).gameObject.SetActive(true);
-                
-                break;
-        }
         playActions.SetActive(true);      //goAction은 액션을 수행하는 오브젝트들의 부모.(연쇄작용 매개자 역할)
 
         

@@ -9,20 +9,58 @@ public class ActionManager : MonoBehaviour
 
     //public static string readingBook;
 
-
-    public static void Toeic()
-    {
-        StatusManager.Engknowledge += 3 * (int)(StatusManager.focus * (StatusManager.Stress / 100) * StatusManager.Willingness); // 영어 지식이 집중력 * (0.01 * 스트레스) * 의지에 따라 누적
-        StatusManager.Happyness -= 5; //즐거움 5 감소
-        StatusManager.Stress += (int)(0.003 * (StatusManager.Anxiety * StatusManager.Depress)); // 우울 * 불안 * 0.003 만큼 스트레스 증가
-        
+    public bool PNP() {
+        if (StatusManager.Stress > 70 || StatusManager.Willingness < 40 || StatusManager.Happyness < 40)
+            return false;
+        else
+            return true;
     }
 
-    public static void Fitness()
+    public bool SNS()
     {
-        StatusManager.healthy += 5 * (int)(StatusManager.focus * (StatusManager.Stress / 100) * StatusManager.Willingness); //건강이 집중력 * 스트레스 /100 * 의지에 따라 증가
+        if (StatusManager.healthy < 20)             //건강에 따라 의지와 즐거움 변화
+        {
+            StatusManager.Willingness -= 3;
+            StatusManager.Happyness -= 3;
+        }
+        if (StatusManager.Depress > 50 && StatusManager.Willingness < 50)      //우울하고 의지 없을 시 SNS
+        {
+            StatusManager.innerpeace -= 10;
+            return true;
+        }
+        else
+            return false;
     }
-
+    public static void Toeic(bool pass)
+    {
+        if (pass)
+        {
+            StatusManager.Engknowledge += 2;
+            StatusManager.Happyness -= 5;
+            StatusManager.Anxiety -= 3;
+            StatusManager.Stress += 2 + (int)(0.1 * (StatusManager.Anxiety));
+        }
+        else {
+            StatusManager.Engknowledge += 1;
+            StatusManager.Happyness -= 5;
+            StatusManager.Anxiety -= 1;
+            StatusManager.Stress += 2 + (int)(0.1 * (StatusManager.Anxiety));
+        }
+    }
+    public static void Fitness(bool pass)
+        {
+            if (pass) {
+                StatusManager.healthy += 3;
+                StatusManager.Willingness += 3;
+                StatusManager.Depress -= 5;
+                StatusManager.Stress += 3;
+            }
+            else{
+                StatusManager.healthy += 1;
+                StatusManager.Depress -= 5;
+                StatusManager.Stress += 3;
+            }
+        }
     public static void Reading(int index)
     {
         switch (index) {
@@ -46,12 +84,12 @@ public class ActionManager : MonoBehaviour
         }
     }
 
-    public static void Rest()
+    public static void Rest(bool pass)
     {
         StatusManager.Stress -= 20;
+        StatusManager.Depress -= 3;
         StatusManager.Anxiety += 5;
-        StatusManager.Willingness += 5;
-        StatusManager.Happyness += 5; // 근데 쉴 때 행복 증가하는것도 스트레스에 영향을 받아야하나...?ㅋㅋㅋㅋㅋㅋㅋ    
+        StatusManager.Happyness += 5;  
     }
 
     public static void GoOut()
@@ -59,7 +97,7 @@ public class ActionManager : MonoBehaviour
 
     }
 
-    public static void Partjob()
+    public static void Partjob(bool pass)
     {
         GameManager.money += 50000;
         StatusManager.Stress += (int)(3 * StatusManager.Stress / 10);

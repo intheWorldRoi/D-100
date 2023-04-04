@@ -13,15 +13,8 @@ public class books : MonoBehaviour
 
     DialogueData data;
 
-  
-
-    private void Start()
-    {
-        
-    }
     public void BookChoice()
     {
-        
         data = dataManager.GetComponent<DialogueData>();
         var system = FindObjectOfType<DialogueSystem>();
         DialogueSystem.IsInAction = true;   

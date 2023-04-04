@@ -11,16 +11,7 @@ public class DialogueTrigger : MonoBehaviour
     
    public void Trigger()
     {
-        //textBox.SetActive(true);
         var system = FindObjectOfType<DialogueSystem>();
         system.Begin(info);
     }
-
-    /*public void GameObjectTrigger()
-    {
-        Debug.Log("GameObjectTrigger ¿€µø¡ﬂ");
-        textBox.SetActive(true);
-        var system = FindObjectOfType<DialogueSystem>();
-        system.Begin(info, this.gameObject);
-    }*/
 }
