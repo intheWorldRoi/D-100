@@ -16,6 +16,18 @@ public class DialogueData : MonoBehaviour
     public List<Dialogue> GoPark;
     public List<Dialogue> GoTheater;
     public List<Dialogue> GoAnyWhere;
+    public List<Dialogue> SNS;
+
+    public List<Dialogue> playToeic;
+    public List<Dialogue> playFitness;
+    public List<Dialogue> playReadingBook;
+    public List<Dialogue> playRest;
+    public List<Dialogue> playGoOut;
+    public List<Dialogue> playAlba;
+
+
+
+
 
 
     void GenerateData()

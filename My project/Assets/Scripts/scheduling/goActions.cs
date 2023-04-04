@@ -15,6 +15,7 @@ public class goActions : MonoBehaviour
     {
         dayIndex = 0;                                   //go 버튼 클릭시 활성화되는 오브젝트입니
         actionIndex = 0;
+        transform.GetChild(Diary.actionList[0][0]).gameObject.SetActive(true);
     }
     public void nextPlay()                              //스케줄의 연쇄적 실행 
     {
@@ -36,38 +37,6 @@ public class goActions : MonoBehaviour
             DialogueSystem.NewLoop = true;
         }
         
-        
-        switch (Diary.actionList[dayIndex][actionIndex])
-        {
-            case 0:
-                ActionManager.Toeic();
-                transform.GetComponent<ActionDialog>().ToeicDialogue();
-                
-                break;
-            case 1: 
-                ActionManager.Fitness();
-                transform.GetComponent<ActionDialog>().FitnessDialogue();
-                
-                break;
-            case 2:
-                //ActionManager.Reading();
-                DialogueSystem.IsInAction = false; //안 넘어가게 하기, 이벤트 처리 후 true로 바꾸고 NextSchedule()을 부른다.
-                transform.GetComponent<ActionDialog>().ReadingDialogue();
-                break;
-            case 3:
-                ActionManager.Rest();
-                transform.GetComponent<ActionDialog>().RestDialogue();
-                break;
-            case 4:
-                ActionManager.GoOut();
-                DialogueSystem.IsInAction = false;  //안 넘어가게 하기, 이벤트 처리 후 true로 바꾸고 NextSchedule()을 부른다.
-                transform.GetComponent<ActionDialog>().GoOutDialogue();
-                break;
-            case 5:
-                ActionManager.Partjob();
-                transform.GetComponent<ActionDialog>().AlbaDialogue();
-                break;
-        }
         transform.GetChild(Diary.actionList[dayIndex][actionIndex]).gameObject.SetActive(true);         //다음 스케줄 활성화
     }
 }

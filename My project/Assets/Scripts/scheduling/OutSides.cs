@@ -35,7 +35,7 @@ public class OutSides : MonoBehaviour
         if (gameObject.transform.name == "choice1")
         {
             GoOutUI.SetActive(false);
-            playGoOut.transform.GetChild(1).gameObject.SetActive(true);
+            playGoOut.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject.SetActive(true);
             ActionManager.GoOut();
             
             system.GetComponent<DialogueSystem>().Begin(data.GoPark[0]);
@@ -44,14 +44,14 @@ public class OutSides : MonoBehaviour
         else if(gameObject.transform.name == "choice2")
         {
             GoOutUI.SetActive(false);
-            playGoOut.transform.GetChild(2).gameObject.SetActive(true);
+            playGoOut.transform.GetChild(1).gameObject.transform.GetChild(1).gameObject.SetActive(true);
             ActionManager.GoOut();
             system.GetComponent<DialogueSystem>().Begin(data.GoTheater[0]);
         }
         else if (gameObject.transform.name == "choice3")
         {
             GoOutUI.SetActive(false);
-            playGoOut.transform.GetChild(3).gameObject.SetActive(true);
+            playGoOut.transform.GetChild(1).gameObject.transform.GetChild(2).gameObject.SetActive(true);
             ActionManager.GoOut();
             system.GetComponent<DialogueSystem>().Begin(data.GoAnyWhere[0]);
         }
