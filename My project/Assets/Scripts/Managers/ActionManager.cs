@@ -9,14 +9,14 @@ public class ActionManager : MonoBehaviour
 
     //public static string readingBook;
 
-    public bool PNP() {
+    public static bool PNP() {
         if (StatusManager.Stress > 70 || StatusManager.Willingness < 40 || StatusManager.Happyness < 40)
             return false;
         else
             return true;
     }
 
-    public bool SNS()
+    public static bool SNS()
     {
         if (StatusManager.healthy < 20)             //건강에 따라 의지와 즐거움 변화
         {
@@ -84,7 +84,7 @@ public class ActionManager : MonoBehaviour
         }
     }
 
-    public static void Rest(bool pass)
+    public static void Rest(    )
     {
         StatusManager.Stress -= 20;
         StatusManager.Depress -= 3;

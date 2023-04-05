@@ -9,6 +9,7 @@ using Unity.VisualScripting;
 public class DialogueSystem : MonoBehaviour
 {
     public static bool IsInAction = false;
+    public static bool IsSNSAction = false;
     public static bool NewLoop = true;
     public static bool SwitchGoOut = false;
 
@@ -48,14 +49,20 @@ public class DialogueSystem : MonoBehaviour
 
     public void Next()
     {
+        Debug.Log("Next »£√‚ , IsSNSAction : " + IsSNSAction);
         if (sentences.Count == 0)
         {
-            if (IsInAction)
+            if (IsSNSAction)
+            {
+                play.sns = ActionManager.SNS();
+                IsSNSAction = false;
+                return;
+            }
+            else if (IsInAction)
             {
                 NextSchedule();
                 return;
             }
-
             else
             {
                 End();

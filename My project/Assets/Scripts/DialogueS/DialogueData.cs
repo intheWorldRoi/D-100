@@ -13,10 +13,14 @@ public class DialogueData : MonoBehaviour
     public List<Dialogue> SuccessBooks;
     public List<Dialogue> EssayBooks;
     public List<Dialogue> NovelBooks;
+
     public List<Dialogue> GoPark;
     public List<Dialogue> GoTheater;
     public List<Dialogue> GoAnyWhere;
+
+
     public List<Dialogue> SNS;
+    public List<Dialogue> SNSToeic;
 
     public List<Dialogue> playToeic;
     public List<Dialogue> playFitness;
