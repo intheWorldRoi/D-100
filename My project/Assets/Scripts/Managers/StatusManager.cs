@@ -33,12 +33,17 @@ public class StatusManager : MonoBehaviour
     public TextMeshProUGUI day;
 
 
+    //µ· ui
+    public TextMeshProUGUI money;
+
+
 
     // Update is called once per frame
     void Update()
     {
         StatusIndicate();
         DayIndicate();
+        money.text = GameManager.money.ToString();
     }
 
 

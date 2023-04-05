@@ -21,6 +21,7 @@ public class DialogueData : MonoBehaviour
 
     public List<Dialogue> SNS;
     public List<Dialogue> SNSToeic;
+    public List<Dialogue> SNSFitness;
 
     public List<Dialogue> playToeic;
     public List<Dialogue> playFitness;

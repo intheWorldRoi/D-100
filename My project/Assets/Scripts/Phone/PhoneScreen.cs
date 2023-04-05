@@ -35,6 +35,14 @@ public class PhoneScreen : MonoBehaviour
             DialogueSystem.IsInAction = true;
             gameObject.transform.parent.gameObject.SetActive(false);
         }
+        else if(gameObject.name == "FitnessScreen" && Count >= 3)
+        {
+            DialogueData data = manager.GetComponent<DialogueData>();
+            DialogueSystem system = dialog.GetComponent<DialogueSystem>();
+            system.Begin(data.SNSFitness[0]);
+        }
+
+        
         
     }
 

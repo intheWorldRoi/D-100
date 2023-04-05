@@ -21,6 +21,7 @@ public class play : MonoBehaviour
     public static bool sns;
     bool pnp;
 
+    int randomNum;
     private void OnEnable()
     {
         DialogueSystem system = DialogSystem.GetComponent<DialogueSystem>();
@@ -41,14 +42,15 @@ public class play : MonoBehaviour
         switch (transform.GetSiblingIndex())
         {
             case 0:
-                int num = UnityEngine.Random.Range(0, 2);
+                int num = UnityEngine.Random.Range(0, data.playToeic.Count);
                 ActionManager.Toeic(pnp);
-                system.GetComponent<DialogueSystem>().Begin(data.playToeic[num]);
+                system.GetComponent<DialogueSystem>().Begin(data.playToeic[num]);   // 여기서 이제 플레이토익 인덱스 나눠서 상태에 따라 출력해야됨
                 
                 break;
             case 1:
+                num = UnityEngine.Random.Range(0, data.playFitness.Count); 
                 ActionManager.Fitness(pnp);
-                system.GetComponent<DialogueSystem>().Begin(data.playFitness[Convert.ToInt16(pnp)]);
+                system.GetComponent<DialogueSystem>().Begin(data.playFitness[num]);
                 break;
             case 2:
                 //ActionManager.Reading();
@@ -85,14 +87,25 @@ public class play : MonoBehaviour
 
         if (sns)
         {
-            if ((transform.GetSiblingIndex() != 3) || (transform.GetSiblingIndex() != 4)) // index값을 업데이트에서 매번 호출하면 과부하가 걸릴까봐 이렇게 함 ㅠㅠ
+            DialogueSystem system = DialogSystem.GetComponent<DialogueSystem>();
+            
+            if ((transform.GetSiblingIndex() ==  0)) // 토익 강제 sns 이벤트 일 때
             {
-                DialogueSystem system = DialogSystem.GetComponent<DialogueSystem>();
-                int randomNum = UnityEngine.Random.Range(0, 3);
+                
+                randomNum = UnityEngine.Random.Range(0, 3); //SNS 진입 다이얼로그가 인덱스별로 다 토익 운동 알바 등에 맞춰서 한거라 얘는 정해주기
                 DialogueSystem.IsInAction = false;
                 system.GetComponent<DialogueSystem>().Begin(data.SNS[randomNum]);
                 phonebody.SetActive(true);
+                phonebody.gameObject.transform.GetChild(0).gameObject.SetActive(true);
                 
+            }
+            else if((transform.GetSiblingIndex() == 1))
+            {
+                randomNum = UnityEngine.Random.Range(4, 6);
+                DialogueSystem.IsInAction = false;
+                system.GetComponent<DialogueSystem>().Begin(data.SNS[randomNum]);
+                phonebody.SetActive(true);
+                phonebody.gameObject.transform.GetChild(1).gameObject.SetActive(true);
             }
             sns = false;
             DialogueSystem.IsSNSAction = false;
