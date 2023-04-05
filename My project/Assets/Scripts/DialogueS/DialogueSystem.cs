@@ -12,6 +12,7 @@ public class DialogueSystem : MonoBehaviour
     public static bool IsSNSAction = false;
     public static bool NewLoop = true;
     public static bool SwitchGoOut = false;
+    public static bool InPara = false;
 
     public GameObject txtName;
     public GameObject txtSentence;
@@ -21,18 +22,23 @@ public class DialogueSystem : MonoBehaviour
     public GameObject goActions;
     public GameObject diary;
 
-    
+    List<Dialogue> paragragh = new List<Dialogue>();
+    int start;
+    int end;
+
+
     Queue<string> sentences = new Queue<string>(); //순차적으로 dialogue 클래스에서 문장을 받아 보여줘야하므로 queue 사용
 
 
-    /*public void StartDialogue(List<Dialogue> paragragh)
+    public void StartDialogue(int firstindex, int lastindex, List<Dialogue> para)
     {
-        foreach(var dia in paragragh)
-        {
-            Begin(dia);
-
-        }
-    }*/
+        InPara = true;
+        start = firstindex;
+        end = lastindex;
+        Debug.Log(start);
+        paragragh=para;
+        Begin(paragragh[start++]);
+    }
     public void Begin(Dialogue info)
     {
         sentences.Clear();
@@ -63,6 +69,15 @@ public class DialogueSystem : MonoBehaviour
                 NextSchedule();
                 return;
             }
+            else if (InPara)
+            {
+                if (start == end)
+                {
+                    Begin(paragragh[start]);
+                    InPara = false;
+                }
+                Begin(paragragh[start++]);
+            }
             else
             {
                 End();
@@ -83,6 +98,11 @@ public class DialogueSystem : MonoBehaviour
             diary.SetActive(true);
         }
         TextBox.SetActive(false);
+        
+        if (goActions.transform.GetChild(6))
+        {
+            goActions.transform.GetChild(6).GetComponent<goStory>().DivEpisode();
+        }
     }
 
     
@@ -95,48 +115,3 @@ public class DialogueSystem : MonoBehaviour
 
     }
 }
-
-
-/*public void Begin(Dialogue info, GameObject o)
-   {
-
-       IsInAction = false;
-       sentences.Clear();
-
-       txtName.GetComponent<TextMeshProUGUI>().text = info.name;
-
-       foreach (var sentence in info.sentences)
-       {
-           sentences.Enqueue(sentence);
-
-       }
-
-       Next(o);
-   }*/
-/*public void Next(GameObject o)
-   {
-
-       if ((sentences.Count == 0))
-       {
-           End(o);
-
-           return;
-       }
-       else if ((sentences.Count == 0) && (!IsInAction))
-       {
-
-           EndSchedule();
-           return;
-       }
-
-
-       effectTxt.SetMsg(sentences.Dequeue());
-   }*/
-/* private void End(GameObject o)
-     {
-         TextBox.SetActive(false);
-         if (IsInAction == false) {
-             o.transform.GetChild(0).gameObject.SetActive(true);
-         }
-
-     }*/
