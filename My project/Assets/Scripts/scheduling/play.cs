@@ -10,6 +10,7 @@ public class play : MonoBehaviour
     public GameObject TextBox;
     public GameObject ReadingUI; // 독서 선택지 ui
     public GameObject GoOutUI;   // 외출 선택지 ui
+    public GameObject RestUI;
 
 
     public GameObject phonebody;
@@ -60,6 +61,8 @@ public class play : MonoBehaviour
                 system.GetComponent<DialogueSystem>().Begin(data.playReadingBook[0]);
                 break;
             case 3:
+                DialogueSystem.IsInAction = false;
+                RestUI.SetActive(true);
                 ActionManager.Rest();
                 system.GetComponent<DialogueSystem>().Begin(data.playRest[0]);
                 break;
@@ -73,8 +76,9 @@ public class play : MonoBehaviour
                 system.GetComponent<DialogueSystem>().Begin(data.playGoOut[0]); 
                 break;
             case 5:
+                num = UnityEngine.Random.Range(0, data.playAlba.Count);
                 ActionManager.Partjob(pnp);
-                system.GetComponent<DialogueSystem>().Begin(data.playAlba[Convert.ToInt16(pnp)]);
+                system.GetComponent<DialogueSystem>().Begin(data.playAlba[num]);
                 break;
         }
         
@@ -99,7 +103,7 @@ public class play : MonoBehaviour
                 phonebody.gameObject.transform.GetChild(0).gameObject.SetActive(true);
                 
             }
-            else if((transform.GetSiblingIndex() == 1))
+            else if((transform.GetSiblingIndex() == 1)) //
             {
                 randomNum = UnityEngine.Random.Range(4, 6);
                 DialogueSystem.IsInAction = false;

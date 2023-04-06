@@ -35,7 +35,7 @@ public class Planning : MonoBehaviour
                     return;                              
                 }
                 else
-                    check = true;
+                    check = true; 
             }
 
         }

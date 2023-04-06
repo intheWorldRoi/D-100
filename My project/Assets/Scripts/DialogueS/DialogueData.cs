@@ -18,6 +18,9 @@ public class DialogueData : MonoBehaviour
     public List<Dialogue> GoTheater;
     public List<Dialogue> GoAnyWhere;
 
+    public List<Dialogue> DoEat;
+    public List<Dialogue> DoOTT;
+    public List<Dialogue> DoSNS;    
 
     public List<Dialogue> SNS;
     public List<Dialogue> SNSToeic;

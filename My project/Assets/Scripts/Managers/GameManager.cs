@@ -13,9 +13,9 @@ public class GameManager : MonoBehaviour
     public static int monthday = 22; //일
 
     public static string TODAY; // 오늘은 무슨 요일인
-    public static int week =5; // 몇번째 주 인가
+    public static int week =1; // 몇번째 주 인가
 
-    public static int money = 100000;
+    public static int money = 100;
 
 
     // Start is called before the first frame update

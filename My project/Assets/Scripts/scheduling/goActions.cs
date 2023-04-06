@@ -38,6 +38,7 @@ public class goActions : MonoBehaviour
         }
         
         transform.GetChild(Diary.actionList[dayIndex][actionIndex]).gameObject.SetActive(true);         //다음 스케줄 활성화
+        ActionManager.NowActionIndex++;
     }
 }
 

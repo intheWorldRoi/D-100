@@ -52,6 +52,7 @@ public class Diary : MonoBehaviour
         if (check)
         {
             transform.GetChild(4).gameObject.SetActive(true);
+
         }
     }
     public void EpisodeChecker(int week)                                        //에피소드 처리
