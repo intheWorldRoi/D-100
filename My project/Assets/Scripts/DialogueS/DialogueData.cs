@@ -34,6 +34,7 @@ public class DialogueData : MonoBehaviour
     public List<Dialogue> playAlba;
 
     public List<Dialogue> EpChrist;
+    public List<Dialogue> EpNewYear;
 
     public List<Dialogue> newYear;
     public List<Dialogue> testToeic;

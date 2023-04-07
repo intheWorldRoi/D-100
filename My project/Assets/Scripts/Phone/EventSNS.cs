@@ -17,11 +17,11 @@ public class EventSNS : MonoBehaviour
         data = dataManager.GetComponent<DialogueData>();
         var system = FindObjectOfType<DialogueSystem>();
 
-        if (gameObject.name == "Phone")
+        if (Phone.activeSelf)
         {
-            if (playActions.transform.GetChild(6))
+            if (playActions.transform.GetChild(6).gameObject.activeSelf)
             {
-                Phone.transform.GetChild(5).gameObject.SetActive(true); // 크리스마스 에피일 때 크리스마스용 폰 스크린 띄움
+                Phone.transform.GetChild(2).gameObject.SetActive(true); // 크리스마스 에피일 때 크리스마스용 폰 스크린 띄움
             }
         }
     }
