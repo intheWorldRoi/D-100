@@ -13,12 +13,7 @@ public class PhoneScreen : MonoBehaviour
     
     public GameObject christmas;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
         Debug.Log(Count);
@@ -36,6 +31,7 @@ public class PhoneScreen : MonoBehaviour
             system.Begin(data.SNSToeic[0]);
             Count = 0;
             DialogueSystem.IsInAction = true;
+            transform.gameObject.SetActive(false);
             gameObject.transform.parent.gameObject.SetActive(false);
         }
         else if (gameObject.name == "FitnessScreen" && Count >= 3)
@@ -43,13 +39,17 @@ public class PhoneScreen : MonoBehaviour
             DialogueData data = manager.GetComponent<DialogueData>();
             DialogueSystem system = dialog.GetComponent<DialogueSystem>();
             system.Begin(data.SNSFitness[0]);
+            Count = 0;
+            DialogueSystem.IsInAction = true;
+            transform.gameObject.SetActive(false);
+            gameObject.transform.parent.gameObject.SetActive(false);
         }
-
         else if (gameObject.name == "EpiChrist" && Count >= 3)
         {
             DialogueData data = manager.GetComponent<DialogueData>();
             DialogueSystem system = dialog.GetComponent<DialogueSystem>();
             system.Begin(data.EpChrist[1]);
+            Count = 0;
             gameObject.SetActive(false);
             gameObject.transform.parent.gameObject.SetActive(false);
             Invoke("goChristPart1", 3.5f);

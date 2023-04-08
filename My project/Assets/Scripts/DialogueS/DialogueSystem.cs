@@ -65,6 +65,12 @@ public class DialogueSystem : MonoBehaviour
             {
                 play.sns = ActionManager.SNS();
                 IsSNSAction = false;
+                if (play.sns) {
+                    goActions.transform.GetChild(0).gameObject.GetComponent<playSNS>().enabled = true;
+                    goActions.transform.GetChild(1).gameObject.GetComponent<playSNS>().enabled = true;
+                }
+                
+
                 return;
             }
             else if (IsInAction)

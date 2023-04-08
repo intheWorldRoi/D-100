@@ -17,7 +17,7 @@ public class episodeToeic : MonoBehaviour
         if (gameObject.transform.name == "ToeicTest")
         {
             system.GetComponent<DialogueSystem>().Begin(data.EpToeic[0]);
-            Invoke("goToeicPart1", 7.5f);
+            Invoke("goToeicPart1", 8.5f);
         }
         else if (gameObject.transform.name == "part1")
         {

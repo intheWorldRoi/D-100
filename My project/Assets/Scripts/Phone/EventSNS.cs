@@ -23,6 +23,17 @@ public class EventSNS : MonoBehaviour
             {
                 Phone.transform.GetChild(2).gameObject.SetActive(true); // 크리스마스 에피일 때 크리스마스용 폰 스크린 띄움
             }
+            else if (play.sns == true){
+                if (playActions.transform.GetChild(0).gameObject.activeSelf)
+                {
+                    Phone.transform.GetChild(0).gameObject.SetActive(true);
+                }
+                if (playActions.transform.GetChild(1).gameObject.activeSelf)
+                {
+                    Phone.transform.GetChild(1).gameObject.SetActive(true);
+                }
+                play.sns = false;
+            }
         }
     }
     public void StartPhone()
@@ -30,10 +41,6 @@ public class EventSNS : MonoBehaviour
         Phone.SetActive(true);
         GetComponent<UI.Image>().color = new Color(1, 1, 1, 1);
         gameObject.GetComponent<BuffAnim>().enabled = false;
-    }
-    public void touchScreen()
-    {
-
     }
     public void StopPhone()
     {
