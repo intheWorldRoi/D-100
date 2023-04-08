@@ -156,7 +156,11 @@ public class play : MonoBehaviour
                 
                 break;
             case 7:
-                DialogueSystem.InMad = false;
+                if (DialogueSystem.InMad)
+                {
+                    DialogueSystem.InMad = false;
+                }
+                
                 StatusManager.Stress -= 100;
                 system.GetComponent<DialogueSystem>().Begin(data.Mad[0]);
                 break;
@@ -222,11 +226,7 @@ public class play : MonoBehaviour
             
             
         }
-        else
-        {
-            Image redSprite = gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.GetComponent<Image>();
-            redSprite.color = new Color (255, 0, 0, 0);
-        }
+        
     }
 
     IEnumerator FadeCoroutine(Image i) //气林 局聪皋捞记
