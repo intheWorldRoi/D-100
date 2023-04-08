@@ -19,7 +19,8 @@ public class episodeChristmas : MonoBehaviour
         data = dataManager.GetComponent<DialogueData>();
         DialogueSystem system = DialogSystem.GetComponent<DialogueSystem>();
 
-        if(gameObject.transform.name == "Christmas") {
+        if (gameObject.transform.name == "Christmas")
+        {
             system.GetComponent<DialogueSystem>().Begin(data.EpChrist[0]);
             PhoneWidget.GetComponent<BuffAnim>().enabled = true;
         }
@@ -29,22 +30,25 @@ public class episodeChristmas : MonoBehaviour
         }
         else if (gameObject.transform.name == "part3")
         {
-            system.GetComponent<DialogueSystem>().Begin(data.EpChrist[7]);
+            GameManager.money -= 10;
+            system.GetComponent<DialogueSystem>().StartDialogue(7, 31, data.EpChrist);
         }
         else if (gameObject.transform.name == "part4")
         {
             DialogueSystem.IsInAction = true;
-            if (choice) {
-                system.GetComponent<DialogueSystem>().Begin(data.EpChrist[9]);
+            if (choice)
+            {
+                system.GetComponent<DialogueSystem>().Begin(data.EpChrist[33]);
                 StatusManager.innerpeace += 30;
             }
             else
             {
-                system.GetComponent<DialogueSystem>().Begin(data.EpChrist[10]);
+                system.GetComponent<DialogueSystem>().Begin(data.EpChrist[34]);
                 StatusManager.Anxiety += 15;
                 StatusManager.Lonely += 15;
                 StatusManager.Depress += 15;
             }
+            Invoke("closeChrist", 10.0f);
         }
 
     }
@@ -58,11 +62,16 @@ public class episodeChristmas : MonoBehaviour
     }
     public void choiceNega()
     {
-        
+
         data = dataManager.GetComponent<DialogueData>();
         DialogueSystem system = DialogSystem.GetComponent<DialogueSystem>();
         gameObject.transform.parent.gameObject.SetActive(false);
-        system.GetComponent<DialogueSystem>().Begin(data.EpChrist[8]);
-        
+        system.GetComponent<DialogueSystem>().Begin(data.EpChrist[32]);
+
+    }
+
+    public void closeChrist()
+    {
+        transform.parent.gameObject.SetActive(false);
     }
 }

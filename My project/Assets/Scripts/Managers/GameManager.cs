@@ -6,7 +6,6 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public static string playername;
 
     public static int Day = 1; //며칠이나 지났나
     public static int month = 11; //월
@@ -18,15 +17,4 @@ public class GameManager : MonoBehaviour
     public static int money = 100;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    //이거 string 어케입력받냐 ?.. getkey는 반환값이 0이나 1이지 않아? 우리는 string 받아야됨     
-    }
-
-    // Update is called once per frame
-    void Update()   
-    {
-        
-    }
 }

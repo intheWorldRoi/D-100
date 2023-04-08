@@ -2,70 +2,78 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class episodeNewYear : MonoBehaviour
+public class episodeToeic : MonoBehaviour
 {
     public GameObject dataManager;
     DialogueData data;
     public GameObject DialogSystem;
-    public static bool choice;
 
-
+    public static int answer;
     private void OnEnable()
     {
         data = dataManager.GetComponent<DialogueData>();
         DialogueSystem system = DialogSystem.GetComponent<DialogueSystem>();
 
-        if (gameObject.transform.name == "NewYear")
+        if (gameObject.transform.name == "ToeicTest")
         {
-            system.GetComponent<DialogueSystem>().Begin(data.EpNewYear[0]);
-            Invoke("goNewYearPart1", 4.5f);
+            system.GetComponent<DialogueSystem>().Begin(data.EpToeic[0]);
+            Invoke("goToeicPart1", 7.5f);
         }
         else if (gameObject.transform.name == "part1")
         {
-            system.GetComponent<DialogueSystem>().StartDialogue(1, 20, data.EpNewYear);
+            system.GetComponent<DialogueSystem>().Begin(data.EpToeic[1]);
         }
         else if (gameObject.transform.name == "part2")
         {
             DialogueSystem.IsInAction = true;
-            if (choice)
+            if (answer == 2)
             {
-                system.GetComponent<DialogueSystem>().Begin(data.EpNewYear[30]);
-                GameManager.money += 20;
+                StatusManager.Engknowledge += 20;
             }
-            else
+            else if (answer == 1)
             {
-                system.GetComponent<DialogueSystem>().Begin(data.EpNewYear[31]);
-                StatusManager.Anxiety += 15;
-                StatusManager.Stress += 20;
-                StatusManager.Depress += 15;
+                StatusManager.Engknowledge += 10;
             }
-            Invoke("closeNewYear", 10.0f);
+            system.GetComponent<DialogueSystem>().Begin(data.EpToeic[4]);
+            Invoke("closeToeic", 10.0f);
         }
 
     }
     public void choicePosi()                        //선택지에 클릭시 호출하는 함수
     {
-        choice = true;
+        answer++;
         data = dataManager.GetComponent<DialogueData>();
         DialogueSystem system = DialogSystem.GetComponent<DialogueSystem>();
         gameObject.transform.parent.gameObject.SetActive(false);
-        system.GetComponent<DialogueSystem>().StartDialogue(21, 24, data.EpNewYear);
+        if (gameObject.transform.name == "LCposi")
+        {
+            system.GetComponent<DialogueSystem>().Begin(data.EpToeic[2]);
+        }
+        else if (gameObject.transform.name == "RCposi")
+        {
+            system.GetComponent<DialogueSystem>().Begin(data.EpToeic[3]);
+        }
     }
     public void choiceNega()
     {
-        choice = false;
         data = dataManager.GetComponent<DialogueData>();
         DialogueSystem system = DialogSystem.GetComponent<DialogueSystem>();
         gameObject.transform.parent.gameObject.SetActive(false);
-        system.GetComponent<DialogueSystem>().StartDialogue(25, 29, data.EpNewYear);
-
+        if(gameObject.transform.name == "LCnega")
+        {
+            system.GetComponent<DialogueSystem>().Begin(data.EpToeic[2]);
+        }
+        else if(gameObject.transform.name == "RCnega")
+        {
+            system.GetComponent<DialogueSystem>().Begin(data.EpToeic[3]);
+        }
     }
 
-    public void goNewYearPart1()
+    public void goToeicPart1()
     {
         transform.GetChild(0).gameObject.SetActive(true);
     }
-    public void closeNewYear()
+    public void closeToeic()
     {
         transform.parent.gameObject.SetActive(false);
     }

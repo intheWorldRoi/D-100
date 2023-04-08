@@ -36,6 +36,7 @@ public class RestThings : MonoBehaviour
 
             n = UnityEngine.Random.Range(0, data.DoEat.Count);
             system.GetComponent<DialogueSystem>().Begin(data.DoEat[n]);
+            GameManager.money -= 5;
 
         }
         else if(gameObject.transform.name == "choice2")

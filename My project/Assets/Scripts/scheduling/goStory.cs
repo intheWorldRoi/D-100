@@ -58,7 +58,7 @@ public class goStory : MonoBehaviour
         }
         if (GameManager.week == 9)
         {
-            
+
             if (transform.GetChild(1).transform.GetChild(0).gameObject.activeSelf)
             {
                 transform.GetChild(1).transform.GetChild(0).gameObject.SetActive(false);
@@ -68,8 +68,26 @@ public class goStory : MonoBehaviour
             {
                 transform.GetChild(1).transform.GetChild(1).gameObject.SetActive(false);
                 transform.GetChild(1).transform.GetChild(2).gameObject.SetActive(true);
-               
 
+
+            }
+        }
+        if (GameManager.week == 11)
+        {
+            if (transform.GetChild(2).transform.GetChild(0).gameObject.activeSelf)
+            {
+                transform.GetChild(2).transform.GetChild(0).gameObject.SetActive(false);
+                transform.GetChild(2).transform.GetChild(1).gameObject.SetActive(true);
+            }
+            else if (transform.GetChild(2).transform.GetChild(1).gameObject.activeSelf)
+            {
+                transform.GetChild(2).transform.GetChild(1).gameObject.SetActive(false);
+                transform.GetChild(2).transform.GetChild(2).gameObject.SetActive(true);
+            }
+            else if (transform.GetChild(2).transform.GetChild(2).gameObject.activeSelf)
+            {
+                transform.GetChild(2).transform.GetChild(2).gameObject.SetActive(false);
+                transform.GetChild(2).transform.GetChild(3).gameObject.SetActive(true);
             }
         }
     }
