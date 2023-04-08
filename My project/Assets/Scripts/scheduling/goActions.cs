@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class goActions : MonoBehaviour
 {
-    public int dayIndex;                                //list[dayIndex][actionIndex] 접근 값이 childindex와 같음을 이용
-    public int actionIndex;
+    public static int dayIndex;                                //list[dayIndex][actionIndex] 접근 값이 childindex와 같음을 이용
+    public static int actionIndex;
     public GameObject Desk;
 
     
@@ -16,9 +16,11 @@ public class goActions : MonoBehaviour
         dayIndex = 0;                                   //go 버튼 클릭시 활성화되는 오브젝트입니
         actionIndex = 0;
         transform.GetChild(Diary.actionList[0][0]).gameObject.SetActive(true);
+        ActionManager.NowActionIndex = 0;
     }
     public void nextPlay()                              //스케줄의 연쇄적 실행 
     {
+        ActionManager.NowActionIndex += 1;
         transform.GetChild(Diary.actionList[dayIndex][actionIndex++]).gameObject.SetActive(false);    //전 스케줄 종료
         if (actionIndex == Diary.actionList[dayIndex].Count)                                          //하루치 액션을 다 수행했는지
         {
@@ -38,7 +40,7 @@ public class goActions : MonoBehaviour
         }
         
         transform.GetChild(Diary.actionList[dayIndex][actionIndex]).gameObject.SetActive(true);         //다음 스케줄 활성화
-        ActionManager.NowActionIndex++;
+        
     }
 }
 

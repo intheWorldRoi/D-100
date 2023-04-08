@@ -23,7 +23,7 @@ public class Hide : MonoBehaviour
         diary.SetActive(false);
         desk.SetActive(false);
         DialogueSystem.NewLoop = false;
-        ActionManager.NowActionIndex = 0;
+        
 
         playActions.SetActive(true);      //goAction은 액션을 수행하는 오브젝트들의 부모.(연쇄작용 매개자 역할)
 

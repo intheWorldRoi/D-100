@@ -6,7 +6,7 @@ using TMPro;
 
 public class StatusManager : MonoBehaviour
 {
-    public static int Depress = 55;
+    public static int Depress = 25;
     public static int Stress = 20;
     public static int Lonely = 20;
     public static int Anxiety = 20;

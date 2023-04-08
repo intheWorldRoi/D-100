@@ -13,6 +13,7 @@ public class DialogueSystem : MonoBehaviour
     public static bool NewLoop = true;
     public static bool SwitchGoOut = false;
     public static bool InPara = false;
+    public static bool InMad = false;
 
     public GameObject txtName;
     public GameObject txtSentence;
@@ -21,6 +22,7 @@ public class DialogueSystem : MonoBehaviour
     public GameObject TextBox2;
     public GameObject goActions;
     public GameObject diary;
+    public GameObject madSolid;
 
     List<Dialogue> paragragh = new List<Dialogue>();
     int start;
@@ -55,6 +57,7 @@ public class DialogueSystem : MonoBehaviour
 
     public void Next()
     {
+        
         Debug.Log("Next 호출 , IsSNSAction : " + IsSNSAction);
         if (sentences.Count == 0)
         {
@@ -78,6 +81,12 @@ public class DialogueSystem : MonoBehaviour
                 }
                 Begin(paragragh[start++]);
             }
+            else if (InMad)
+            {
+                play.mad = false;
+            }
+            
+            
             else
             {
                 End();
@@ -86,8 +95,15 @@ public class DialogueSystem : MonoBehaviour
         }
         else
         {
-            //txtSentence.GetComponent<TextMeshProUGUI>().text = sentences.Dequeue();
+            Debug.Log(sentences.Peek());
+            if (sentences.Peek().Contains("아.... 정말 스트레스가..  주체가 안 돼.")) // 폭주 지점 확인
+            {
+                    
+                play.mad = true;
+                InMad = true;
+            }
             effectTxt.SetMsg(sentences.Dequeue());
+            
         }
         
     }
@@ -114,4 +130,6 @@ public class DialogueSystem : MonoBehaviour
 
 
     }
+
+    
 }

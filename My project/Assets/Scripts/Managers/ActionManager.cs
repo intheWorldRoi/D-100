@@ -7,6 +7,7 @@ public class ActionManager : MonoBehaviour
 
     StatusManager manager;
     public static int NowActionIndex;
+    public static int NowDayIndex;
 
     //public static string readingBook;
 
@@ -53,12 +54,12 @@ public class ActionManager : MonoBehaviour
             if (pass) {
                 StatusManager.healthy += 3;
                 StatusManager.Willingness += 3;
-                StatusManager.Depress -= 5;
+                StatusManager.Depress -= 3;
                 StatusManager.Stress += 3;
             }
             else{
                 StatusManager.healthy += 1;
-                StatusManager.Depress -= 5;
+                StatusManager.Depress -= 3;
                 StatusManager.Stress += 3;
             }
         }
