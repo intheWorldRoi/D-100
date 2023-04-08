@@ -37,8 +37,8 @@ public class playSNS : MonoBehaviour
                 phonebody.transform.parent.GetComponent<BuffAnim>().enabled = true;
             }
             DialogueSystem.IsSNSAction = false;
-            this.transform.GetComponent<playSNS>().enabled = false;
-            return;
+            
         }
+        this.transform.GetComponent<playSNS>().enabled = false;
     }
 }

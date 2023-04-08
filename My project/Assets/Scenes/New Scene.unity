@@ -634,7 +634,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -423, y: 38}
+  m_AnchoredPosition: {x: -53, y: -193}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &25356962
@@ -2673,19 +2673,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 220246760}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 220246763}
-        m_TargetAssemblyTypeName: EventSNS, Assembly-CSharp
-        m_MethodName: touchScreen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &220246763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3229,7 +3217,11 @@ MonoBehaviour:
     - "\uC598\uB3C4 \uC88B\uC544\uC11C \uC774\uB807\uAC8C \uACF5\uBD80\uD558\uB294\uAC8C
       \uC544\uB2D0\uD150\uB370"
     - "\uB098\uB3C4 \uC5B5\uC9C0\uB85C\uB77C\uB3C4 \uD574\uC57C\uB3FC ..."
-  SNSFitness: []
+  SNSFitness:
+  - name: "\uB098"
+    sentences:
+    - "\uD5D0, \uC2DC\uAC04\uC774 \uBC8C\uC368 \uC774\uB807\uAC8C \uD758\uB800\uB124"
+    - "\uD5EC\uC2A4\uC7A5 \uC640\uC11C \uD3F0\uB9CC \uD558\uB2E4\uAC00..."
   playToeic:
   - name: jay
     sentences:
@@ -11522,32 +11514,21 @@ MonoBehaviour:
   phonebody: {fileID: 415307013}
   dataManager: {fileID: 223014533}
   DialogSystem: {fileID: 1506325044}
---- !u!61 &871885959
-BoxCollider2D:
+--- !u!114 &871885959
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871885955}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.4, y: 3.58}
-    newSize: {x: 6.4, y: 3.58}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 6.4, y: 3.58}
-  m_EdgeRadius: 0
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0cde20901589684ab1ee83dbd28e711, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogSystem: {fileID: 1506325044}
+  dataManager: {fileID: 223014533}
+  phonebody: {fileID: 415307013}
 --- !u!1 &873905742
 GameObject:
   m_ObjectHideFlags: 0
@@ -20967,7 +20948,7 @@ GameObject:
   - component: {fileID: 1741541072}
   - component: {fileID: 1741541075}
   - component: {fileID: 1741541074}
-  - component: {fileID: 1741541073}
+  - component: {fileID: 1741541076}
   m_Layer: 0
   m_Name: playFitness
   m_TagString: Untagged
@@ -20990,32 +20971,6 @@ Transform:
   m_Father: {fileID: 891744793}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1741541073
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741541071}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.24, y: 4.82}
-    newSize: {x: 6.4, y: 3.58}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 6.4, y: 3.58}
-  m_EdgeRadius: 0
 --- !u!114 &1741541074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21087,6 +21042,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1741541076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741541071}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0cde20901589684ab1ee83dbd28e711, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogSystem: {fileID: 1506325044}
+  dataManager: {fileID: 223014533}
+  phonebody: {fileID: 415307013}
 --- !u!1 &1750007624
 GameObject:
   m_ObjectHideFlags: 0
