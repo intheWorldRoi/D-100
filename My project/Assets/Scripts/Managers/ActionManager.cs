@@ -20,11 +20,6 @@ public class ActionManager : MonoBehaviour
 
     public static bool SNS()
     {
-        if (StatusManager.healthy < 20)             //건강에 따라 의지와 즐거움 변화
-        {
-            StatusManager.Willingness -= 3;
-            StatusManager.Happyness -= 3;
-        }
         if (StatusManager.Depress > 50 && StatusManager.Willingness < 50)      //우울하고 의지 없을 시 SNS
         {
             StatusManager.innerpeace -= 10;
@@ -150,5 +145,28 @@ public class ActionManager : MonoBehaviour
         StatusManager.Stress += (int)(3 * StatusManager.Stress / 10);
     }
 
-    
+    public static void HowAreYou()
+    {
+        StatusManager.Lonely += 3;
+        StatusManager.Anxiety += 3;
+
+        if (StatusManager.healthy < 20)             //건강에 따라 의지와 즐거움 변화
+        {
+            StatusManager.Willingness -= 5;
+            StatusManager.Happyness -= 5;
+        }
+        if (StatusManager.Stress >50 || StatusManager.Lonely > 30)
+        {
+            StatusManager.Depress += 3;
+        }
+        if (StatusManager.Happyness < 40)
+        {
+            StatusManager.Willingness -= 3;
+        }
+        if(StatusManager.Stress > 50)
+        {
+            StatusManager.healthy -= 3;
+        }
+
+    }
 }

@@ -3064,7 +3064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SuccessBooks:
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "\"\uC778\uC0DD\uC5D0\uC11C \uC2E4\uD328\uD55C \uC0AC\uB78C \uC911 \uB2E4\uC218\uB294\""
     - "\"\uC131\uACF5\uC744 \uBAA9\uC804\uC5D0 \uB450\uACE0\uB3C4 \uBAA8\uB978 \uCC44
@@ -3076,7 +3076,7 @@ MonoBehaviour:
     - "\uD558\uC9C0\uB9CC \uB09C \uC7AC\uB2A5\uC774 \uC5C6\uC5B4..."
     - "(\uC758\uC9C0\uAC00 \uC624\uB974\uC9C0\uB9CC \uB3D9\uC2DC\uC5D0 \uBD88\uC548\uD574\uC9C0\uB294
       \uAC83 \uAC19\uB2E4.)"
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "\"\uC6B0\uB9AC\uAC00 \uD560 \uC218 \uC788\uAE30 \uC804\uC5D0 \uBC30\uC6CC\uC57C
       \uD558\uB294 \uC77C\uB4E4\uC744\""
@@ -3087,10 +3087,8 @@ MonoBehaviour:
     - "\uB098\uB3C4 \uC774\uB807\uAC8C \uC131\uACF5\uD560 \uC218 \uC788\uC744\uAE4C...?"
     - "(\uC758\uC9C0\uAC00 \uC624\uB974\uC9C0\uB9CC \uB3D9\uC2DC\uC5D0 \uBD88\uC548\uD574\uC9C0\uB294
       \uAC83 \uAC19\uB2E4.)"
-  - name: 
-    sentences: []
   EssayBooks:
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "\"... \uC774 \uC138\uC0C1\uC758 \uB9CE\uC740 \uC0AC\uB78C\uB4E4\uC774\""
     - "\"\uC2A4\uC2A4\uB85C\uC758 \uAC00\uCE58\uB97C \uC99D\uBA85\uD558\uB824 \uC560\uC4F4\uB2E4\""
@@ -3101,7 +3099,7 @@ MonoBehaviour:
     - "\uB0B4 \uC0B6\uC758 \uBAA9\uC801\uC744 \uB2E4\uC2DC\uAE08 \uC0DD\uAC01\uD558\uAC8C
       \uB418\uC5C8\uB2E4."
   NovelBooks:
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "\"\uC9C0\uAE0B\uC9C0\uAE0B\uD558\uB2E4.\""
     - "\"\uD615, \uC800 \uB0A8\uC790\uAC00 \uCE7C \uB4E4\uACE0 \uC788\uC5B4.......\""
@@ -3113,7 +3111,7 @@ MonoBehaviour:
     - "\"\uADF8\uB9CC\uD558\uB77C\uACE0 !!!\""
     - ".. \uC5ED\uC2DC \uC18C\uC124 \uC77D\uB294 \uAC74 \uC7AC\uBBF8\uC788\uC5B4."
   GoPark:
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "\uC544\uC544... \uB0A0 \uC88B\uB2E4."
     - "\uC5EC\uC720\uC788\uB294 \uC0AC\uB78C\uB4E4\uC744 \uBCF4\uB2C8 \uB098\uB3C4
@@ -3123,7 +3121,7 @@ MonoBehaviour:
     - "\uC5B4\uCA0C\uB4E0 \uC778\uC0DD\uC740 \uD589\uBCF5\uD558\uAC8C \uC0B4\uC544\uC57C
       \uD558\uB2C8\uAE4C.."
   GoTheater:
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "\uC601\uD654\uD45C \uAC12 \uC815\uB9D0 \uBE44\uC2F8\uB124.."
     - "\uC62C \uB54C\uB9C8\uB2E4 \uC801\uC751\uC774 \uC548\uB41C\uB2E4\uB2C8\uAE4C."
@@ -3134,7 +3132,7 @@ MonoBehaviour:
     - "\uC800 \uC560\uC26C \uC815\uB9D0 \uD654\uB048\uD558\uB124."
     - "\uC7AC\uBC0C\uC5C8\uB2E4."
   GoAnyWhere:
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "\uC57C\uACBD\uC774 \uBCF4\uACE0\uC2F6\uC5B4\uC11C \uBC24\uAE4C\uC9C0 \uAE30\uB2E4\uB838\uB2E4
       \uB098\uC654\uB2E4."
@@ -3217,42 +3215,42 @@ MonoBehaviour:
     - "\"\uC0DD\uAC01\uB9CC \uD558\uB2E4\uAC00 20\uB300 \uB2E4 \uAC10\""
     - "\uBB50\uC57C? \uAE30\uBD84 \uB098\uC058\uAC8C."
   SNS:
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "\uD558\uC544.. \uBA87 \uC2DC\uC9C0?"
     - "...\uC778\uC2A4\uD0C0\uADF8\uB7A8 \uC7A0\uAE50\uB9CC \uD560\uAE4C"
     - "\uB531... 5\uBD84\uB9CC \uD558\uBA74 \uAD1C\uCC2E\uC744 \uAC83 \uAC19\uC544."
     - ...
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "\uC544... \uC9C4\uC9DC \uBABB\uD574\uBA39\uACA0\uB124"
     - "\uC9C4\uC9DC \uC7A0\uAE50\uB9CC \uD3F0 \uC880 \uD558\uC790."
     - "\uC5B4\uCC28\uD53C \uC774\uB7F0 \uC815\uC2E0\uC73C\uB860 \uC9D1\uC911\uB3C4
       \uC548\uB3FC."
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "\uC5D0\uACE0, \uD53C\uACE4\uD574...."
     - "\uB2E4\uB978 \uC0AC\uB78C\uB4E4\uC740 \uACF5\uBD80\uB97C \uC5BC\uB9C8\uB098
       \uD558\uB294\uAC70\uC9C0?"
     - "\uC7A0\uAE50\uB9CC \uBCF4\uACE0\uC624\uC790."
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "... \uC7A0\uAE50\uB9CC \uC778\uC2A4\uD0C0 \uC880 \uD560\uB798"
     - "\uC7A0\uAE50\uC740 \uAD1C\uCC2E\uC544."
     - "\uC774\uB7EC\uACE0 \uC0AC\uB294\uAC70\uC796\uC544 \uB2E4."
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "...\uC774\uAC74 \uC790\uC138\uB97C \uC5B4\uB5BB\uAC8C \uD574\uC57C\uB418\uB354\uB77C."
     - "\uC7A0\uAE50 \uD3F0\uC73C\uB85C \uD655\uC778 \uC880 \uD560\uAE4C?"
     - ....
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "\uC544.. \uC624\uB298\uB530\uB77C \uC65C\uC774\uB807\uAC8C \uC548 \uBA39\uB0D0
       \uC6B4\uB3D9\uC774."
     - "\uB0B4 \uCE5C\uAD6C\uB4E4\uC740... \uBC14\uB514\uD504\uB85C\uD544 \uC5C4\uCCAD
       \uCC0D\uB358\uB370."
     - "\uADF8\uB798 \uC790\uADF9 \uC880 \uBC1B\uC744 \uACB8 \uBCF4\uACE0\uC624\uC790."
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "\uD55C \uC138\uD2B8 \uB05D\uB0AC\uB124.."
     - "\uC26C\uB294\uB3D9\uC548 \uC7A0\uAE50 \uD3F0\uC774\uB098 \uBCF4\uC790."
@@ -3271,12 +3269,12 @@ MonoBehaviour:
     - "\uD5D0, \uC2DC\uAC04\uC774 \uBC8C\uC368 \uC774\uB807\uAC8C \uD758\uB800\uB124"
     - "\uD5EC\uC2A4\uC7A5 \uC640\uC11C \uD3F0\uB9CC \uD558\uB2E4\uAC00..."
   playToeic:
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "\uC544... \uC9D1\uC911\uC774 \uC798 \uC548 \uB418\uB124"
     - "\uBB50\uB77C\uB294 \uAC70\uC9C0? \uC878\uB824\uC6CC..."
     - ZZZ...
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "\uB610.. \uC601\uC5B4\uACF5\uBD80 \uD574\uC57C\uD558\uB124..."
     - "\uC544... \uC9DC\uC99D\uB098"
@@ -3284,38 +3282,38 @@ MonoBehaviour:
     - ..........
     - "\uC544.. \uC9D1\uC911\uC548\uB3FC"
   playFitness:
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "\uC624\uB298\uC740 \uADFC\uB825\uC744 \uD560 \uAE30\uB825\uC774 \uC5C6\uB124"
     - "\uB300\uCDA9 \uB7EC\uB2DD\uBA38\uC2E0 \uAC77\uB2E4\uAC00 \uAC00\uC57C\uC9C0"
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "\uAC1C\uAC15 \uC804\uAE4C\uC9C0 \uCD5C\uC18C\uD55C 5\uD0A4\uB85C \uC815\uB3C4\uB294
       ..."
     - "\uD558\uB8E8\uC5D0 2\uC2DC\uAC04\uC740 \uC6B4\uB3D9\uC744 \uD574\uC57C\uD558\uB098?"
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "\uC800 \uC0AC\uB78C\uC740 \uB9E8\uB0A0 \uBCF4\uC774\uB124."
     - "\uC660\uC9C0 \uB0B4\uC801 \uCE5C\uBC00\uAC10\uC774 \uC0DD\uAE34 \uAC83 \uAC19\uC544."
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "\uC624\uB298\uB3C4 \uC5F4\uC2EC\uD788 \uC6B4\uB3D9\uD558\uC790."
     - "\uB4DD\uADFC\uB4DD\uADFC!"
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "\uC774 \uC815\uB3C4\uBA74 \uB0A8\uB4E4\uB9CC\uD07C\uC740 \uC5F4\uC2EC\uD788
       \uC6B4\uB3D9\uD558\uB294\uAC70\uC9C0."
     - "\uC548\uD558\uB294 \uC0AC\uB78C\uB4E4\uBCF4\uB2E8 \uB0B4\uAC00 \uB098\uC544."
   playReadingBook:
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "\uBB34\uC2A8 \uCC45\uC744 \uC77D\uC744\uAE4C"
   playRest:
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "\uC9D1\uC5D0\uC11C \uC26C\uC790"
   playGoOut:
-  - name: jay
+  - name: "\uB098"
     sentences:
     - "\uC5B4\uB514\uB85C \uAC00 \uBCFC\uAE4C"
   playAlba:
@@ -11173,37 +11171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3599dd8e06576c842acbbf3a2533459b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &844466297
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 844466298}
-  m_Layer: 0
-  m_Name: testob
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &844466298
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 844466297}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 113.8743, y: 483.89313, z: -3.5900168}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &846001027
 GameObject:
   m_ObjectHideFlags: 0
