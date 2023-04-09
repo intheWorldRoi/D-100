@@ -6,12 +6,12 @@ using TMPro;
 
 public class StatusManager : MonoBehaviour
 {
-    public static int Depress = 25;
-    public static int Stress = 20;
-    public static int Lonely = 20;
-    public static int Anxiety = 20;
-    public static int Willingness = 20;
-    public static int Happyness = 20;
+    public static int Depress = 50;
+    public static int Stress = 50;
+    public static int Lonely = 50;
+    public static int Anxiety = 50;
+    public static int Willingness = 50;
+    public static int Happyness = 50;
 
     //핵심수치
     public TextMeshProUGUI DepNum;
@@ -23,7 +23,7 @@ public class StatusManager : MonoBehaviour
 
     //세부수치
 
-    public static int Engknowledge = 1; // 1 ~ 100 까지의 수치, 70 이상일시 우선은 도전과제 달성으로 해놓고 나중에 밸패 필요
+    public static int Engknowledge = 0; // 1 ~ 100 까지의 수치, 70 이상일시 우선은 도전과제 달성으로 해놓고 나중에 밸패 필요
     public static int innerpeace = 0;   //깨달음. 히든엔딩
     public static int healthy = 30; // 1~100 , 건강수치
 

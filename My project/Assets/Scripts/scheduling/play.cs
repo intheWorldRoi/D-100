@@ -28,6 +28,7 @@ public class play : MonoBehaviour
     int randomNum;
 
     int num;
+    bool ReadyToUp = true;
 
   
     private void OnEnable()
@@ -100,7 +101,6 @@ public class play : MonoBehaviour
                 {
                     DialogueSystem.IsInAction = false;
                     RestUI.SetActive(true);
-                    ActionManager.Rest();
                     system.GetComponent<DialogueSystem>().Begin(data.playRest[0]);
                 }
                 
@@ -115,7 +115,6 @@ public class play : MonoBehaviour
                 }
                 else
                 {
-                    ActionManager.GoOut();
                     DialogueSystem.IsInAction = false;  //안 넘어가게 하기, 이벤트 처리 후 true로 바꾸고 NextSchedule()을 부른다.
                     GoOutUI.SetActive(true);
                     system.GetComponent<DialogueSystem>().Begin(data.playGoOut[0]);
@@ -129,11 +128,11 @@ public class play : MonoBehaviour
                 }
                 else
                 {
-                    //num = UnityEngine.Random.Range(0, data.playAlba.Count);
+                    num = UnityEngine.Random.Range(0, data.playAlba.Count);
                     mad = false;
                     Image red = gameObject.transform.GetChild(0).GetChild(0).gameObject.GetComponent<Image>();
                     red.color = new Color(255, 0, 0, 0);
-                    num = 6;
+               
                     if (num == 6) // 
                     {
                         int actionIndex = goActions.actionIndex;
@@ -189,12 +188,14 @@ public class play : MonoBehaviour
 
                 if (StatusManager.Stress < 100)
                 {
-                    Invoke("StressOverwhelming", 0.5f);
+                    if (ReadyToUp)
+                    {
+                        ReadyToUp = false;
+                        Invoke("StressOverwhelming", 0.5f);
+                    }
+                    
                 }
             }
-            
-            
-            
         }
         
     }
@@ -228,8 +229,8 @@ public class play : MonoBehaviour
     {
         
         StatusManager.Stress++;
-        
 
+        ReadyToUp = true;
     }
 }
 

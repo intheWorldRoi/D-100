@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public static string TODAY; // 오늘은 무슨 요일인
     public static int week =1; // 몇번째 주 인가
 
-    public static int money = 100;
+    public static int money = 30;
 
 
 }

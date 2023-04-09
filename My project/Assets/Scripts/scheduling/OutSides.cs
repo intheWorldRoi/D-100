@@ -46,6 +46,9 @@ public class OutSides : MonoBehaviour
             GoOutUI.SetActive(false);
             playGoOut.transform.GetChild(1).gameObject.transform.GetChild(1).gameObject.SetActive(true);
             ActionManager.GoOut();
+            GameManager.money -= 3;
+            StatusManager.innerpeace += 3;
+            StatusManager.Happyness += 3;
             system.GetComponent<DialogueSystem>().Begin(data.GoTheater[0]);
         }
         else if (gameObject.transform.name == "choice3")
