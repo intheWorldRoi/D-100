@@ -27,6 +27,10 @@ public class StatusManager : MonoBehaviour
     public static int innerpeace = 0;   //깨달음. 히든엔딩
     public static int healthy = 30; // 1~100 , 건강수치
 
+    public TextMeshProUGUI EngNum;
+    public TextMeshProUGUI innerNum;
+    public TextMeshProUGUI healNum;
+
     //날짜ui
     public TextMeshProUGUI orderday;
     public TextMeshProUGUI month;
@@ -55,6 +59,10 @@ public class StatusManager : MonoBehaviour
         AnxNum.text = Anxiety.ToString();
         WilNum.text = Willingness.ToString();
         HapNum.text = Happyness.ToString();
+
+        EngNum.text = Engknowledge.ToString();
+        innerNum.text = innerpeace.ToString();
+        healNum.text = healthy.ToString();
     }
 
     public static void DayCalculate() //날짜 계산. 월별로 30일 31일 달라서 계산필요 ..

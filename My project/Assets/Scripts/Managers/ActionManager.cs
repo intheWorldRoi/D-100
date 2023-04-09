@@ -12,7 +12,7 @@ public class ActionManager : MonoBehaviour
     //public static string readingBook;
 
     public static bool PNP() {
-        if (StatusManager.Stress > 75 || StatusManager.Willingness < 25 || StatusManager.Happyness < 25)
+        if (StatusManager.Stress > 75 || StatusManager.Willingness < 30 || StatusManager.Happyness < 30)
             return false;
         else
             return true;
@@ -50,10 +50,10 @@ public class ActionManager : MonoBehaviour
                 StatusManager.healthy += 3;
                 StatusManager.Willingness += 3;
                 StatusManager.Depress -= 3;
-                StatusManager.Stress += 3;
+                StatusManager.Stress -= 3;
             }
             else{
-                StatusManager.healthy += 1;
+                StatusManager.healthy += 5;
                 StatusManager.Depress -= 1;
                 StatusManager.Stress += 3;
             }
@@ -61,7 +61,7 @@ public class ActionManager : MonoBehaviour
     public static void Reading(int index)
     {
         StatusManager.Stress += 3;
-        StatusManager.innerpeace += 3;
+        StatusManager.innerpeace += 5;
         switch (index) {
             case 0:
                 {
@@ -71,11 +71,13 @@ public class ActionManager : MonoBehaviour
                 }
             case 1:
                 {
+                    StatusManager.Anxiety -= 3;
                     StatusManager.Depress -= 10;
                     break;
                 }
             case 2:
                 {
+                    StatusManager.Anxiety -= 3;
                     StatusManager.Happyness += 10;
                     break;
                 }
@@ -92,11 +94,12 @@ public class ActionManager : MonoBehaviour
         }
         else
         {
-            StatusManager.Stress -= 10;
+            StatusManager.Stress -= 15;
             StatusManager.Depress -= 3;
             StatusManager.Happyness += 3;
         }
-        StatusManager.Anxiety += 3;
+        StatusManager.Anxiety += 5;
+        StatusManager.Lonely += 3;
     }
 
     public static void GoOut()
@@ -119,12 +122,16 @@ public class ActionManager : MonoBehaviour
         }
         StatusManager.Stress -= 5;
         StatusManager.Lonely -= 10;
+        StatusManager.innerpeace += 3;
+        GameManager.money -= 1;
     }
 
-    public static void Partjob(bool pass)
+    public static void Partjob()
     {
+        StatusManager.Anxiety -= 3;
+        StatusManager.Lonely -= 3;
+        StatusManager.Stress += 3;
         GameManager.money += 5;
-        StatusManager.Stress += 5;
     }
 
     public static void HowAreYou()
@@ -134,24 +141,49 @@ public class ActionManager : MonoBehaviour
 
         if (StatusManager.healthy < 25)             //건강에 따라 의지와 즐거움 변화
         {
+            StatusManager.Willingness -= 5;
+            StatusManager.Happyness -= 5;
+        }
+        else if (StatusManager.healthy < 50)
+        {
             StatusManager.Willingness -= 3;
             StatusManager.Happyness -= 3;
         }
-        if (StatusManager.Stress >50 || StatusManager.Lonely > 75)
+
+        if (StatusManager.Stress >60 || StatusManager.Lonely > 60)
         {
             StatusManager.Depress += 3;
         }
-        if (StatusManager.Happyness < 25)
+
+        if (StatusManager.Happyness < 30 || StatusManager.Depress >60)
         {
-            StatusManager.Willingness -= 3;
+            StatusManager.Willingness -= 5;
         }
-        if (StatusManager.Happyness > 75)
+        if (StatusManager.Happyness > 70 || StatusManager.Depress <40)
         {
-            StatusManager.Willingness += 3;
+            StatusManager.Willingness += 5;
         }
-        if (StatusManager.Stress > 50)
+
+        if (StatusManager.Anxiety > 75)
         {
-            StatusManager.healthy -= 3;
+            StatusManager.innerpeace -= 5;
+        }
+        else if(StatusManager.Anxiety > 50)
+        {
+            StatusManager.innerpeace -= 3;
+        }
+        else
+        {
+            StatusManager.innerpeace -= 1;
+        }
+
+        if (StatusManager.Stress > 70)
+        {
+            StatusManager.healthy -= 5;
+        }
+        else
+        {
+            StatusManager.healthy -= 1;
         }
 
     }

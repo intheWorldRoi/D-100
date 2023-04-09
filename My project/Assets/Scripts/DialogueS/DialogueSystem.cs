@@ -104,8 +104,7 @@ public class DialogueSystem : MonoBehaviour
         {
             Debug.Log(sentences.Peek());
             if (sentences.Peek().Contains("아.... 정말 스트레스가..  주체가 안 돼.")) // 폭주 지점 확인
-            {
-                    
+            {     
                 play.mad = true;
                 InMad = true;
             }

@@ -22,11 +22,11 @@ public class goActions : MonoBehaviour
     }
     public void nextPlay()                              //스케줄의 연쇄적 실행 
     {
-        ActionManager.HowAreYou();
+        
         ActionManager.NowActionIndex += 1;
         transform.GetChild(Diary.actionList[dayIndex][actionIndex++]).gameObject.SetActive(false);    //전 스케줄 종료
         if (actionIndex == Diary.actionList[dayIndex].Count)                                          //하루치 액션을 다 수행했는지
-        {
+        {   ActionManager.HowAreYou();
             actionIndex = 0;
             dayIndex++;
             GameManager.Day++;
@@ -39,6 +39,7 @@ public class goActions : MonoBehaviour
             Diary.actionList.Clear();
             DialogueSystem.IsInAction = false;
             DialogueSystem.NewLoop = true;
+            return;
         }
         
         transform.GetChild(Diary.actionList[dayIndex][actionIndex]).gameObject.SetActive(true);         //다음 스케줄 활성화

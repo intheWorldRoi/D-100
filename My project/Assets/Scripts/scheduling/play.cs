@@ -58,13 +58,20 @@ public class play : MonoBehaviour
                 }
                 else
                 {
-                    num = UnityEngine.Random.Range(0, data.playToeic.Count);
-                    ActionManager.Toeic(pnp);
-                    system.GetComponent<DialogueSystem>().Begin(data.playToeic[num]);   // 여기서 이제 플레이토익 인덱스 나눠서 상태에 따라 출력해야됨
+                    if (pnp)
+                    {
+                        num = UnityEngine.Random.Range(0, data.playToeic.Count/2);
+                        ActionManager.Toeic(pnp);
+                        system.GetComponent<DialogueSystem>().Begin(data.playToeic[num]);
+                    }
+                    else {
+                        num = UnityEngine.Random.Range(data.playToeic.Count/2, data.playToeic.Count);
+                        ActionManager.Toeic(pnp);
+                        system.GetComponent<DialogueSystem>().Begin(data.playToeic[num]);   // 여기서 이제 플레이토익 인덱스 나눠서 상태에 따라 출력해야됨
+                    }
                 }
-                
-                
                 break;
+
             case 1:
                 if (DialogueSystem.InMad)
                 {
@@ -72,12 +79,21 @@ public class play : MonoBehaviour
                 }
                 else
                 {
-                    num = UnityEngine.Random.Range(0, data.playFitness.Count);
-                    ActionManager.Fitness(pnp);
-                    system.GetComponent<DialogueSystem>().Begin(data.playFitness[num]);
+                    if (pnp)
+                    {
+                        num = UnityEngine.Random.Range(0, data.playFitness.Count / 2);
+                        ActionManager.Toeic(pnp);
+                        system.GetComponent<DialogueSystem>().Begin(data.playFitness[num]);
+                    }
+                    else
+                    {
+                        num = UnityEngine.Random.Range(data.playFitness.Count / 2, data.playFitness.Count);
+                        ActionManager.Toeic(pnp);
+                        system.GetComponent<DialogueSystem>().Begin(data.playFitness[num]);   // 여기서 이제 플레이토익 인덱스 나눠서 상태에 따라 출력해야됨
+                    }
                 }
-               
                 break;
+                   
             case 2:
                 if (DialogueSystem.InMad)
                 {
@@ -149,7 +165,7 @@ public class play : MonoBehaviour
                         }
 
                     }
-                    ActionManager.Partjob(pnp);
+                    ActionManager.Partjob();
                     system.GetComponent<DialogueSystem>().Begin(data.playAlba[num]);
                 }
                 
@@ -160,7 +176,7 @@ public class play : MonoBehaviour
                     DialogueSystem.InMad = false;
                 }
                 
-                StatusManager.Stress -= 50;
+                StatusManager.Stress -= 10;
                 system.GetComponent<DialogueSystem>().Begin(data.Mad[0]);
                 break;
         }
