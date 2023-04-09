@@ -117,7 +117,31 @@ public class ActionManager : MonoBehaviour
 
     public static void GoOut()
     {
-
+        if (StatusManager.Anxiety > 60)
+        {
+            StatusManager.Stress -= 3;
+            StatusManager.Depress -= 2;
+            StatusManager.Anxiety -= 2;
+        }
+        else if (StatusManager.Anxiety > 40 && StatusManager.Depress > 30)
+        {
+            StatusManager.Stress -= 5;
+            StatusManager.Depress -= 4;
+            StatusManager.Anxiety -= 3;
+        }
+        else if (StatusManager.Stress > 70)
+        {
+            StatusManager.Stress -= 3;
+            StatusManager.Depress -= 5;
+            StatusManager.Anxiety -= 6;
+        }
+        else
+        {
+            StatusManager.Stress -= 10;
+            StatusManager.Depress -= 3;
+            StatusManager.Anxiety += 3;
+            StatusManager.Happyness += 5;
+        }
     }
 
     public static void Partjob(bool pass)

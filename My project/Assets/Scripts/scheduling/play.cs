@@ -40,7 +40,7 @@ public class play : MonoBehaviour
 
         int index = transform.GetSiblingIndex();
 
-        if (index == 0 || index == 1 || index == 2 || index == 5) //패논패가 등장하는 액션인지 판단한다
+        if (index == 0 || index == 1) //패논패가 등장하는 액션인지 판단한다
         {
             pnp = ActionManager.PNP();
             DialogueSystem.IsSNSAction = true;
@@ -151,7 +151,7 @@ public class play : MonoBehaviour
 
                     }
                     ActionManager.Partjob(pnp);
-                    system.GetComponent<DialogueSystem>().Begin(data.playAlba[6]);
+                    system.GetComponent<DialogueSystem>().Begin(data.playAlba[num]);
                 }
                 
                 break;
@@ -161,7 +161,7 @@ public class play : MonoBehaviour
                     DialogueSystem.InMad = false;
                 }
                 
-                StatusManager.Stress -= 100;
+                StatusManager.Stress -= 50;
                 system.GetComponent<DialogueSystem>().Begin(data.Mad[0]);
                 break;
         }

@@ -22,7 +22,7 @@ public class DialogueSystem : MonoBehaviour
     public GameObject TextBox2;
     public GameObject goActions;
     public GameObject diary;
-    public GameObject madSolid;
+    
 
     List<Dialogue> paragragh = new List<Dialogue>();
     int start;
@@ -61,7 +61,8 @@ public class DialogueSystem : MonoBehaviour
         Debug.Log("Next »£√‚ , IsSNSAction : " + IsSNSAction);
         if (sentences.Count == 0)
         {
-            if (IsSNSAction)
+
+            if (IsSNSAction && !InMad)
             {
                 play.sns = ActionManager.SNS();
                 IsSNSAction = false;

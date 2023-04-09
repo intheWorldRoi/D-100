@@ -7,7 +7,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
 
-    public static int Day = 11213; //¸çÄ¥ÀÌ³ª Áö³µ³ª
+    public static int Day = 1; //¸çÄ¥ÀÌ³ª Áö³µ³ª
     public static int month = 11; //¿ù
     public static int monthday = 22; //ÀÏ
 
