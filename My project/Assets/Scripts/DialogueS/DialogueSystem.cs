@@ -91,6 +91,8 @@ public class DialogueSystem : MonoBehaviour
             else if (InMad)
             {
                 play.mad = false;
+                NextSchedule();
+                return;
             }
             
             

@@ -29,7 +29,6 @@ public class PhoneScreen : MonoBehaviour
             DialogueData data = manager.GetComponent<DialogueData>();
             DialogueSystem system = dialog.GetComponent<DialogueSystem>();
             system.Begin(data.SNSToeic[0]);
-            StatusManager.Stress += 10;
             Count = 0;
             DialogueSystem.IsInAction = true;
             transform.gameObject.SetActive(false);
@@ -40,7 +39,6 @@ public class PhoneScreen : MonoBehaviour
             DialogueData data = manager.GetComponent<DialogueData>();
             DialogueSystem system = dialog.GetComponent<DialogueSystem>();
             system.Begin(data.SNSFitness[0]);
-            StatusManager.Stress += 10;
             Count = 0;
             DialogueSystem.IsInAction = true;
             transform.gameObject.SetActive(false);

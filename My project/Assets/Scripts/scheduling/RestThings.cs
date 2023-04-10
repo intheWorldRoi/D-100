@@ -38,7 +38,7 @@ public class RestThings : MonoBehaviour
             system.GetComponent<DialogueSystem>().Begin(data.DoEat[n]);
             GameManager.money -= 3;
             StatusManager.Stress -= 5;
-            StatusManager.Happyness += 5;
+            StatusManager.Joy += 5;
 
 
         }

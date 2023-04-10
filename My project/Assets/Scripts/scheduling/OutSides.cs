@@ -48,7 +48,7 @@ public class OutSides : MonoBehaviour
             ActionManager.GoOut();
             GameManager.money -= 3;
             StatusManager.innerpeace += 3;
-            StatusManager.Happyness += 3;
+            StatusManager.Joy += 10;
             system.GetComponent<DialogueSystem>().Begin(data.GoTheater[0]);
         }
         else if (gameObject.transform.name == "choice3")

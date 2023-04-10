@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using JetBrains.Annotations;
 
 public class StatusManager : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class StatusManager : MonoBehaviour
     public static int Lonely = 50;
     public static int Anxiety = 50;
     public static int Willingness = 50;
-    public static int Happyness = 50;
+    public static int Joy = 50;
+
 
     //핵심수치
     public TextMeshProUGUI DepNum;
@@ -19,7 +21,7 @@ public class StatusManager : MonoBehaviour
     public TextMeshProUGUI LonNum;
     public TextMeshProUGUI AnxNum;
     public TextMeshProUGUI WilNum;
-    public TextMeshProUGUI HapNum;
+    public TextMeshProUGUI joyNum;
 
     //세부수치
 
@@ -45,9 +47,12 @@ public class StatusManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ScaleRangeStat();
         StatusIndicate();
         DayIndicate();
+        
         money.text = GameManager.money.ToString();
+
     }
 
 
@@ -58,7 +63,7 @@ public class StatusManager : MonoBehaviour
         LonNum.text = Lonely.ToString();
         AnxNum.text = Anxiety.ToString();
         WilNum.text = Willingness.ToString();
-        HapNum.text = Happyness.ToString();
+        joyNum.text = Joy.ToString();
 
         EngNum.text = Engknowledge.ToString();
         innerNum.text = innerpeace.ToString();
@@ -67,29 +72,38 @@ public class StatusManager : MonoBehaviour
 
     public static void DayCalculate() //날짜 계산. 월별로 30일 31일 달라서 계산필요 ..
     {
-        if (GameManager.month == 11 && GameManager.monthday < 30)
+        if (GameManager.month == 11 && GameManager.monthday < 31)
         {
             GameManager.monthday++;
         }
-        else if (GameManager.month == 11 && GameManager.monthday == 30)
+        else if (GameManager.month == 11 && GameManager.monthday > 30)
         {
             GameManager.month++;
             GameManager.monthday = 1;
         }
-        else if ((GameManager.month == 12 || GameManager.monthday == 1) && GameManager.monthday < 31)
+        else if (GameManager.month == 12 && GameManager.monthday < 32)
         {
             GameManager.monthday++;
         }
-        else if ((GameManager.month == 12 || GameManager.monthday == 1) && GameManager.monthday == 31)
+        else if (GameManager.month == 12 && GameManager.monthday > 31)
         {
-            GameManager.month++;
+            GameManager.month = 1;
             GameManager.monthday = 1;
         }
-        else if (GameManager.month == 2 && GameManager.monthday < 28)
+        else if (GameManager.month == 1 && GameManager.monthday < 32)
         {
             GameManager.monthday++;
         }
-        else if (GameManager.month == 2 && GameManager.monthday == 28)
+        else if (GameManager.month == 1 && GameManager.monthday > 31)
+        {
+            GameManager.month = 2;
+            GameManager.monthday = 1;
+        }
+        else if (GameManager.month == 2 && GameManager.monthday < 29)
+        {
+            GameManager.monthday++;
+        }
+        else if (GameManager.month == 2 && GameManager.monthday > 28)
         {
             GameManager.month++;
             GameManager.monthday = 1;
@@ -101,6 +115,72 @@ public class StatusManager : MonoBehaviour
         orderday.text = GameManager.Day.ToString() + "일째";
         month.text = GameManager.month.ToString() + "월";
         day.text = GameManager.monthday.ToString() + "일";
+    }
+
+    private void ScaleRangeStat()
+    {
+
+        if (Stress < 0)
+        {
+            Stress = 0;
+        }
+        if (Depress < 0)
+        {
+            Depress = 0;
+        }
+        if (Lonely < 0)
+        {
+            Lonely = 0;
+        }
+        if (Anxiety < 0)
+        {
+            Anxiety = 0;
+        }
+        if (Willingness < 0)
+        {
+            Willingness = 0;
+        }
+        if (Joy < 0)
+        {
+            Joy = 0;
+        }
+        if(healthy < 0)
+        {
+            healthy = 0;
+        }
+        if (innerpeace < 0)
+        {
+            innerpeace = 0;
+        }
+
+        if (Depress > 100)
+        {
+            Depress = 100;
+        }
+        if(Lonely > 100)
+        {
+            Lonely= 100;
+        }
+        if(Anxiety > 100)
+        {
+            Anxiety= 100;
+        }
+        if(Stress > 100)
+        {
+            Stress= 100;
+        }
+        if (Willingness > 100)
+        {
+            Willingness = 100;
+        }
+        if (Joy > 100)
+        {
+            Joy = 100;
+        }
+        if (healthy > 100)
+        {
+            healthy = 100;
+        }
     }
 
 }

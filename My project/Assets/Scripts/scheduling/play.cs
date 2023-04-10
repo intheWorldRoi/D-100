@@ -82,13 +82,13 @@ public class play : MonoBehaviour
                     if (pnp)
                     {
                         num = UnityEngine.Random.Range(0, data.playFitness.Count / 2);
-                        ActionManager.Toeic(pnp);
+                        ActionManager.Fitness(pnp);
                         system.GetComponent<DialogueSystem>().Begin(data.playFitness[num]);
                     }
                     else
                     {
                         num = UnityEngine.Random.Range(data.playFitness.Count / 2, data.playFitness.Count);
-                        ActionManager.Toeic(pnp);
+                        ActionManager.Fitness(pnp);
                         system.GetComponent<DialogueSystem>().Begin(data.playFitness[num]);   // ���⼭ ���� �÷������� �ε��� ������ ���¿� ���� ����ؾߵ�
                     }
                 }
@@ -182,7 +182,8 @@ public class play : MonoBehaviour
                     DialogueSystem.InMad = false;
                 }
                 
-                StatusManager.Stress -= 10;
+                StatusManager.Stress -= 5;
+                StatusManager.Depress += 5;
                 system.GetComponent<DialogueSystem>().Begin(data.Mad[0]);
                 break;
         }
@@ -213,7 +214,7 @@ public class play : MonoBehaviour
                     if (ReadyToUp)
                     {
                         ReadyToUp = false;
-                        Invoke("StressOverwhelming", 0.5f);
+                        Invoke("StressOverwhelming", 0.3f);
                     }
                     
                 }

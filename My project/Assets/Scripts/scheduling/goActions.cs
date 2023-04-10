@@ -17,7 +17,7 @@ public class goActions : MonoBehaviour
         dayIndex = 0;                                   //go 버튼 클릭시 활성화되는 오브젝트입니
         actionIndex = 0;
         transform.GetChild(Diary.actionList[0][0]).gameObject.SetActive(true);
-        MakeRent();
+        
         ActionManager.NowActionIndex = 0;
     }
     public void nextPlay()                              //스케줄의 연쇄적 실행 
@@ -29,7 +29,7 @@ public class goActions : MonoBehaviour
         {
             GameManager.EndingCheck();
 
-
+            MakeRent();
             ActionManager.HowAreYou();
             actionIndex = 0;
             dayIndex++;
@@ -38,8 +38,6 @@ public class goActions : MonoBehaviour
         }
         if (dayIndex == 7)                                                            //일주일치 액션을 다 수행했는지
         {
-
-            
 
             GameManager.week++;
             gameObject.SetActive(false);                                              //스케줄 1주일치 완료시 스스로 비활성화로 루틴 1 종료
@@ -55,7 +53,7 @@ public class goActions : MonoBehaviour
     }
     private void MakeRent()
     {
-        if(GameManager.week == 3 || GameManager.week == 8 || GameManager.week ==12)
+        if(GameManager.monthday == 10)
         {
             GameManager.money -= 30;
         }

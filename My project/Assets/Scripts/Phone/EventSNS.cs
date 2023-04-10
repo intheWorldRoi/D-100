@@ -38,7 +38,7 @@ public class EventSNS : MonoBehaviour
     }
     public void StartPhone()
     {
-        if (play.sns) {
+        if (play.sns || playActions.transform.GetChild(6).gameObject.activeSelf) {
             Phone.SetActive(true);
             GetComponent<UI.Image>().color = new Color(1, 1, 1, 1);
             gameObject.GetComponent<BuffAnim>().enabled = false;
