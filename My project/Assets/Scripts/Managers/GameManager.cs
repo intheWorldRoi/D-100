@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -17,4 +17,11 @@ public class GameManager : MonoBehaviour
     public static int money = 30;
 
 
+    public static void EndingCheck()
+    {
+        if(StatusManager.Anxiety >= 100 || StatusManager.Depress >= 100 || StatusManager.Stress >= 100 || StatusManager.Lonely >= 100)
+        {
+            SceneManager.LoadScene(1);
+        }
+    }
 }

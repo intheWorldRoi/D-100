@@ -44,7 +44,7 @@ public class DialogueSystem : MonoBehaviour
     public void Begin(Dialogue info)
     {
         sentences.Clear();
-        TextBox.SetActive(true);
+        TextBox.SetActive(true);    
         txtName.GetComponent<TextMeshProUGUI>().text = info.name;
 
         foreach(var sentence in info.sentences)

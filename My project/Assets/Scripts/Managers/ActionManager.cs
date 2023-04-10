@@ -94,7 +94,7 @@ public class ActionManager : MonoBehaviour
         }
         else
         {
-            StatusManager.Stress -= 15;
+            StatusManager.Stress -= 5;
             StatusManager.Depress -= 3;
             StatusManager.Happyness += 3;
         }
@@ -120,7 +120,7 @@ public class ActionManager : MonoBehaviour
             StatusManager.Anxiety -= 3;
             StatusManager.Happyness += 5;
         }
-        StatusManager.Stress -= 5;
+        StatusManager.Stress -= 5;                // ????
         StatusManager.Lonely -= 10;
         StatusManager.innerpeace += 3;
         GameManager.money -= 1;

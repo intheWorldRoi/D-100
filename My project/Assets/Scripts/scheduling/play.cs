@@ -144,25 +144,31 @@ public class play : MonoBehaviour
                 }
                 else
                 {
-                    num = UnityEngine.Random.Range(0, data.playAlba.Count);
+                    int actionIndex = goActions.actionIndex;
+                    int dayIndex = goActions.dayIndex;
+                    if (dayIndex != 6)
+                    {
+                        num = UnityEngine.Random.Range(0, data.playAlba.Count);
+                    }
+                    else
+                    {
+                        num = UnityEngine.Random.Range(0, data.playAlba.Count - 1);
+                    }
                     mad = false;
                     Image red = gameObject.transform.GetChild(0).GetChild(0).gameObject.GetComponent<Image>();
                     red.color = new Color(255, 0, 0, 0);
                     
                     if (num == 6) // 
                     {
-                        int actionIndex = goActions.actionIndex;
-                        int dayIndex = goActions.dayIndex;
-                        if (goActions.dayIndex != 6)
-                        {
-                            Debug.Log("if�������");
+                        
+                        
                             for (int i = 0; i < 3; i++)
                             {
                                 Diary.actionList[dayIndex + 1][i] = 7;
 
                             }
 
-                        }
+                        
 
                     }
                     ActionManager.Partjob();

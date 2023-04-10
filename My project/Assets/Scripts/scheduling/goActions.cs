@@ -26,14 +26,22 @@ public class goActions : MonoBehaviour
         ActionManager.NowActionIndex += 1;
         transform.GetChild(Diary.actionList[dayIndex][actionIndex++]).gameObject.SetActive(false);    //전 스케줄 종료
         if (actionIndex == Diary.actionList[dayIndex].Count)                                          //하루치 액션을 다 수행했는지
-        {   ActionManager.HowAreYou();
+        {
+            GameManager.EndingCheck();
+
+
+            ActionManager.HowAreYou();
             actionIndex = 0;
             dayIndex++;
             GameManager.Day++;
             StatusManager.DayCalculate();
         }
         if (dayIndex == 7)                                                            //일주일치 액션을 다 수행했는지
-        {   GameManager.week++;
+        {
+
+            
+
+            GameManager.week++;
             gameObject.SetActive(false);                                              //스케줄 1주일치 완료시 스스로 비활성화로 루틴 1 종료
             Desk.SetActive(true);
             Diary.actionList.Clear();
