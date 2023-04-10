@@ -185,6 +185,7 @@ public class ActionManager : MonoBehaviour
         {
             StatusManager.healthy -= 1;
         }
+        
 
     }
 }

@@ -108,6 +108,11 @@ public class DialogueSystem : MonoBehaviour
                 play.mad = true;
                 InMad = true;
             }
+            else if(StatusManager.Stress == 100)
+            {
+                play.mad = true;
+                InMad = true;
+            }
             effectTxt.SetMsg(sentences.Dequeue());
             
         }
@@ -118,6 +123,7 @@ public class DialogueSystem : MonoBehaviour
         if (NewLoop)
         {
             diary.SetActive(true);
+            diary.GetComponentInParent<Button>().enabled = false;
         }
         TextBox.SetActive(false);
         

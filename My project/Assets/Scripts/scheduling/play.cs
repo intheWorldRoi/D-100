@@ -9,8 +9,8 @@ using UnityEngine.Rendering.VirtualTexturing;
 public class play : MonoBehaviour
 {
     public GameObject TextBox;
-    public GameObject ReadingUI; // µ¶¼­ ¼±ÅÃÁö ui
-    public GameObject GoOutUI;   // ¿ÜÃâ ¼±ÅÃÁö ui
+    public GameObject ReadingUI; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ui
+    public GameObject GoOutUI;   // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ui
     public GameObject RestUI;
 
 
@@ -33,7 +33,7 @@ public class play : MonoBehaviour
   
     private void OnEnable()
     {
-        Debug.Log("ÇöÀç ¾×¼Ç ÀÎµ¦½º : " + ActionManager.NowActionIndex);
+        Debug.Log("ï¿½ï¿½ï¿½ï¿½ ï¿½×¼ï¿½ ï¿½Îµï¿½ï¿½ï¿½ : " + ActionManager.NowActionIndex);
         DialogueSystem system = DialogSystem.GetComponent<DialogueSystem>();
 
         data = dataManager.GetComponent<DialogueData>();
@@ -41,7 +41,7 @@ public class play : MonoBehaviour
 
         int index = transform.GetSiblingIndex();
 
-        if (index == 0 || index == 1) //ÆÐ³íÆÐ°¡ µîÀåÇÏ´Â ¾×¼ÇÀÎÁö ÆÇ´ÜÇÑ´Ù
+        if (index == 0 || index == 1) //ï¿½Ð³ï¿½ï¿½Ð°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½×¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ï¿½Ñ´ï¿½
         {
             pnp = ActionManager.PNP();
             DialogueSystem.IsSNSAction = true;
@@ -67,7 +67,7 @@ public class play : MonoBehaviour
                     else {
                         num = UnityEngine.Random.Range(data.playToeic.Count/2, data.playToeic.Count);
                         ActionManager.Toeic(pnp);
-                        system.GetComponent<DialogueSystem>().Begin(data.playToeic[num]);   // ¿©±â¼­ ÀÌÁ¦ ÇÃ·¹ÀÌÅäÀÍ ÀÎµ¦½º ³ª´²¼­ »óÅÂ¿¡ µû¶ó Ãâ·ÂÇØ¾ßµÊ
+                        system.GetComponent<DialogueSystem>().Begin(data.playToeic[num]);   // ï¿½ï¿½ï¿½â¼­ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ø¾ßµï¿½
                     }
                 }
                 break;
@@ -89,7 +89,7 @@ public class play : MonoBehaviour
                     {
                         num = UnityEngine.Random.Range(data.playFitness.Count / 2, data.playFitness.Count);
                         ActionManager.Toeic(pnp);
-                        system.GetComponent<DialogueSystem>().Begin(data.playFitness[num]);   // ¿©±â¼­ ÀÌÁ¦ ÇÃ·¹ÀÌÅäÀÍ ÀÎµ¦½º ³ª´²¼­ »óÅÂ¿¡ µû¶ó Ãâ·ÂÇØ¾ßµÊ
+                        system.GetComponent<DialogueSystem>().Begin(data.playFitness[num]);   // ï¿½ï¿½ï¿½â¼­ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ø¾ßµï¿½
                     }
                 }
                 break;
@@ -101,7 +101,7 @@ public class play : MonoBehaviour
                 }
                 else
                 {
-                    DialogueSystem.IsInAction = false; //¾È ³Ñ¾î°¡°Ô ÇÏ±â, ÀÌº¥Æ® Ã³¸® ÈÄ true·Î ¹Ù²Ù°í NextSchedule()À» ºÎ¸¥´Ù.
+                    DialogueSystem.IsInAction = false; //ï¿½ï¿½ ï¿½Ñ¾î°¡ï¿½ï¿½ ï¿½Ï±ï¿½, ï¿½Ìºï¿½Æ® Ã³ï¿½ï¿½ ï¿½ï¿½ trueï¿½ï¿½ ï¿½Ù²Ù°ï¿½ NextSchedule()ï¿½ï¿½ ï¿½Î¸ï¿½ï¿½ï¿½.
                     ReadingUI.SetActive(true);
                     system.GetComponent<DialogueSystem>().Begin(data.playReadingBook[0]);
                 }
@@ -131,7 +131,7 @@ public class play : MonoBehaviour
                 }
                 else
                 {
-                    DialogueSystem.IsInAction = false;  //¾È ³Ñ¾î°¡°Ô ÇÏ±â, ÀÌº¥Æ® Ã³¸® ÈÄ true·Î ¹Ù²Ù°í NextSchedule()À» ºÎ¸¥´Ù.
+                    DialogueSystem.IsInAction = false;  //ï¿½ï¿½ ï¿½Ñ¾î°¡ï¿½ï¿½ ï¿½Ï±ï¿½, ï¿½Ìºï¿½Æ® Ã³ï¿½ï¿½ ï¿½ï¿½ trueï¿½ï¿½ ï¿½Ù²Ù°ï¿½ NextSchedule()ï¿½ï¿½ ï¿½Î¸ï¿½ï¿½ï¿½.
                     GoOutUI.SetActive(true);
                     system.GetComponent<DialogueSystem>().Begin(data.playGoOut[0]);
                 }
@@ -148,14 +148,14 @@ public class play : MonoBehaviour
                     mad = false;
                     Image red = gameObject.transform.GetChild(0).GetChild(0).gameObject.GetComponent<Image>();
                     red.color = new Color(255, 0, 0, 0);
-               
+                    
                     if (num == 6) // 
                     {
                         int actionIndex = goActions.actionIndex;
                         int dayIndex = goActions.dayIndex;
                         if (goActions.dayIndex != 6)
                         {
-                            Debug.Log("if¹®½ÇÇà¿Ï");
+                            Debug.Log("ifï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
                             for (int i = 0; i < 3; i++)
                             {
                                 Diary.actionList[dayIndex + 1][i] = 7;
@@ -191,8 +191,8 @@ public class play : MonoBehaviour
             Image redSprite;
             if(gameObject.name == "playAlba")
             {
-                redSprite = gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.GetComponent<Image>(); // ÀÚ½ÄÀÇ ÀÚ½ÄÀÇ image ÄÄÆ÷³ÍÆ® °Ù
-                Debug.Log("¾ËÆÄ°ª : " + redSprite.color.a);
+                redSprite = gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.GetComponent<Image>(); // ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½Ú½ï¿½ï¿½ï¿½ image ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½
+                Debug.Log("ï¿½ï¿½ï¿½Ä°ï¿½ : " + redSprite.color.a);
                 if (redSprite.color.a <= 0)
                 {
                     StartCoroutine(FadeCoroutine(redSprite));
@@ -216,7 +216,7 @@ public class play : MonoBehaviour
         
     }
 
-    IEnumerator FadeCoroutine(Image i) //ÆøÁÖ ¾Ö´Ï¸ÞÀÌ¼Ç
+    IEnumerator FadeCoroutine(Image i) //ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½
     {
         float fadeCount = 0;
         while (fadeCount < 0.3f)

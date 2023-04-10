@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Xml.Serialization;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Hide : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Hide : MonoBehaviour
     public void HideDiary()          //exit 버튼에서 쓰임
     {
         diary.SetActive(false);
+        desk.GetComponent<Button>().enabled = true;
     }
 
     public void HideAndReveal()      //Go 버튼에 달려 있고 버튼 누르면 다이어리 숨기고 데스크 숨김.
@@ -23,6 +25,7 @@ public class Hide : MonoBehaviour
         diary.SetActive(false);
         desk.SetActive(false);
         DialogueSystem.NewLoop = false;
+        desk.GetComponent<Button>().enabled = true;
         
 
         playActions.SetActive(true);      //goAction은 액션을 수행하는 오브젝트들의 부모.(연쇄작용 매개자 역할)
