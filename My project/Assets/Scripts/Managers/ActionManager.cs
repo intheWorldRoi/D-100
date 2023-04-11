@@ -34,13 +34,13 @@ public class ActionManager : MonoBehaviour
     {
         if (pass)
         {
-            StatusManager.Engknowledge += 3;
-            StatusManager.Joy -= 5;
+            StatusManager.Engknowledge += 5;
+            StatusManager.Joy -= 2;
             StatusManager.Anxiety -= 3;
             StatusManager.Stress += 3;
         }
         else {
-            StatusManager.Engknowledge += 1;
+            StatusManager.Engknowledge += 3;
             StatusManager.Joy -= 5;
             StatusManager.Anxiety -= 1;
             StatusManager.Stress += 3;
@@ -53,9 +53,10 @@ public class ActionManager : MonoBehaviour
                 StatusManager.Willingness += 3;
                 StatusManager.Depress -= 3;
                 StatusManager.Stress += 3;
+                StatusManager.Joy += 2;
             }
             else{
-                StatusManager.healthy += 1;
+                StatusManager.healthy += 2;
                 StatusManager.Willingness += 1;
                 StatusManager.Depress -= 1;
                 StatusManager.Stress += 3;
@@ -78,9 +79,10 @@ public class ActionManager : MonoBehaviour
                 }
             case 1:
                 {
-                    StatusManager.Anxiety -= 3;
+                    StatusManager.Anxiety -= 10;
                     StatusManager.Depress -= 5;
                     StatusManager.innerpeace += 3;
+                    
                     break;
                 }
             case 2:
@@ -88,6 +90,7 @@ public class ActionManager : MonoBehaviour
                     StatusManager.Anxiety -= 3;
                     StatusManager.Joy += 5;
                     StatusManager.innerpeace += 5;
+                    StatusManager.Depress -= 5;
                     break;
                 }
         }
@@ -141,6 +144,10 @@ public class ActionManager : MonoBehaviour
             StatusManager.Anxiety -= 3;
             StatusManager.Joy += 3;
         }
+        if(StatusManager.Lonely > 70)
+        {
+            StatusManager.Lonely -= 10;
+        }
         StatusManager.Stress -= 3;                // ????
         StatusManager.Lonely -= 10;
         StatusManager.innerpeace += 3;
@@ -154,7 +161,7 @@ public class ActionManager : MonoBehaviour
         StatusManager.Lonely -= 1;
         StatusManager.Anxiety -= 1;
         StatusManager.healthy -= 1;
-        GameManager.money += 5;
+        GameManager.money += 10;
     }
 
     public static void HowAreYou()
