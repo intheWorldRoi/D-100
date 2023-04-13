@@ -19,6 +19,7 @@ public class PhoneScreen : MonoBehaviour
         Debug.Log(Count);
         if(Input.mouseScrollDelta.y != 0 && CountReady)
         {
+            SoundManager.instance.PlaySound("instaHeart", 0.5f);
             Count++;
             CountReady = false;
             Invoke("ReadyToCount", 1f);

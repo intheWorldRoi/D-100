@@ -171,12 +171,13 @@ public class ActionManager : MonoBehaviour
 
         if (StatusManager.healthy < 50)
         {
+            StatusManager.Depress += 3;
             StatusManager.Willingness -= 3;
             StatusManager.Joy -= 3;
         }
 
 
-        if (StatusManager.Stress > 50 || StatusManager.Lonely > 50)
+        if (StatusManager.Lonely > 50)
         {
             StatusManager.Depress += 3;
             StatusManager.Joy -= 3;
@@ -212,15 +213,18 @@ public class ActionManager : MonoBehaviour
 
         if (StatusManager.Stress > 70)
         {
+            StatusManager.Depress += 5;
             StatusManager.healthy -= 3;
         }
 
         else if (StatusManager.Stress > 50)
         {
+            StatusManager.Depress += 3;
             StatusManager.healthy -= 2;
         }
         else
         {
+            StatusManager.Depress += 1;
             StatusManager.healthy -= 1;
         }
 

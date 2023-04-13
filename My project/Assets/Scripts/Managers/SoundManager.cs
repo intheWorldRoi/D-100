@@ -18,8 +18,8 @@ public class SoundManager : MonoBehaviour
     public Dictionary<string, AudioClip> bgmClipsDic = new Dictionary<string, AudioClip>();
     public Dictionary<string, AudioClip> audioClipsDic = new Dictionary<string, AudioClip>();
 
-    AudioSource bgmPlayer;
-    AudioSource sfxPlayer;
+    public AudioSource bgmPlayer;
+    public AudioSource sfxPlayer;
 
     public void Awake()
     {
@@ -78,6 +78,7 @@ public class SoundManager : MonoBehaviour
     public void SetVolumeSound(float a_volume)
     {
         masterVolumeSFX = a_volume;
+        sfxPlayer.volume = masterVolumeSFX;
     }
 
     public void SetVolumeBGM(float a_volume)

@@ -10,22 +10,12 @@ public class OutSides : MonoBehaviour
 
     DialogueData data;
 
+    int num;
     private void Awake()
     {
         playGoOut = transform.parent.gameObject.transform.parent.gameObject.transform.parent.gameObject; //하이어라키 창의 playGoOut
     }
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void PlaceChoice()
     {
         data = dataManager.GetComponent<DialogueData>();
@@ -34,11 +24,12 @@ public class OutSides : MonoBehaviour
 
         if (gameObject.transform.name == "choice1")
         {
+            SoundManager.instance.PlayBGM("park");
             GoOutUI.SetActive(false);
             playGoOut.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject.SetActive(true);
             ActionManager.GoOut();
-            
-            system.GetComponent<DialogueSystem>().Begin(data.GoPark[0]);
+            num = UnityEngine.Random.Range(0, data.GoPark.Count);
+            system.GetComponent<DialogueSystem>().Begin(data.GoPark[num]);
             
         }
         else if(gameObject.transform.name == "choice2")
@@ -49,14 +40,17 @@ public class OutSides : MonoBehaviour
             GameManager.money -= 3;
             StatusManager.innerpeace += 3;
             StatusManager.Joy += 10;
-            system.GetComponent<DialogueSystem>().Begin(data.GoTheater[0]);
+            num = UnityEngine.Random.Range(0, data.GoTheater.Count);
+            system.GetComponent<DialogueSystem>().Begin(data.GoTheater[num]);
         }
         else if (gameObject.transform.name == "choice3")
         {
+            SoundManager.instance.PlayBGM("park");
             GoOutUI.SetActive(false);
             playGoOut.transform.GetChild(1).gameObject.transform.GetChild(2).gameObject.SetActive(true);
             ActionManager.GoOut();
-            system.GetComponent<DialogueSystem>().Begin(data.GoAnyWhere[0]);
+            num = UnityEngine.Random.Range(0, data.GoAnyWhere.Count);
+            system.GetComponent<DialogueSystem>().Begin(data.GoAnyWhere[num]);
         }
 
     }
