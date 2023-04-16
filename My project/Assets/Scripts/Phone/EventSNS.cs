@@ -21,16 +21,16 @@ public class EventSNS : MonoBehaviour
         {
             if (playActions.transform.GetChild(6).gameObject.activeSelf)
             {
-                Phone.transform.GetChild(2).gameObject.SetActive(true); // 크리스마스 에피일 때 크리스마스용 폰 스크린 띄움
+                Phone.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.SetActive(true); // 크리스마스 에피일 때 크리스마스용 폰 스크린 띄움
             }
             else if (play.sns == true){
                 if (playActions.transform.GetChild(0).gameObject.activeSelf)
                 {
-                    Phone.transform.GetChild(0).gameObject.SetActive(true);
+                    Phone.transform.GetChild(0).transform.GetChild(0).gameObject.gameObject.SetActive(true);
                 }
                 if (playActions.transform.GetChild(1).gameObject.activeSelf)
                 {
-                    Phone.transform.GetChild(1).gameObject.SetActive(true);
+                    Phone.transform.GetChild(1).transform.GetChild(0).gameObject.gameObject.SetActive(true);
                 }
                 play.sns = false;
             }
