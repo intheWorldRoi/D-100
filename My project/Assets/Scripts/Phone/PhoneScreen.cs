@@ -46,7 +46,7 @@ public class PhoneScreen : MonoBehaviour
             DialogueSystem.IsInAction = true;
             transform.gameObject.SetActive(false);
             gameObject.transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
-            GetComponent<RectTransform>().position = new Vector3(0, -90, 0);
+            GetComponent<RectTransform>().position += Vector3.down * 650 * 3;
         }
         else if (gameObject.name == "EpiChrist" && Count >= 3)
         {
@@ -56,7 +56,7 @@ public class PhoneScreen : MonoBehaviour
             Count = 0;
             gameObject.SetActive(false);
             gameObject.transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
-            GetComponent<RectTransform>().position = new Vector3(0, -90, 0);
+            GetComponent<RectTransform>().position += Vector3.down * 650 * 3;
             Invoke("goChristPart1", 3.5f);
         }
 
