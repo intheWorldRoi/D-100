@@ -13,6 +13,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Start()
     {
+        SoundManager.instance.PlayBGM("main");
         Scene scene = SceneManager.GetActiveScene();
         if( scene.name == "Ending_GameOver")
         {
@@ -23,6 +24,7 @@ public class DialogueTrigger : MonoBehaviour
     public void Trigger()
     {
         var system = DialogueSystem.GetComponent<DialogueSystem>();
+        SoundManager.instance.PlaySound("click");
         system.Begin(info);
     }
 

@@ -19,6 +19,7 @@ public class Planning : MonoBehaviour
         plannedAction = objDiary.GetComponent<Diary>().selectedActionItemIndex; // 선택한 action 의 index를 plannedAction 변수에 저장
         Diary.actionList[transform.parent.transform.GetSiblingIndex()][transform.GetSiblingIndex()] = plannedAction; // Diary의 이중 에 plannedAction 변수값 저장
 
+        SoundManager.instance.PlaySound("click");
         PrintActionName();                                    //text 출력 switch문 함수
         Go();                                                 //플랜 완성 시 go버튼 활성화
         

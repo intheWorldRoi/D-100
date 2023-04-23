@@ -19,7 +19,9 @@ public class PhoneScreen : MonoBehaviour
         Debug.Log(Count);
         if(Input.mouseScrollDelta.y != 0 && CountReady)
         {
+            SoundManager.instance.PlaySound("instaHeart", 0.5f);
             Count++;
+            GetComponent<RectTransform>().position += Vector3.up * 650;
             CountReady = false;
             Invoke("ReadyToCount", 1f);
         }
@@ -32,7 +34,8 @@ public class PhoneScreen : MonoBehaviour
             Count = 0;
             DialogueSystem.IsInAction = true;
             transform.gameObject.SetActive(false);
-            gameObject.transform.parent.gameObject.SetActive(false);
+            gameObject.transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
+            GetComponent<RectTransform>().position += Vector3.down * 650*3;
         }
         else if (gameObject.name == "FitnessScreen" && Count >= 3)
         {
@@ -42,7 +45,8 @@ public class PhoneScreen : MonoBehaviour
             Count = 0;
             DialogueSystem.IsInAction = true;
             transform.gameObject.SetActive(false);
-            gameObject.transform.parent.gameObject.SetActive(false);
+            gameObject.transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
+            GetComponent<RectTransform>().position += Vector3.down * 650 * 3;
         }
         else if (gameObject.name == "EpiChrist" && Count >= 3)
         {
@@ -51,7 +55,8 @@ public class PhoneScreen : MonoBehaviour
             system.Begin(data.EpChrist[1]);
             Count = 0;
             gameObject.SetActive(false);
-            gameObject.transform.parent.gameObject.SetActive(false);
+            gameObject.transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
+            GetComponent<RectTransform>().position += Vector3.down * 650 * 3;
             Invoke("goChristPart1", 3.5f);
         }
 

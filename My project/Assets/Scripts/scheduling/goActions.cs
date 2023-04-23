@@ -45,11 +45,20 @@ public class goActions : MonoBehaviour
             Diary.actionList.Clear();
             DialogueSystem.IsInAction = false;
             DialogueSystem.NewLoop = true;
+            if (SoundManager.instance.bgmPlayer.clip != SoundManager.instance.bgmClipsDic["main"])
+            {
+                SoundManager.instance.PlayBGM("main");
+            }
             return;
         }
         
         transform.GetChild(Diary.actionList[dayIndex][actionIndex]).gameObject.SetActive(true);         //다음 스케줄 활성화
-        
+        if (SoundManager.instance.bgmPlayer.clip != SoundManager.instance.bgmClipsDic["main"])
+        {
+            SoundManager.instance.PlayBGM("main");
+        }
+
+
     }
     private void MakeRent()
     {
