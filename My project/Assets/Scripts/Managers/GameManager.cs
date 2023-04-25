@@ -23,5 +23,21 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(1);
         }
+        if(money < 0)
+        {
+            SceneManager.LoadScene(2);
+        }
+    }
+
+    private void Update()
+    {
+        if(Day == 100)
+        {
+            if(StatusManager.innerpeace > 80 && StatusManager.Engknowledge > 100 && StatusManager.healthy > 80)
+            {
+                //Âð¿£µù¾À ºÎ¸£±â
+            }
+            
+        }
     }
 }
