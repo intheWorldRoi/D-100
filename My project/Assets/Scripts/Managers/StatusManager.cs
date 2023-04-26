@@ -8,7 +8,7 @@ using JetBrains.Annotations;
 public class StatusManager : MonoBehaviour
 {
     public static int Depress = 50;
-    public static int Stress = 90;
+    public static int Stress = 99;
     public static int Lonely = 50;
     public static int Anxiety = 50;
     public static int Willingness = 50;

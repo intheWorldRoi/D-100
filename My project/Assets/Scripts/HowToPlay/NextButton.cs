@@ -5,12 +5,12 @@ using UnityEngine;
 public class NextButton : MonoBehaviour
 {
     static int nowIndex;
-    public GameObject MainUI;
-    public GameObject interfaceUI;
+    public GameObject[] UI;
+    
     // Start is called before the first frame update
     void Start()
     {
-        nowIndex = 1;
+        nowIndex = 0;
     }
 
     // Update is called once per frame
@@ -21,11 +21,18 @@ public class NextButton : MonoBehaviour
 
     public void nextUI()
     {
-        if(nowIndex == 1)
+        
+        if(nowIndex != UI.Length -1)
         {
-            MainUI.SetActive(false);
-            interfaceUI.SetActive(true);
-            nowIndex = 2;
+            UI[nowIndex].SetActive(false);
+            UI[nowIndex + 1].SetActive(true);
+            nowIndex++;
+        }
+        else
+        {
+            UI[0].SetActive(true);
+            UI[nowIndex].SetActive(false);
+            nowIndex = 0;
         }
         
         
@@ -34,11 +41,17 @@ public class NextButton : MonoBehaviour
     public void previousUI()
     {
         Debug.Log("¿€µø");
-        if(nowIndex == 2)
+        if(nowIndex != 0)
         {
-            MainUI.SetActive(true);
-            interfaceUI.SetActive(false);
-            nowIndex = 1;
+            UI[nowIndex].SetActive(false);
+            UI[nowIndex - 1].SetActive(true);
+            nowIndex--;
+        }
+        else
+        {
+            UI[UI.Length -1].SetActive(true);
+            UI[nowIndex].SetActive(false);
+            nowIndex = UI.Length;
         }
         
     }
@@ -46,7 +59,17 @@ public class NextButton : MonoBehaviour
     public void Escape()
     {
         transform.parent.gameObject.SetActive(false);
-        MainUI.SetActive(true);
-        interfaceUI.SetActive(false);
+        for(int i = 0; i < UI.Length; i++)
+        {
+            if(i == 0)
+            {
+                UI[i].SetActive(true);
+            }
+            else
+            {
+                UI[i].SetActive(false);
+            }
+        }
+        
     }
 }

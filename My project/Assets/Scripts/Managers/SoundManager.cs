@@ -34,6 +34,14 @@ public class SoundManager : MonoBehaviour
             AwakeAfter();
         }
     }
+
+     void Start()
+    {
+        if(SceneManager.GetActiveScene().name == "Main")
+        {
+            instance.PlayBGM("main");  
+        }
+    }
     void AwakeAfter()
     {
         GameObject bgm = new GameObject("BGM");

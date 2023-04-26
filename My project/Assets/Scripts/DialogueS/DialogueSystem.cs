@@ -16,6 +16,8 @@ public class DialogueSystem : MonoBehaviour
     public static bool InPara = false;
     public static bool InMad = false;
 
+    public static bool IsMainScene;
+
     public GameObject txtName;
     public GameObject txtSentence;
     public TypeEffect effectTxt;
@@ -33,6 +35,18 @@ public class DialogueSystem : MonoBehaviour
     Queue<string> sentences = new Queue<string>(); //순차적으로 dialogue 클래스에서 문장을 받아 보여줘야하므로 queue 사용
 
 
+
+    public void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "Main")
+        {
+            IsMainScene = true;
+        }
+        else if (SceneManager.sceneCount == 1 || SceneManager.sceneCount == 3)
+        {
+            IsMainScene = false;
+        }
+    }
     public void StartDialogue(int firstindex, int lastindex, List<Dialogue> para)
     {
         InPara = true;
@@ -63,7 +77,7 @@ public class DialogueSystem : MonoBehaviour
         if (sentences.Count == 0)
         {
 
-            if (IsSNSAction && !InMad)
+            if (IsMainScene && IsSNSAction && !InMad)
             {
                 play.sns = ActionManager.SNS();
                 IsSNSAction = false;
@@ -75,12 +89,12 @@ public class DialogueSystem : MonoBehaviour
 
                 return;
             }
-            else if (IsInAction)
+            else if (IsMainScene && IsInAction)
             {
                 NextSchedule();
                 return;
             }
-            else if (InPara)
+            else if (IsMainScene && InPara)
             {
                 if (start == end)
                 {
@@ -89,7 +103,7 @@ public class DialogueSystem : MonoBehaviour
                 }
                 Begin(paragragh[start++]);
             }
-            else if (InMad)
+            else if (IsMainScene && InMad)
             {
                 play.mad = false;
                 NextSchedule();
@@ -123,19 +137,19 @@ public class DialogueSystem : MonoBehaviour
     }
     private void End()
     {
-        if (SceneManager.GetActiveScene().name == "Main" && NewLoop)
+        if (IsMainScene && NewLoop)
         {
             diary.SetActive(true);
             diary.GetComponentInParent<Button>().enabled = false;
         }
         TextBox.SetActive(false);
         
-        if (SceneManager.GetActiveScene().name == "Main" && goActions.transform.GetChild(6))
+        if (IsMainScene && goActions.transform.GetChild(6))
         {
             goActions.transform.GetChild(6).GetComponent<goStory>().DivEpisode();
         }
 
-        if (SceneManager.GetActiveScene().name == "Ending_GameOver")
+        if (!IsMainScene)
         {
             print("씨발아");
             transform.GetChild(0).gameObject.SetActive(true);

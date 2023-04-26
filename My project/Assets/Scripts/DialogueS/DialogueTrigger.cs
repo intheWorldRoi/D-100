@@ -13,7 +13,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Start()
     {
-        //SoundManager.instance.PlayBGM("main"); // 아니 브금을 왜 여기서 트는거야
+        
         Scene scene = SceneManager.GetActiveScene();
         if( scene.name == "Ending_GameOver")
         {
