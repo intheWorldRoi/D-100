@@ -163,7 +163,6 @@ public class ActionManager : MonoBehaviour
         StatusManager.healthy -= 1;
         GameManager.money += 10;
     }
-
     public static void HowAreYou()
     {
         StatusManager.Lonely += 5;

@@ -4,14 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using JetBrains.Annotations;
+using System.Xml.Serialization;
 
 public class StatusManager : MonoBehaviour
 {
-    public static int Depress = 50;
-    public static int Stress = 99;
+    public static int Depress = 60;
+    public static int Stress = 50;
     public static int Lonely = 50;
     public static int Anxiety = 50;
-    public static int Willingness = 50;
+    public static int Willingness = 40;
     public static int Joy = 50;
 
 
@@ -23,15 +24,15 @@ public class StatusManager : MonoBehaviour
     public TextMeshProUGUI WilNum;
     public TextMeshProUGUI joyNum;
 
+    public RectTransform Depbar, Strbar, Lonbar, Anxbar, Wilbar, joybar;
+
     //세부수치
 
     public static int Engknowledge = 0; // 1 ~ 100 까지의 수치, 70 이상일시 우선은 도전과제 달성으로 해놓고 나중에 밸패 필요
     public static int innerpeace = 0;   //깨달음. 히든엔딩
     public static int healthy = 30; // 1~100 , 건강수치
 
-    public TextMeshProUGUI EngNum;
-    public TextMeshProUGUI innerNum;
-    public TextMeshProUGUI healNum;
+    public TextMeshProUGUI EngNum, innerNum, healNum;
 
     //날짜ui
     public TextMeshProUGUI orderday;
@@ -50,7 +51,9 @@ public class StatusManager : MonoBehaviour
         ScaleRangeStat();
         StatusIndicate();
         DayIndicate();
-        
+        ctrBar();
+
+
         money.text = GameManager.money.ToString();
 
     }
@@ -69,8 +72,16 @@ public class StatusManager : MonoBehaviour
         innerNum.text = innerpeace.ToString();
         healNum.text = healthy.ToString();
     }
-
-    public static void DayCalculate() //날짜 계산. 월별로 30일 31일 달라서 계산필요 ..
+    public void ctrBar()
+    {
+        Depbar.localScale = new Vector2(Depress / 100f, 1f);
+        Strbar.localScale = new Vector2(Stress / 100f, 1f);
+        Lonbar.localScale = new Vector2(Lonely / 100f, 1f);
+        Anxbar.localScale = new Vector2(Anxiety / 100f, 1f);
+        Wilbar.localScale = new Vector2(Willingness / 100f, 1f);
+        joybar.localScale = new Vector2(Joy / 100f, 1f);
+    }
+        public static void DayCalculate() //날짜 계산. 월별로 30일 31일 달라서 계산필요 ..
     {
         if (GameManager.month == 11 && GameManager.monthday < 31)
         {
