@@ -13,11 +13,17 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Start()
     {
-        SoundManager.instance.PlayBGM("main");
+        //SoundManager.instance.PlayBGM("main"); // 아니 브금을 왜 여기서 트는거야
         Scene scene = SceneManager.GetActiveScene();
         if( scene.name == "Ending_GameOver")
         {
+            Debug.Log("게임오버");
             GameOver();
+        }
+        else if(scene.name == "Ending_Loser")
+        {
+            Debug.Log("거지엔딩");
+            GameOver_nomoney();
         }
         
     }
@@ -28,7 +34,13 @@ public class DialogueTrigger : MonoBehaviour
         system.Begin(info);
     }
 
-   public void GameOver()
+    public void GameOver()
+    {
+        var system = DialogueSystem.GetComponent<DialogueSystem>();
+        system.Begin(info);
+    }
+
+    public void GameOver_nomoney()
     {
         var system = DialogueSystem.GetComponent<DialogueSystem>();
         system.Begin(info);

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Globalization;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -122,16 +123,22 @@ public class DialogueSystem : MonoBehaviour
     }
     private void End()
     {
-        if (NewLoop)
+        if (SceneManager.GetActiveScene().name == "Main" && NewLoop)
         {
             diary.SetActive(true);
             diary.GetComponentInParent<Button>().enabled = false;
         }
         TextBox.SetActive(false);
         
-        if (goActions.transform.GetChild(6))
+        if (SceneManager.GetActiveScene().name == "Main" && goActions.transform.GetChild(6))
         {
             goActions.transform.GetChild(6).GetComponent<goStory>().DivEpisode();
+        }
+
+        if (SceneManager.GetActiveScene().name == "Ending_GameOver")
+        {
+            print("¾¾¹ß¾Æ");
+            transform.GetChild(0).gameObject.SetActive(true);
         }
     }
 
