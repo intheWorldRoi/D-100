@@ -45,4 +45,12 @@ public class Hide : MonoBehaviour
 
         }
     }
+    public void exitBtn()
+    {
+        transform.parent.gameObject.SetActive(false);
+    }
+    public void openSetting()
+    {
+        transform.GetChild(1).gameObject.SetActive(true);
+    }
 }

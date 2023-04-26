@@ -37,10 +37,8 @@ public class SoundManager : MonoBehaviour
 
      void Start()
     {
-        if(SceneManager.GetActiveScene().name == "Main")
-        {
-            instance.PlayBGM("main");  
-        }
+        if (SceneManager.GetActiveScene().name == "Intro")
+            PlayBGM("innerpeace");
     }
     void AwakeAfter()
     {

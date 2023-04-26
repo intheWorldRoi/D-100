@@ -51,7 +51,7 @@ public class NextButton : MonoBehaviour
         {
             UI[UI.Length -1].SetActive(true);
             UI[nowIndex].SetActive(false);
-            nowIndex = UI.Length;
+            nowIndex = UI.Length -1;
         }
         
     }
