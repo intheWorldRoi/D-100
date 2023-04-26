@@ -49,7 +49,7 @@ public class NextButton : MonoBehaviour
         }
         else
         {
-            UI[UI.Length -1].SetActive(true);
+            UI[UI.Length - 1].SetActive(true);
             UI[nowIndex].SetActive(false);
             nowIndex = UI.Length -1;
         }
