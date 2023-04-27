@@ -14,9 +14,12 @@ public class TypeEffect : MonoBehaviour
     float interval;
 
     public GameObject endcursor;
+    SoundManager s;
+    
 
     private void Awake()
     {
+        s = SoundManager.instance;   
         msgtext = GetComponent<TextMeshProUGUI>();
     }
 
@@ -53,6 +56,9 @@ public class TypeEffect : MonoBehaviour
 
     private void EffectEnd()
     {
+       
         endcursor.SetActive(true);
+        s.StopSound();
+
     }
 }

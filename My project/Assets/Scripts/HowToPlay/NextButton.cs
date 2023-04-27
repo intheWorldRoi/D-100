@@ -16,7 +16,7 @@ public class NextButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(nowIndex);
+        //Debug.Log(nowIndex);
     }
 
     public void nextUI()

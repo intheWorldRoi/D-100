@@ -39,6 +39,10 @@ public class SoundManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Intro")
             PlayBGM("innerpeace");
+        if (SceneManager.GetActiveScene().name == "Main")
+        {
+            PlayBGM("main");
+        }
     }
     void AwakeAfter()
     {
@@ -63,6 +67,11 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+
+    private void Update()
+    {
+        //print(bgmPlayer.volume);
+    }
     // 한 번 재생 : 볼륨 매개변수로 지정
     public void PlaySound(string a_name, float a_volume = 1f)
     {
@@ -71,15 +80,23 @@ public class SoundManager : MonoBehaviour
     
     public void PlayBGM(string a_name)
     {
+        StartCoroutine(volumeDown());
         bgmPlayer.clip = bgmClipsDic[a_name];
-        bgmPlayer.volume = masterVolumeBGM;
+        bgmPlayer.volume = 0;
         bgmPlayer.loop = true;
+        StartCoroutine(volumeUp());
         bgmPlayer.Play();
+        
     }
 
     public void StopBGM()
     {
+        StartCoroutine(volumeDown());
         bgmPlayer.Stop();
+    }
+    public void StopSound()
+    {
+        sfxPlayer.Stop();
     }
     public void SetVolumeSound(float a_volume)
     {
@@ -93,4 +110,24 @@ public class SoundManager : MonoBehaviour
         bgmPlayer.volume = masterVolumeBGM;
     }
 
+    IEnumerator volumeUp()
+    {
+        
+        while(bgmPlayer.volume <= 1)
+        {
+            yield return new WaitForSeconds(0.2f);
+            bgmPlayer.volume += 0.1f;
+            yield return new WaitForSeconds(0.3f);
+        }
+    }
+
+    IEnumerator volumeDown()
+    {
+        while(bgmPlayer.volume >= 0)
+        {
+            yield return new WaitForSeconds(0.2f);
+            bgmPlayer.volume += 0.1f;
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
 }

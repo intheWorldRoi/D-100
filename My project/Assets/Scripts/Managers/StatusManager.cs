@@ -9,7 +9,7 @@ using System.Xml.Serialization;
 public class StatusManager : MonoBehaviour
 {
     public static int Depress = 60;
-    public static int Stress = 50;
+    public static int Stress = 10;
     public static int Lonely = 50;
     public static int Anxiety = 50;
     public static int Willingness = 40;

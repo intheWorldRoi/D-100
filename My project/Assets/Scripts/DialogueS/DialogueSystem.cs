@@ -73,7 +73,7 @@ public class DialogueSystem : MonoBehaviour
     public void Next()
     {
         
-        Debug.Log("Next 호출 , IsSNSAction : " + IsSNSAction);
+        //Debug.Log("Next 호출 , IsSNSAction : " + IsSNSAction);
         if (sentences.Count == 0)
         {
 
@@ -119,7 +119,7 @@ public class DialogueSystem : MonoBehaviour
         }
         else
         {
-            Debug.Log(sentences.Peek());
+            //Debug.Log(sentences.Peek());
             if (sentences.Peek().Contains("아.... 정말 스트레스가..  주체가 안 돼.")) // 폭주 지점 확인
             {     
                 play.mad = true;
@@ -130,7 +130,11 @@ public class DialogueSystem : MonoBehaviour
                 play.mad = true;
                 InMad = true;
             }
+            SoundManager s = SoundManager.instance;
+            
+            s.PlaySound("tadadada");
             effectTxt.SetMsg(sentences.Dequeue());
+            
             
         }
         
@@ -151,7 +155,7 @@ public class DialogueSystem : MonoBehaviour
 
         if (!IsMainScene)
         {
-            print("씨발아");
+            
             transform.GetChild(0).gameObject.SetActive(true);
         }
     }

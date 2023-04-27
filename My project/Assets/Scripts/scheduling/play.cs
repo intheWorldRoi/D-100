@@ -28,12 +28,27 @@ public class play : MonoBehaviour
     int randomNum;
 
     int num;
-    bool ReadyToUp = true;
+    static int madnum;
 
-  
+    bool ReadyToUp = true;
+    static SoundManager s;
+
+
+    private void Awake()
+    {
+        madnum = 0;
+        s = SoundManager.instance;
+    }
+    private void Start()
+    {
+        
+    }
+
+
+
     private void OnEnable()
     {
-        Debug.Log("���� �׼� �ε��� : " + ActionManager.NowActionIndex);
+        //Debug.Log("���� �׼� �ε��� : " + ActionManager.NowActionIndex);
         DialogueSystem system = DialogSystem.GetComponent<DialogueSystem>();
 
         data = dataManager.GetComponent<DialogueData>();
@@ -167,7 +182,9 @@ public class play : MonoBehaviour
                                 Diary.actionList[dayIndex + 1][i] = 7;
 
                             }
-
+                        s.StopBGM();
+                        
+                        s.PlayBGM("stripes");
                         
 
                     }
@@ -177,14 +194,34 @@ public class play : MonoBehaviour
                 
                 break;
             case 7:
+                
                 if (DialogueSystem.InMad)
                 {
                     DialogueSystem.InMad = false;
                 }
+                if(madnum == 0)
+                {
+                    system.GetComponent<DialogueSystem>().Begin(data.Mad[0]);
+                    madnum = 1;
+                    
+                }
+                else if(madnum == 1)
+                {
+                    system.GetComponent<DialogueSystem>().Begin(data.Mad[1]);
+                    madnum = 2;
+                    
+                }
+                else if(madnum == 2)
+                {
+                    system.GetComponent<DialogueSystem>().Begin(data.Mad[2]);
+                    madnum = 0;
+                    s.PlayBGM("main");
+                    
+                }
                 
-                StatusManager.Stress -= 5;
+                StatusManager.Stress -= 15;
                 StatusManager.Depress += 5;
-                system.GetComponent<DialogueSystem>().Begin(data.Mad[0]);
+                
                 break;
         }
         
@@ -199,7 +236,7 @@ public class play : MonoBehaviour
             if(gameObject.name == "playAlba")
             {
                 redSprite = gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.GetComponent<Image>(); // �ڽ��� �ڽ��� image ������Ʈ ��
-                Debug.Log("���İ� : " + redSprite.color.a);
+                
                 if (redSprite.color.a <= 0)
                 {
                     StartCoroutine(FadeCoroutine(redSprite));
@@ -220,6 +257,7 @@ public class play : MonoBehaviour
                 }
             }
         }
+
         
     }
 
