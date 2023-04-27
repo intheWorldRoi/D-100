@@ -19,15 +19,20 @@ public class GameManager : MonoBehaviour
 
     public static void EndingCheck()
     {
+        SoundManager s = SoundManager.instance;
         if(StatusManager.Anxiety >= 100 || StatusManager.Depress >= 100 || StatusManager.Stress >= 100 || StatusManager.Lonely >= 100)
         {
             SceneManager.LoadScene(1);
+            s.PlayBGM("BadMad");
+
         }
         if(money < 0)
         {
             SceneManager.LoadScene(2);
         }
     }
+
+    
 
     private void Update()
     {

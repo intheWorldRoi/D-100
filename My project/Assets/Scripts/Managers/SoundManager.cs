@@ -71,6 +71,7 @@ public class SoundManager : MonoBehaviour
     private void Update()
     {
         //print(bgmPlayer.volume);
+        
     }
     // 한 번 재생 : 볼륨 매개변수로 지정
     public void PlaySound(string a_name, float a_volume = 1f)
