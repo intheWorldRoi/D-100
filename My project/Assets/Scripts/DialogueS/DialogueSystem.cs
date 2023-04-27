@@ -28,8 +28,7 @@ public class DialogueSystem : MonoBehaviour
     
 
     List<Dialogue> paragragh = new List<Dialogue>();
-    int start;
-    int end;
+    int start, end;
 
 
     Queue<string> sentences = new Queue<string>(); //순차적으로 dialogue 클래스에서 문장을 받아 보여줘야하므로 queue 사용

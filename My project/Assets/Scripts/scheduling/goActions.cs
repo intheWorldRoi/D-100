@@ -5,6 +5,7 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class goActions : MonoBehaviour
@@ -76,9 +77,9 @@ public class goActions : MonoBehaviour
         }
 
         transform.GetChild(Diary.actionList[dayIndex][actionIndex]).gameObject.SetActive(true);         //다음 스케줄 활성화
-        if (SoundManager.instance.bgmPlayer.clip != SoundManager.instance.bgmClipsDic["main"])
+        if (SoundManager.instance.bgmPlayer.clip != SoundManager.instance.bgmClipsDic["main"] && SceneManager.GetActiveScene().name == "main")
         {
-            //SoundManager.instance.PlayBGM("main");
+            SoundManager.instance.PlayBGM("main");
         }
 
 

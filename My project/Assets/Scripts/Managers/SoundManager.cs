@@ -38,11 +38,7 @@ public class SoundManager : MonoBehaviour
      void Start()
     {
         if (SceneManager.GetActiveScene().name == "Intro")
-            PlayBGM("innerpeace");
-        if (SceneManager.GetActiveScene().name == "Main")
-        {
-            PlayBGM("main");
-        }
+            PlayINTRO("innerpeace");
     }
     void AwakeAfter()
     {
@@ -130,5 +126,13 @@ public class SoundManager : MonoBehaviour
             bgmPlayer.volume += 0.1f;
             yield return new WaitForSeconds(0.1f);
         }
+    }
+    public void PlayINTRO(string a_name)
+    {
+        bgmPlayer.clip = bgmClipsDic[a_name];
+        bgmPlayer.volume = 1;
+        bgmPlayer.loop = true;
+        bgmPlayer.Play();
+
     }
 }
