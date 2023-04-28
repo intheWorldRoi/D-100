@@ -12,6 +12,7 @@ public class PhoneScreen : MonoBehaviour
     public GameObject dialog;
     
     public GameObject christmas;
+    public GameObject[] ScrollObjects;
     // Start is called before the first frame update
     
     void Update()
@@ -23,7 +24,7 @@ public class PhoneScreen : MonoBehaviour
             Count++;
             GetComponent<RectTransform>().position += Vector3.up * 650;
             CountReady = false;
-            Invoke("ReadyToCount", 1f);
+            Invoke("ReadyToCount", 0.5f);
         }
 
         if (gameObject.name == "ToeicScreen" && Count >= 3)
@@ -58,6 +59,13 @@ public class PhoneScreen : MonoBehaviour
             gameObject.transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
             GetComponent<RectTransform>().position += Vector3.down * 650 * 3;
             Invoke("goChristPart1", 3.5f);
+        }
+        if(Count >= 3)
+        {
+            for(int i = 0; i < ScrollObjects.Length; i++)
+            {
+                ScrollObjects[i].SetActive(false);
+            }
         }
 
     }

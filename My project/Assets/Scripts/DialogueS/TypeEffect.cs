@@ -13,7 +13,7 @@ public class TypeEffect : MonoBehaviour
 
     float interval;
 
-    public GameObject endcursor;
+    
     SoundManager s;
     
 
@@ -36,7 +36,7 @@ public class TypeEffect : MonoBehaviour
     {
         msgtext.text = "";
         index = 0;
-        endcursor.SetActive(false);
+        
         interval = 1.0f / CPS;
         //Debug.Log(interval);
 
@@ -57,7 +57,7 @@ public class TypeEffect : MonoBehaviour
     private void EffectEnd()
     {
        
-        endcursor.SetActive(true);
+        
         s.StopSound();
 
     }

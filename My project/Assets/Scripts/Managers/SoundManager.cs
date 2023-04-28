@@ -68,10 +68,7 @@ public class SoundManager : MonoBehaviour
     {
         
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            PlaySound("clickSound");
-        }
+        
         
     }
     // 한 번 재생 : 볼륨 매개변수로 지정

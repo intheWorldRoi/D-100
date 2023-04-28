@@ -1,13 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class ActionManager : MonoBehaviour
 {
 
-    StatusManager manager;
     public static int NowActionIndex;
     public static int NowDayIndex;
+
+    public TextMeshProUGUI DepNum, StrNum, LonNum, AnxNum, WilNum, joyNum, healTXT, moneyTXT;
+    public GameObject Review;
+
+    
+
+
 
     //public static string readingBook;
 
@@ -239,5 +247,118 @@ public class ActionManager : MonoBehaviour
         {
             StatusManager.Anxiety -= 5;
         }
+    }
+
+    public void ReviewIndicate(string Dep, string Str, string Lon, string Anx, string Wil, string Joy, string Health, string Money) 
+    {
+        StartCoroutine(Fadein(Review, 0.5f));
+        
+        StartCoroutine(Fadein(Review.transform.GetChild(0).gameObject, 1.5f));
+
+        StartCoroutine(TextFadein(Review.transform.GetChild(0).GetChild(0).gameObject, 1.2f));
+        StartCoroutine(TextFadein(Review.transform.GetChild(0).GetChild(2).GetChild(0).gameObject, 1.2f));
+        StartCoroutine(TextFadein(Review.transform.GetChild(0).GetChild(2).GetChild(1).gameObject, 1.2f));
+
+        StartCoroutine(Reviewsururuk(Dep,Str,Lon,Anx,Wil,Joy, Health, Money));
+    }
+
+    IEnumerator Fadein(GameObject o, float maxAlpha)
+    {
+        float a = 0;
+        if (o.name == "Main")
+        {
+            yield return new WaitForSeconds(1f);
+        }
+
+        yield return new WaitForSeconds(0.2f);
+        while (a <= maxAlpha)
+        {
+            Debug.Log("a = " + a);
+            o.GetComponent<Image>().color = new Color(o.GetComponent<Image>().color.r, o.GetComponent<Image>().color.g, o.GetComponent<Image>().color.b, a);
+            a += 0.1f;
+            yield return new WaitForSeconds(0.1f);
+
+        }
+    }
+
+    IEnumerator TextFadein(GameObject o, float maxAlpha)
+    {
+        float a = 0;
+        
+        if (o.name == "reviewWeek")
+        {
+            yield return new WaitForSeconds(2f);
+        }
+        else if (o.name == "mind")
+        {
+            yield return new WaitForSeconds(2.5f);
+        }
+        else if (o.name == "Implicit")
+        {
+            yield return new WaitForSeconds(3.5f);
+        }
+
+
+        yield return new WaitForSeconds(0.2f);
+        while (a <= maxAlpha)
+        {
+            Debug.Log("a = " + a);
+            o.GetComponent<TextMeshProUGUI>().color = new Color(o.GetComponent<TextMeshProUGUI>().color.r, o.GetComponent<TextMeshProUGUI>().color.g, o.GetComponent<TextMeshProUGUI>().color.b, a);
+            a += 0.1f;
+            yield return new WaitForSeconds(0.1f);
+
+        }
+    }
+
+    IEnumerator Reviewsururuk(string Dep, string Str, string Lon, string Anx, string Wil, string Joy, string Health, string Money)
+    {
+        TypeEffect DepEffect = DepNum.transform.gameObject.GetComponent<TypeEffect>();
+        TypeEffect StrEffect = StrNum.transform.gameObject.GetComponent<TypeEffect>();
+        TypeEffect LonEffect = LonNum.transform.gameObject.GetComponent<TypeEffect>();
+        TypeEffect AnxEffect = AnxNum.transform.gameObject.GetComponent<TypeEffect>();
+        TypeEffect WilEffect = WilNum.transform.gameObject.GetComponent<TypeEffect>();
+        TypeEffect JoyEffect = joyNum.transform.gameObject.GetComponent<TypeEffect>(); //최적화 가능한 방법이 없을까...?
+        TypeEffect HealEffect = healTXT.transform.gameObject.GetComponent<TypeEffect>();
+        TypeEffect MoneyEffect = moneyTXT.transform.gameObject.GetComponent<TypeEffect>();
+
+
+
+        yield return new WaitForSeconds(3f);
+        DepEffect.SetMsg("우울 : " + Dep + "만큼 증가했습니다.");
+        yield return new WaitForSeconds(0.5f);
+        StrEffect.SetMsg("스트레스 : " + Str + "만큼 증가했습니다.");
+        yield return new WaitForSeconds(0.5f);
+        LonEffect.SetMsg("외로움 : " + Lon + "만큼 증가했습니다.");
+        yield return new WaitForSeconds(0.5f);
+        AnxEffect.SetMsg("불안 : " + Anx + "만큼 증가했습니다.");
+        yield return new WaitForSeconds(0.5f);
+        WilEffect.SetMsg("의지 : " + Wil + "만큼 증가했습니다.");
+        yield return new WaitForSeconds(0.5f);
+        JoyEffect.SetMsg("즐거움 : " + Joy + "만큼 증가했습니다");
+
+        yield return new WaitForSeconds(1f);
+        if (StatusManager.healthy > 50 && StatusManager.healthy <80)
+        {
+            HealEffect.SetMsg("건강이 양호하다. 조금만 더 운동하면 될 것 같아!");
+        }
+        else if(StatusManager.healthy < 20)
+        {
+
+            HealEffect.SetMsg("건강이 매우 좋지 않은 것 같다..");
+        }
+        else if (StatusManager.healthy >= 80)
+        {
+            HealEffect.SetMsg("내가 이보다 더 건강했던 적이 있던가 ...?");
+        }
+        else
+        {
+            HealEffect.SetMsg("건강이 그닥 좋지 않다.. 운동을 더 해야겠다.");
+        }
+
+
+        yield return new WaitForSeconds(0.5f);
+        MoneyEffect.SetMsg("돈이 " + Money + "만큼 증가했습니다.");
+        
+
     }
 }

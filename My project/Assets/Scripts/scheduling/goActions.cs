@@ -13,6 +13,8 @@ public class goActions : MonoBehaviour
     public static int dayIndex;                                //list[dayIndex][actionIndex] 접근 값이 childindex와 같음을 이용
     public static int actionIndex;
     public GameObject Desk, Review;
+    public GameObject a;
+    ActionManager actionmanager;
 
     public int preDep, preStr, preLon, preAnx, preWil, prejoy;
     public TextMeshProUGUI DepNum, StrNum, LonNum, AnxNum, WilNum, joyNum, healTXT, moneyTXT;
@@ -21,6 +23,10 @@ public class goActions : MonoBehaviour
 
     public int preMoney;
 
+    private void Awake()
+    {
+        actionmanager = a.GetComponent<ActionManager>();
+    }
     void OnEnable()     //go 버튼 클릭시 활성화되는 오브젝트입니다
     {
         dayIndex = 0;
@@ -63,12 +69,13 @@ public class goActions : MonoBehaviour
         {
 
             GameManager.week++;
+            reviewWeek();
             gameObject.SetActive(false);                                              //스케줄 1주일치 완료시 스스로 비활성화로 루틴 1 종료
             Desk.SetActive(true);
             Diary.actionList.Clear();
             DialogueSystem.IsInAction = false;
             DialogueSystem.NewLoop = true;
-            reviewWeek();
+            
             if (SoundManager.instance.bgmPlayer.clip != SoundManager.instance.bgmClipsDic["main"])
             {
                 SoundManager.instance.PlayBGM("main");
@@ -94,21 +101,10 @@ public class goActions : MonoBehaviour
     public void reviewWeek()
     {
         Review.SetActive(true);
+        actionmanager.ReviewIndicate(PlusMinus(StatusManager.Depress, preDep), PlusMinus(StatusManager.Stress, preStr), PlusMinus(StatusManager.Lonely, preLon),
+            PlusMinus(StatusManager.Anxiety, preAnx), PlusMinus(StatusManager.Willingness, preWil), PlusMinus(StatusManager.Joy, prejoy), PlusMinus(GameManager.money, preMoney), moneyTXT.text = PlusMinus(GameManager.money, preMoney));
 
-        DepNum.text = PlusMinus(StatusManager.Depress, preDep);
-        StrNum.text = PlusMinus(StatusManager.Stress, preStr);
-        LonNum.text = PlusMinus(StatusManager.Lonely, preLon);
-        AnxNum.text = PlusMinus(StatusManager.Anxiety, preAnx);
-        WilNum.text = PlusMinus(StatusManager.Willingness , preWil);
-        joyNum.text = PlusMinus(StatusManager.Joy , prejoy);
-        moneyTXT.text = PlusMinus(GameManager.money , preMoney);
-
-        if (StatusManager.healthy > 50)
-        {
-            healTXT.text = "양호";
-        }
-        else
-            healTXT.text = "운동부족";
+        
     }
     private string PlusMinus(int stat, int preStat)
     {
@@ -119,4 +115,8 @@ public class goActions : MonoBehaviour
         else
             return (stat - preStat).ToString();
     }
+
+
+
+    
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,7 +16,6 @@ public class GameManager : MonoBehaviour
     public static int week =1; // 몇번째 주 인가
 
     public static int money = 30;
-
 
     public static void EndingCheck()
     {
@@ -45,4 +45,8 @@ public class GameManager : MonoBehaviour
             
         }
     }
+
+    
+
+    
 }
