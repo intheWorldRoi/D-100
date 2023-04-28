@@ -12839,6 +12839,8 @@ MonoBehaviour:
   diary: {fileID: 866018719}
   desk: {fileID: 711386479}
   playActions: {fileID: 0}
+  ReviewObjects: []
+  ReviewTexts: []
 --- !u!1 &719635439
 GameObject:
   m_ObjectHideFlags: 0
@@ -13732,6 +13734,8 @@ MonoBehaviour:
   diary: {fileID: 866018719}
   desk: {fileID: 711386479}
   playActions: {fileID: 891744792}
+  ReviewObjects: []
+  ReviewTexts: []
 --- !u!1 &755632548
 GameObject:
   m_ObjectHideFlags: 0
@@ -18209,6 +18213,21 @@ MonoBehaviour:
   diary: {fileID: 0}
   desk: {fileID: 0}
   playActions: {fileID: 0}
+  ReviewObjects:
+  - {fileID: 1251421555}
+  - {fileID: 224797589}
+  ReviewTexts:
+  - {fileID: 1459288921}
+  - {fileID: 359408483}
+  - {fileID: 1907564216}
+  - {fileID: 1809057811}
+  - {fileID: 515636056}
+  - {fileID: 757796752}
+  - {fileID: 667583771}
+  - {fileID: 1402149366}
+  - {fileID: 557657411}
+  - {fileID: 92600642}
+  - {fileID: 1271076188}
 --- !u!114 &938696852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22315,6 +22334,8 @@ MonoBehaviour:
   diary: {fileID: 866018719}
   desk: {fileID: 711386479}
   playActions: {fileID: 891744792}
+  ReviewObjects: []
+  ReviewTexts: []
 --- !u!1 &1235280141
 GameObject:
   m_ObjectHideFlags: 0
