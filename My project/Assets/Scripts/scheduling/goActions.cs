@@ -69,14 +69,14 @@ public class goActions : MonoBehaviour
         {
 
             GameManager.week++;
-            reviewWeek();
+            //reviewWeek();
             gameObject.SetActive(false);                                              //스케줄 1주일치 완료시 스스로 비활성화로 루틴 1 종료
             Desk.SetActive(true);
             Diary.actionList.Clear();
             DialogueSystem.IsInAction = false;
             DialogueSystem.NewLoop = true;
             
-            if (SoundManager.instance.bgmPlayer.clip != SoundManager.instance.bgmClipsDic["main"])
+            if (SoundManager.instance.bgmPlayer.clip != SoundManager.instance.bgmClipsDic["main"] && SceneManager.GetActiveScene().name == "main")
             {
                 SoundManager.instance.PlayBGM("main");
             }
@@ -102,7 +102,7 @@ public class goActions : MonoBehaviour
     {
         Review.SetActive(true);
         actionmanager.ReviewIndicate(PlusMinus(StatusManager.Depress, preDep), PlusMinus(StatusManager.Stress, preStr), PlusMinus(StatusManager.Lonely, preLon),
-            PlusMinus(StatusManager.Anxiety, preAnx), PlusMinus(StatusManager.Willingness, preWil), PlusMinus(StatusManager.Joy, prejoy), PlusMinus(GameManager.money, preMoney), moneyTXT.text = PlusMinus(GameManager.money, preMoney));
+            PlusMinus(StatusManager.Anxiety, preAnx), PlusMinus(StatusManager.Willingness, preWil), PlusMinus(StatusManager.Joy, prejoy), PlusMinus(StatusManager.healthy, preHealthy), PlusMinus(GameManager.money, preMoney));
 
         
     }

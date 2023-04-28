@@ -64,13 +64,6 @@ public class SoundManager : MonoBehaviour
     }
 
 
-    private void Update()
-    {
-        
-
-        
-        
-    }
     // 한 번 재생 : 볼륨 매개변수로 지정
     public void PlaySound(string a_name, float a_volume = 1f)
     {
@@ -112,7 +105,7 @@ public class SoundManager : MonoBehaviour
     IEnumerator volumeUp()
     {
         
-        while(bgmPlayer.volume <= 1)
+        while(bgmPlayer.volume <= masterVolumeBGM)
         {
             yield return new WaitForSeconds(0.2f);
             bgmPlayer.volume += 0.1f;
