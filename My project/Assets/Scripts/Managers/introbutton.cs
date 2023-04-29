@@ -8,7 +8,7 @@ public class introbutton : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(0);
-        SoundManager.instance.PlayBGM("main");
+        SoundManager.instance.PlayINTRO("main");
     }
     public void Update()
     {

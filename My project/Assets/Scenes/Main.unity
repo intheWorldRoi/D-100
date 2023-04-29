@@ -3159,12 +3159,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: eced050d384fb914bbb5c87f622a4e4d, type: 3}
   - {fileID: 8300000, guid: fa955d3bf0ce6da40905ee80f555d851, type: 3}
   - {fileID: 8300000, guid: f3448d4c04c586448a567e6c711a311d, type: 3}
-  - {fileID: 8300000, guid: 93cff9bf1ee039a409b457a72b398ddd, type: 3}
+  - {fileID: 8300000, guid: dd875f67b83cf924d8f6d28c6415969c, type: 3}
   audioClip:
   - {fileID: 8300000, guid: a940f842b6ca95c4fa92c9c80c87f448, type: 3}
-  - {fileID: 8300000, guid: 7313260fa4450fa409691947067509c9, type: 3}
+  - {fileID: 8300000, guid: 39fefe969f98e7543b1e792c5c656fd5, type: 3}
   - {fileID: 8300000, guid: 7318bf6e433792f4cbc56d07a6c75ed5, type: 3}
   - {fileID: 8300000, guid: 1cc8299a536bbc843876dc07a8c3bca6, type: 3}
+  - {fileID: 8300000, guid: dd875f67b83cf924d8f6d28c6415969c, type: 3}
+  - {fileID: 8300000, guid: 3562dfae6546ed445bfe0f14e22f5bfd, type: 3}
   bgmPlayer: {fileID: 0}
   sfxPlayer: {fileID: 0}
 --- !u!1 &166403283

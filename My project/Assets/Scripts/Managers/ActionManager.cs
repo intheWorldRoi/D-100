@@ -13,10 +13,6 @@ public class ActionManager : MonoBehaviour
     public TextMeshProUGUI DepNum, StrNum, LonNum, AnxNum, WilNum, joyNum, healTXT, moneyTXT;
     public GameObject Review;
 
-    
-
-
-
     //public static string readingBook;
 
     public static bool PNP() {
@@ -254,7 +250,7 @@ public class ActionManager : MonoBehaviour
         StartCoroutine(Fadein(Review, 0.5f));
         
         StartCoroutine(Fadein(Review.transform.GetChild(0).gameObject, 1.5f));
-
+        
         StartCoroutine(TextFadein(Review.transform.GetChild(0).GetChild(0).gameObject, 1.2f));
         StartCoroutine(TextFadein(Review.transform.GetChild(0).GetChild(2).GetChild(0).gameObject, 1.2f));
         StartCoroutine(TextFadein(Review.transform.GetChild(0).GetChild(2).GetChild(1).gameObject, 1.2f));
@@ -284,7 +280,7 @@ public class ActionManager : MonoBehaviour
     IEnumerator TextFadein(GameObject o, float maxAlpha)
     {
         float a = 0;
-        
+        SoundManager.instance.PlaySound("sagaksagak");
         if (o.name == "reviewWeek")
         {
             yield return new WaitForSeconds(2f);
@@ -305,6 +301,7 @@ public class ActionManager : MonoBehaviour
             Debug.Log("a = " + a);
             o.GetComponent<TextMeshProUGUI>().color = new Color(o.GetComponent<TextMeshProUGUI>().color.r, o.GetComponent<TextMeshProUGUI>().color.g, o.GetComponent<TextMeshProUGUI>().color.b, a);
             a += 0.1f;
+            
             yield return new WaitForSeconds(0.1f);
 
         }

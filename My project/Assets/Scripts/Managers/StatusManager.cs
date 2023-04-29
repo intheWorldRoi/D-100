@@ -8,11 +8,11 @@ using System.Xml.Serialization;
 
 public class StatusManager : MonoBehaviour
 {
-    public static int Depress = 10;
-    public static int Stress = 10;
-    public static int Lonely = 10;
-    public static int Anxiety = 10;
-    public static int Willingness = 40;
+    public static int Depress = 0;
+    public static int Stress = 0;
+    public static int Lonely = 0;
+    public static int Anxiety = 0;
+    public static int Willingness = 50;
     public static int Joy = 50;
 
 
