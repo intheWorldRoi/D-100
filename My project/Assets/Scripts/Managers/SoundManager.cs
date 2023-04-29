@@ -59,7 +59,7 @@ public class SoundManager : MonoBehaviour
         audioClipsDic = new Dictionary<string, AudioClip>();
         foreach (AudioClip a in audioClip)
         {
-            audioClipsDic.Add(a.name, a);
+            audioClipsDic.Add(a.name, a);   
         }
     }
 
