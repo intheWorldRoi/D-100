@@ -2266,6 +2266,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1cc8299a536bbc843876dc07a8c3bca6, type: 3}
   - {fileID: 8300000, guid: f4c6954b46ec89f43baf4444b65de954, type: 3}
   - {fileID: 8300000, guid: 3562dfae6546ed445bfe0f14e22f5bfd, type: 3}
+  - {fileID: 8300000, guid: 0ba4692b6ab76e149a8bc308b299119e, type: 3}
   bgmPlayer: {fileID: 0}
   sfxPlayer: {fileID: 0}
 --- !u!82 &1534417112

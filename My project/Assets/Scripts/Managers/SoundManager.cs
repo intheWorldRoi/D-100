@@ -106,7 +106,7 @@ public class SoundManager : MonoBehaviour
         while (bgmPlayer.volume > 0)
         {
             yield return new WaitForSeconds(0.06f);
-            bgmPlayer.volume -= 0.05f;
+            bgmPlayer.volume -= 0.1f;
             yield return new WaitForSeconds(0.03f);
         }
         bgmPlayer.clip = bgmClipsDic[a_name];

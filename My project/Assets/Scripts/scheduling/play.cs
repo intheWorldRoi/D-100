@@ -183,7 +183,7 @@ public class play : MonoBehaviour
 
                             }
                        
-                        s.PlayBGM("heartbeat");
+                        s.PlayBGM("stripes"); // 바꾸지마삼..!
 
                     }
                     ActionManager.Partjob();
@@ -199,7 +199,7 @@ public class play : MonoBehaviour
                 }
                 if(madnum == 0)
                 {
-                    s.PlayBGM("stripes");
+                    
                     system.GetComponent<DialogueSystem>().Begin(data.Mad[0]);
                     madnum = 1;
                     

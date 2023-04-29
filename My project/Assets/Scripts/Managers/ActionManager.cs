@@ -13,8 +13,13 @@ public class ActionManager : MonoBehaviour
     public TextMeshProUGUI DepNum, StrNum, LonNum, AnxNum, WilNum, joyNum, healTXT, moneyTXT;
     public GameObject Review;
 
+    SoundManager s;
     //public static string readingBook;
 
+    private void Start()
+    {
+        s = SoundManager.instance;
+    }
     public static bool PNP() {
         if (StatusManager.Stress > 70 || StatusManager.Willingness < 40 || StatusManager.Joy < 40)
             return false;
@@ -321,12 +326,14 @@ public class ActionManager : MonoBehaviour
 
 
         yield return new WaitForSeconds(3f);
+        s.PlaySound("bororong");
         DepEffect.SetMsg("우울 : " + Dep + "만큼 증가했습니다.");
         yield return new WaitForSeconds(0.5f);
         StrEffect.SetMsg("스트레스 : " + Str + "만큼 증가했습니다.");
         yield return new WaitForSeconds(0.5f);
         LonEffect.SetMsg("외로움 : " + Lon + "만큼 증가했습니다.");
         yield return new WaitForSeconds(0.5f);
+        s.PlaySound("bororong");
         AnxEffect.SetMsg("불안 : " + Anx + "만큼 증가했습니다.");
         yield return new WaitForSeconds(0.5f);
         WilEffect.SetMsg("의지 : " + Wil + "만큼 증가했습니다.");
@@ -336,24 +343,28 @@ public class ActionManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         if (StatusManager.healthy > 50 && StatusManager.healthy <80)
         {
+            s.PlaySound("bororong");
             HealEffect.SetMsg("건강이 양호하다. 조금만 더 운동하면 될 것 같아!");
         }
         else if(StatusManager.healthy < 20)
         {
-
+            s.PlaySound("bororong");
             HealEffect.SetMsg("건강이 매우 좋지 않은 것 같다..");
         }
         else if (StatusManager.healthy >= 80)
         {
+            s.PlaySound("bororong");
             HealEffect.SetMsg("내가 이보다 더 건강했던 적이 있던가 ...?");
         }
         else
         {
+            s.PlaySound("bororong");
             HealEffect.SetMsg("건강이 그닥 좋지 않다.. 운동을 더 해야겠다.");
         }
 
 
         yield return new WaitForSeconds(0.5f);
+        s.PlaySound("bororong");
         MoneyEffect.SetMsg("돈이 " + Money + "만큼 증가했습니다.");
         
 
