@@ -7,7 +7,7 @@ public class volumeChange : MonoBehaviour
 {
     private void Awake()
     {
-        if (transform.name == "BGMSlider")
+        if (gameObject.name == "BGMSlider")
             transform.GetComponent<Slider>().value = SoundManager.instance.masterVolumeBGM;
 
         else
@@ -15,7 +15,7 @@ public class volumeChange : MonoBehaviour
     }
     private void Update()
     {
-        if (transform.name == "BGMSlider")
+        if (gameObject.name == "BGMSlider")
             SoundManager.instance.SetVolumeBGM(transform.GetComponent<Slider>().value);
 
         else

@@ -69,7 +69,7 @@ public class goActions : MonoBehaviour
         {
 
             GameManager.week++;
-            //reviewWeek();
+            reviewWeek();
             gameObject.SetActive(false);                                              //스케줄 1주일치 완료시 스스로 비활성화로 루틴 1 종료
             Desk.SetActive(true);
             Diary.actionList.Clear();
