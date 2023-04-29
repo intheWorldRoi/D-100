@@ -82,4 +82,9 @@ public class Diary : MonoBehaviour
                 break;
         }
     }
+    private void Awake()
+    {
+        actionList.Clear();
+        check = false;
+    }
 }

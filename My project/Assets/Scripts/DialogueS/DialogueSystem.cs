@@ -88,12 +88,8 @@ public class DialogueSystem : MonoBehaviour
 
                 return;
             }
-            else if (IsMainScene && IsInAction)
-            {
-                NextSchedule();
-                return;
-            }
-            else if (IsMainScene && InPara)
+            
+            else if (InPara)
             {
                 if (start == end)
                 {
@@ -102,13 +98,17 @@ public class DialogueSystem : MonoBehaviour
                 }
                 Begin(paragragh[start++]);
             }
+            else if (IsMainScene && IsInAction)
+            {
+                NextSchedule();
+                return;
+            }
             else if (IsMainScene && InMad)
             {
                 play.mad = false;
                 NextSchedule();
                 return;
             }
-            
             
             else
             {
@@ -169,5 +169,13 @@ public class DialogueSystem : MonoBehaviour
 
     }
 
-
+    private void Awake()
+    {
+        IsInAction = false;
+        IsSNSAction = false;
+        NewLoop = true;
+        SwitchGoOut = false;
+        InPara = false;
+        InMad = false;
+}
 }

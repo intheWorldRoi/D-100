@@ -5,44 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public Dialogue info;
+    public List<Dialogue> info;
 
     public GameObject textBox;
     public GameObject DialogueSystem;
 
 
+
     private void Start()
     {
+        var system = DialogueSystem.GetComponent<DialogueSystem>();
         
         Scene scene = SceneManager.GetActiveScene();
         if( scene.name == "Ending_GameOver")
-        {
-            Debug.Log("게임오버");
-            GameOver();
+        { 
+            if (GameManager.money <= 0)
+                system.StartDialogue(0, 1, info);
+            else
+                system.Begin(info[1]);
         }
-        else if(scene.name == "Ending_Loser")
-        {
-            Debug.Log("거지엔딩");
-            GameOver_nomoney();
-        }
-        
     }
     public void Trigger()
     {
         var system = DialogueSystem.GetComponent<DialogueSystem>();
         SoundManager.instance.PlaySound("click");
-        system.Begin(info);
-    }
-
-    public void GameOver()
-    {
-        var system = DialogueSystem.GetComponent<DialogueSystem>();
-        system.Begin(info);
-    }
-
-    public void GameOver_nomoney()
-    {
-        var system = DialogueSystem.GetComponent<DialogueSystem>();
-        system.Begin(info);
+        system.Begin(info[0]);
     }
 }

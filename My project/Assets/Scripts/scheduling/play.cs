@@ -161,7 +161,7 @@ public class play : MonoBehaviour
                 {
                     int actionIndex = goActions.actionIndex;
                     int dayIndex = goActions.dayIndex;
-                    if (dayIndex != 6)
+                    if (dayIndex != 6 && GameManager.week != 5)
                     {
                         num = UnityEngine.Random.Range(0, data.playAlba.Count);
                     }
@@ -173,7 +173,7 @@ public class play : MonoBehaviour
                     Image red = gameObject.transform.GetChild(0).GetChild(0).gameObject.GetComponent<Image>();
                     red.color = new Color(255, 0, 0, 0);
                     
-                    if (num == 6) // 
+                    if (num == 6 ) // 
                     {
                         
                         

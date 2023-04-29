@@ -8,7 +8,7 @@ using UnityEngine;
 public class goStory : MonoBehaviour
 {
     public GameObject goActions;
-    private void OnEnable()      //세부구현 필요.
+    private void OnEnable()      
     {
         DialogueSystem.IsInAction = false;
         Debug.Log("스토리 실행");

@@ -8,35 +8,38 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
 
-    public static int Day = 1; //며칠이나 지났나
-    public static int month = 11; //월
-    public static int monthday = 22; //일
+    public static int Day; //며칠이나 지났나
+    public static int month; //월
+    public static int monthday; //일
 
     public static string TODAY; // 오늘은 무슨 요일인
-    public static int week =1; // 몇번째 주 인가
+    public static int week; // 몇번째 주 인가
 
-    public static int money = 30;
+    public static int money;
 
+    private void Awake()
+    {
+        Day = 1;
+        month = 11;
+        monthday = 22;
+        week = 5;
+
+        money = 0;
+    }
     public static void EndingCheck()
     {
         SoundManager s = SoundManager.instance;
-        if(StatusManager.Anxiety >= 100 || StatusManager.Depress >= 100 || StatusManager.Stress >= 100 || StatusManager.Lonely >= 100)
+        if(StatusManager.Anxiety >= 100 || StatusManager.Depress >= 100 || StatusManager.Stress >= 100 || StatusManager.Lonely >= 100 || money < 0)
         {
             SceneManager.LoadScene(1);
             s.PlayBGM("BadMad");
 
         }
-        if(money < 0)
-        {
-            SceneManager.LoadScene(2);
-        }
     }
-
-    
 
     private void Update()
     {
-        if(Day == 100)
+        if(week == 15)
         {
             if(StatusManager.innerpeace > 80 && StatusManager.Engknowledge > 100 && StatusManager.healthy > 80)
             {

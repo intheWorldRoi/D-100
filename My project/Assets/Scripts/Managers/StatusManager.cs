@@ -8,29 +8,15 @@ using System.Xml.Serialization;
 
 public class StatusManager : MonoBehaviour
 {
-    public static int Depress = 0;
-    public static int Stress = 0;
-    public static int Lonely = 0;
-    public static int Anxiety = 0;
-    public static int Willingness = 50;
-    public static int Joy = 50;
-
-
+    public static int Depress, Stress, Lonely,Anxiety, Willingness, Joy;
     //핵심수치
-    public TextMeshProUGUI DepNum;
-    public TextMeshProUGUI StrNum;
-    public TextMeshProUGUI LonNum;
-    public TextMeshProUGUI AnxNum;
-    public TextMeshProUGUI WilNum;
-    public TextMeshProUGUI joyNum;
+    public TextMeshProUGUI DepNum,StrNum, LonNum, AnxNum, WilNum, joyNum;
 
     public RectTransform Depbar, Strbar, Lonbar, Anxbar, Wilbar, joybar;
 
     //세부수치
 
-    public static int Engknowledge = 0; // 1 ~ 100 까지의 수치, 70 이상일시 우선은 도전과제 달성으로 해놓고 나중에 밸패 필요
-    public static int innerpeace = 0;   //깨달음. 히든엔딩
-    public static int healthy = 30; // 1~100 , 건강수치
+    public static int Engknowledge, innerpeace, healthy;
 
     public TextMeshProUGUI EngNum, innerNum, healNum;
 
@@ -38,12 +24,22 @@ public class StatusManager : MonoBehaviour
     public TextMeshProUGUI orderday;
     public TextMeshProUGUI month;
     public TextMeshProUGUI day;
-
-
     //돈 ui
     public TextMeshProUGUI money;
 
+    private void Awake()
+    {
+        Depress = 0;
+        Stress = 0;
+        Lonely = 0;
+        Anxiety = 0;
+        Willingness = 80;
+        Joy = 80;
 
+        Engknowledge = 0;
+        innerpeace = 0;
+        healthy = 30;
+}
 
     // Update is called once per frame
     void Update()
@@ -193,5 +189,7 @@ public class StatusManager : MonoBehaviour
             healthy = 100;
         }
     }
+
+   
 
 }
