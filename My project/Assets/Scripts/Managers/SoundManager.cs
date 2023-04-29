@@ -9,8 +9,8 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager instance;
 
-    public float masterVolumeSFX = 1f;
-    public float masterVolumeBGM = 1f;
+    public float masterVolumeSFX = 1;
+    public float masterVolumeBGM = 1;
 
     [SerializeField] AudioClip[] bgmClip; // 오디오 소스들 지정.
     [SerializeField] AudioClip[] audioClip; // 오디오 소스들 지정.
@@ -35,10 +35,10 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-     void Start()
+    void Start()
     {
         if (SceneManager.GetActiveScene().name == "Intro")
-            PlayINTRO("innerpeace");
+            PlayINTRO("introNomal");
     }
     void AwakeAfter()
     {
@@ -69,21 +69,20 @@ public class SoundManager : MonoBehaviour
     {
         sfxPlayer.PlayOneShot(audioClipsDic[a_name], a_volume * masterVolumeSFX);
     }
-    
+
     public void PlayBGM(string a_name)
     {
-        StartCoroutine(volumeDown());
-        bgmPlayer.clip = bgmClipsDic[a_name];
-        bgmPlayer.volume = 0;
-        bgmPlayer.loop = true;
-        StartCoroutine(volumeUp());
-        bgmPlayer.Play();
-        
+        //StartCoroutine(volumeDown());
+        //bgmPlayer.clip = bgmClipsDic[a_name];
+        //bgmPlayer.loop = true;
+        StartCoroutine(volumeUp(a_name));
+        //bgmPlayer.Play();
+
     }
 
     public void StopBGM()
     {
-        StartCoroutine(volumeDown());
+        //StartCoroutine(volumeDown());
         bgmPlayer.Stop();
     }
     public void StopSound()
@@ -102,30 +101,41 @@ public class SoundManager : MonoBehaviour
         bgmPlayer.volume = masterVolumeBGM;
     }
 
-    IEnumerator volumeUp()
+    IEnumerator volumeUp(string a_name)
     {
-        
-        while(bgmPlayer.volume <= masterVolumeBGM)
+        while (bgmPlayer.volume > 0)
         {
-            yield return new WaitForSeconds(0.2f);
-            bgmPlayer.volume += 0.1f;
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.06f);
+            bgmPlayer.volume -= 0.05f;
+            yield return new WaitForSeconds(0.03f);
         }
+        bgmPlayer.clip = bgmClipsDic[a_name];
+        bgmPlayer.loop = true;
+        bgmPlayer.Play();
+        while (bgmPlayer.volume < masterVolumeBGM)
+        {
+            yield return new WaitForSeconds(0.06f);
+            bgmPlayer.volume += 0.1f;
+            yield return new WaitForSeconds(0.03f);
+        }
+        bgmPlayer.volume = masterVolumeBGM;
+
     }
 
     IEnumerator volumeDown()
     {
-        while(bgmPlayer.volume >= 0)
+        while (bgmPlayer.volume >= 0)
         {
             yield return new WaitForSeconds(0.2f);
-            bgmPlayer.volume += 0.1f;
+            bgmPlayer.volume -= 0.1f;
             yield return new WaitForSeconds(0.1f);
         }
+
     }
     public void PlayINTRO(string a_name)
     {
         bgmPlayer.clip = bgmClipsDic[a_name];
-        bgmPlayer.volume = 1;
+        bgmPlayer.volume = masterVolumeBGM;
         bgmPlayer.loop = true;
         bgmPlayer.Play();
 

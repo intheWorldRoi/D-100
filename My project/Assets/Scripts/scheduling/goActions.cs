@@ -69,25 +69,26 @@ public class goActions : MonoBehaviour
         {
 
             GameManager.week++;
-            //reviewWeek();
+            reviewWeek();
             gameObject.SetActive(false);                                              //스케줄 1주일치 완료시 스스로 비활성화로 루틴 1 종료
             Desk.SetActive(true);
             Diary.actionList.Clear();
             DialogueSystem.IsInAction = false;
             DialogueSystem.NewLoop = true;
             
-            if (SoundManager.instance.bgmPlayer.clip != SoundManager.instance.bgmClipsDic["main"] && SceneManager.GetActiveScene().name == "main")
+            if (SoundManager.instance.bgmPlayer.clip != SoundManager.instance.bgmClipsDic["main"] && SceneManager.GetActiveScene().name == "Main")
             {
                 SoundManager.instance.PlayBGM("main");
             }
             return;
         }
 
-        transform.GetChild(Diary.actionList[dayIndex][actionIndex]).gameObject.SetActive(true);         //다음 스케줄 활성화
-        if (SoundManager.instance.bgmPlayer.clip != SoundManager.instance.bgmClipsDic["main"] && SceneManager.GetActiveScene().name == "main")
+        if (SoundManager.instance.bgmPlayer.clip != SoundManager.instance.bgmClipsDic["main"] && SceneManager.GetActiveScene().name == "Main" && DialogueSystem.InMad == false)
         {
             SoundManager.instance.PlayBGM("main");
         }
+        transform.GetChild(Diary.actionList[dayIndex][actionIndex]).gameObject.SetActive(true);         //다음 스케줄 활성화
+        
 
 
     }

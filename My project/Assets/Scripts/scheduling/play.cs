@@ -182,10 +182,8 @@ public class play : MonoBehaviour
                                 Diary.actionList[dayIndex + 1][i] = 7;
 
                             }
-                        s.StopBGM();
-                        
-                        s.PlayBGM("stripes");
-                        
+                       
+                        s.PlayBGM("heartbeat");
 
                     }
                     ActionManager.Partjob();
@@ -201,6 +199,7 @@ public class play : MonoBehaviour
                 }
                 if(madnum == 0)
                 {
+                    s.PlayBGM("stripes");
                     system.GetComponent<DialogueSystem>().Begin(data.Mad[0]);
                     madnum = 1;
                     
@@ -215,7 +214,6 @@ public class play : MonoBehaviour
                 {
                     system.GetComponent<DialogueSystem>().Begin(data.Mad[2]);
                     madnum = 0;
-                    s.PlayBGM("main");
                     
                 }
                 
@@ -246,7 +244,7 @@ public class play : MonoBehaviour
                     StartCoroutine(FadeOutCoroutine(redSprite));
                 }
 
-                if (StatusManager.Stress < 100)
+                if (StatusManager.Stress < 99)
                 {
                     if (ReadyToUp)
                     {
