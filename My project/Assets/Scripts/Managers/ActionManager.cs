@@ -13,6 +13,8 @@ public class ActionManager : MonoBehaviour
     public TextMeshProUGUI DepNum, StrNum, LonNum, AnxNum, WilNum, joyNum, healTXT, moneyTXT;
     public GameObject Review;
 
+    public GameObject data;
+
     SoundManager s;
     //public static string readingBook;
 
@@ -252,9 +254,9 @@ public class ActionManager : MonoBehaviour
 
     public void ReviewIndicate(string Dep, string Str, string Lon, string Anx, string Wil, string Joy, string Health, string Money) 
     {
-        StartCoroutine(Fadein(Review, 0.5f));
+        StartCoroutine(Fadein(Review, 0.5f, 0));
         
-        StartCoroutine(Fadein(Review.transform.GetChild(0).gameObject, 1.5f));
+        StartCoroutine(Fadein(Review.transform.GetChild(0).gameObject, 1.5f, 1f));
         
         StartCoroutine(TextFadein(Review.transform.GetChild(0).GetChild(0).gameObject, 1.2f));
         StartCoroutine(TextFadein(Review.transform.GetChild(0).GetChild(2).GetChild(0).gameObject, 1.2f));
@@ -263,13 +265,12 @@ public class ActionManager : MonoBehaviour
         StartCoroutine(Reviewsururuk(Dep,Str,Lon,Anx,Wil,Joy, Health, Money));
     }
 
-    IEnumerator Fadein(GameObject o, float maxAlpha)
+    IEnumerator Fadein(GameObject o, float maxAlpha, float wait)
     {
         float a = 0;
-        if (o.name == "Main")
-        {
-            yield return new WaitForSeconds(1f);
-        }
+        
+         yield return new WaitForSeconds(wait);
+        
 
         yield return new WaitForSeconds(0.2f);
         while (a <= maxAlpha)
@@ -367,6 +368,20 @@ public class ActionManager : MonoBehaviour
         s.PlaySound("bororong");
         MoneyEffect.SetMsg("돈이 " + Money + "만큼 증가했습니다.");
         
+
+    }
+
+    public IEnumerator WeekDiary(int week)
+    {
+        yield return new WaitForSeconds(0.1f);
+        StartCoroutine(Fadein(Review, 0.4f, 0));
+        GameObject notepad = Review.transform.GetChild(2).gameObject;
+        StartCoroutine(Fadein(notepad, 1.2f, 0.5f));
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(TextFadein(notepad.transform.GetChild(0).gameObject, 1.2f));
+        yield return new WaitForSeconds(0.4f);
+        StartCoroutine(TextFadein(notepad.transform.GetChild(1).gameObject, 1.2f));
+        notepad.transform.GetChild(1).gameObject.GetComponent<TypeEffect>().SetMsg(data.GetComponent<DialogueData>().diarys[week-2]);
 
     }
 }

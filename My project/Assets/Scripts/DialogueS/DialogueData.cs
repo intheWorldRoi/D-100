@@ -38,7 +38,8 @@ public class DialogueData : MonoBehaviour
     public List<Dialogue> EpToeic;
 
     public List<Dialogue> Mad;
-  
+
+    public List<string> diarys;
 
 
 

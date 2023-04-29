@@ -15,6 +15,8 @@ public class Hide : MonoBehaviour
     public GameObject[] ReviewObjects;
     public TextMeshProUGUI[] ReviewTexts;
 
+    public GameObject ActionManager;
+
     public void HideDiary()          //exit 버튼에서 쓰임
     {
         SoundManager.instance.PlaySound("click");
@@ -68,6 +70,35 @@ public class Hide : MonoBehaviour
                 ReviewTexts[i].GetComponent<TextMeshProUGUI>().text = "";
             }
         }
+    }
+
+    public void NextBtn()
+    {
+        Debug.Log("작동");
+        for (int i = 0; i < ReviewObjects.Length; i++)
+        {
+            ReviewObjects[i].GetComponent<Image>().color = new Color(ReviewObjects[i].GetComponent<Image>().color.r,
+                ReviewObjects[i].GetComponent<Image>().color.g,
+                ReviewObjects[i].GetComponent<Image>().color.b, 0);
+        }
+        for (int i = 0; i < ReviewTexts.Length; i++)
+        {
+            if (i < 3)
+            {
+                ReviewTexts[i].GetComponent<TextMeshProUGUI>().color = new Color(255, 255, 255, 0);
+            }
+            else
+            {
+                ReviewTexts[i].GetComponent<TextMeshProUGUI>().text = "";
+            }
+        }
+
+        ActionManager am = ActionManager.GetComponent<ActionManager>();
+
+        am.StartCoroutine(am.WeekDiary(GameManager.week));
+        
+
+
     }
     public void openSetting()          
     {
