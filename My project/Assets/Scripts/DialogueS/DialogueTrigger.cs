@@ -11,7 +11,6 @@ public class DialogueTrigger : MonoBehaviour
     public GameObject DialogueSystem;
 
 
-
     private void Start()
     {
         var system = DialogueSystem.GetComponent<DialogueSystem>();
@@ -31,4 +30,14 @@ public class DialogueTrigger : MonoBehaviour
         SoundManager.instance.PlaySound("click");
         system.Begin(info[0]);
     }
+    public void introDia()
+    {
+        var system = DialogueSystem.GetComponent<DialogueSystem>();
+        system.Begin(info[0]);
+    }
+    public void letsStart() {
+        var system = DialogueSystem.GetComponent<DialogueSystem>();
+        system.Begin(info[1]);
+    }
+
 }

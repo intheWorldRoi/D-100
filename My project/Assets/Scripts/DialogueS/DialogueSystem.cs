@@ -152,10 +152,14 @@ public class DialogueSystem : MonoBehaviour
             goActions.transform.GetChild(6).GetComponent<goStory>().DivEpisode();
         }
 
-        if (!IsMainScene)
+        if (SceneManager.GetActiveScene().name == "Ending_GameOver")
         {
             
             transform.GetChild(0).gameObject.SetActive(true);
+        }
+        if(SceneManager.GetActiveScene().name == "Intro")
+        {
+
         }
     }
 

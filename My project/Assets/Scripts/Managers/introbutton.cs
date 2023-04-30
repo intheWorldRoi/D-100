@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class introbutton : MonoBehaviour
 {
+    public GameObject introVideo;
     public void StartGame()
     {
-        SceneManager.LoadScene(0);
-        SoundManager.instance.PlayINTRO("main");
+        introVideo.SetActive(true);
     }
     public void Update()
     {
