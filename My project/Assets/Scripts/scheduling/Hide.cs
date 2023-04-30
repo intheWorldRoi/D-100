@@ -65,9 +65,13 @@ public class Hide : MonoBehaviour
             {
                 ReviewTexts[i].GetComponent<TextMeshProUGUI>().color = new Color(255, 255, 255, 0);
             }
-            else
+            else if(i < 12)
             {
                 ReviewTexts[i].GetComponent<TextMeshProUGUI>().text = "";
+            }
+            else if(i == 12)
+            {
+                ReviewTexts[i].GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 0);
             }
         }
     }
@@ -87,10 +91,11 @@ public class Hide : MonoBehaviour
             {
                 ReviewTexts[i].GetComponent<TextMeshProUGUI>().color = new Color(255, 255, 255, 0);
             }
-            else
+            else if(i < 12)
             {
                 ReviewTexts[i].GetComponent<TextMeshProUGUI>().text = "";
             }
+            
         }
 
         ActionManager am = ActionManager.GetComponent<ActionManager>();

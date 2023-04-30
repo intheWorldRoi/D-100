@@ -286,7 +286,7 @@ public class ActionManager : MonoBehaviour
     IEnumerator TextFadein(GameObject o, float maxAlpha)
     {
         float a = 0;
-        SoundManager.instance.PlaySound("sagaksagak");
+        
         if (o.name == "reviewWeek")
         {
             yield return new WaitForSeconds(2f);
@@ -380,7 +380,8 @@ public class ActionManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         StartCoroutine(TextFadein(notepad.transform.GetChild(0).gameObject, 1.2f));
         yield return new WaitForSeconds(0.4f);
-        StartCoroutine(TextFadein(notepad.transform.GetChild(1).gameObject, 1.2f));
+        SoundManager.instance.PlaySound("sagaksagak");
+        //StartCoroutine(TextFadein(notepad.transform.GetChild(1).gameObject, 1.2f));
         notepad.transform.GetChild(1).gameObject.GetComponent<TypeEffect>().SetMsg(data.GetComponent<DialogueData>().diarys[week-2]);
 
     }
