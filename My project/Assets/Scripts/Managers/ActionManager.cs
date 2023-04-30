@@ -381,7 +381,7 @@ public class ActionManager : MonoBehaviour
         StartCoroutine(TextFadein(notepad.transform.GetChild(0).gameObject, 1.2f));
         yield return new WaitForSeconds(0.4f);
         SoundManager.instance.PlaySound("sagaksagak");
-        //StartCoroutine(TextFadein(notepad.transform.GetChild(1).gameObject, 1.2f));
+        StartCoroutine(TextFadein(notepad.transform.GetChild(1).gameObject, 1.2f));
         notepad.transform.GetChild(1).gameObject.GetComponent<TypeEffect>().SetMsg(data.GetComponent<DialogueData>().diarys[week-2]);
 
     }

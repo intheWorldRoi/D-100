@@ -19,12 +19,16 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        Day = 1;
-        month = 11;
-        monthday = 22;
-        week = 1;
+        if (SceneManager.GetActiveScene().name == "Intro")
+        {
+            Day = 1;
+            month = 11;
+            monthday = 22;
+            week = 5;
 
-        money = 0;
+            money = 30;
+        }
+        
     }
     public static void EndingCheck()
     {
@@ -37,15 +41,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Update()
+    public static void Ending()
     {
-        if(week == 15)
+        if (Day == 100)
         {
-            if(StatusManager.innerpeace > 80 && StatusManager.Engknowledge > 100 && StatusManager.healthy > 80)
+            if (money > 200)
             {
-                //Âð¿£µù¾À ºÎ¸£±â
+                SceneManager.LoadScene(4);
             }
-            
+            else
+            {
+                SceneManager.LoadScene(3);
+            }
         }
     }
 

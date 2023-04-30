@@ -72,6 +72,7 @@ public class SoundManager : MonoBehaviour
 
     public void PlayBGM(string a_name)
     {
+        StopCoroutine(volumeUp(a_name));
         //StartCoroutine(volumeDown());
         //bgmPlayer.clip = bgmClipsDic[a_name];
         //bgmPlayer.loop = true;

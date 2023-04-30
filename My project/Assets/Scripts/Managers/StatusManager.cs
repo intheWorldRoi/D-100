@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using JetBrains.Annotations;
 using System.Xml.Serialization;
+using UnityEngine.SceneManagement;
 
 public class StatusManager : MonoBehaviour
 {
@@ -29,16 +30,20 @@ public class StatusManager : MonoBehaviour
 
     private void Awake()
     {
-        Depress = 0;
-        Stress = 0;
-        Lonely = 0;
-        Anxiety = 0;
-        Willingness = 80;
-        Joy = 80;
+        if(SceneManager.GetActiveScene().name == "Intro")
+        {
+            Depress = 0;
+            Stress = 0;
+            Lonely = 0;
+            Anxiety = 0;
+            Willingness = 80;
+            Joy = 80;
 
-        Engknowledge = 0;
-        innerpeace = 0;
-        healthy = 30;
+            Engknowledge = 0;
+            innerpeace = 0;
+            healthy = 30;
+        }
+        
 }
 
     // Update is called once per frame

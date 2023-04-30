@@ -38,10 +38,8 @@ public class EndingCredit : MonoBehaviour
     }
     private void replay()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 1) //게임오버시
-        {
+            StopCoroutine(Fadein());
             StartCoroutine(Up());
-        }
     }
     IEnumerator Up()
     {

@@ -21,6 +21,7 @@ public class episodeChristmas : MonoBehaviour
 
         if (gameObject.transform.name == "Christmas")
         {
+            SoundManager.instance.PlayBGM("christmas");
             system.GetComponent<DialogueSystem>().Begin(data.EpChrist[0]);
             PhoneWidget.GetComponent<BuffAnim>().enabled = true;
         }
@@ -73,5 +74,6 @@ public class episodeChristmas : MonoBehaviour
     public void closeChrist()
     {
         transform.parent.gameObject.SetActive(false);
+        SoundManager.instance.PlayBGM("main");
     }
 }
