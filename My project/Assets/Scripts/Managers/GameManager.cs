@@ -17,16 +17,17 @@ public class GameManager : MonoBehaviour
 
     public static int money;
 
+    public static bool ending;
     private void Awake()
     {
         if (SceneManager.GetActiveScene().name == "Main")
         {
-            Day = 1;
+            Day = 92;
             month = 11;
             monthday = 22;
-            week = 1;
+            week = 13;
 
-            money = 30;
+            money = 2   30;
         }
         
     }
@@ -45,9 +46,11 @@ public class GameManager : MonoBehaviour
     {
         if (Day == 100)
         {
+            Debug.Log("day == 100");
             if (money > 200)
             {
                 SceneManager.LoadScene(4);
+
             }
             else
             {

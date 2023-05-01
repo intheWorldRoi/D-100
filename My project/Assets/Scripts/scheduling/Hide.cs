@@ -17,6 +17,14 @@ public class Hide : MonoBehaviour
 
     public GameObject ActionManager;
 
+    DialogueData data;
+
+    SoundManager s;
+    private void Awake()
+    {
+        s = SoundManager.instance;
+    }
+
     public void HideDiary()          //exit 버튼에서 쓰임
     {
         SoundManager.instance.PlaySound("click");
@@ -52,36 +60,84 @@ public class Hide : MonoBehaviour
     }
     public void exitBtn()              
     {
-        transform.parent.gameObject.SetActive(false);
-        for(int i = 0; i < ReviewObjects.Length; i++)
+        if(GameManager.Day == 99) // 99일 여기서 처리합니다
         {
-            ReviewObjects[i].GetComponent<Image>().color = new Color(ReviewObjects[i].GetComponent<Image>().color.r, 
-                ReviewObjects[i].GetComponent<Image>().color.g, 
-                ReviewObjects[i].GetComponent<Image>().color.b, 0);
-        }
-        for(int i = 0; i < ReviewTexts.Length; i++)
-        {
-            if(i < 3)
+            transform.parent.parent.GetChild(0).gameObject.SetActive(false); // deskimage 비활성화
+            data = DialogueData.data;
+            
+            StartCoroutine(day99());
+            for (int i = 0; i < ReviewObjects.Length; i++)
             {
-                ReviewTexts[i].GetComponent<TextMeshProUGUI>().color = new Color(255, 255, 255, 0);
+                ReviewObjects[i].GetComponent<Image>().color = new Color(ReviewObjects[i].GetComponent<Image>().color.r,
+                    ReviewObjects[i].GetComponent<Image>().color.g,
+                    ReviewObjects[i].GetComponent<Image>().color.b, 0);
             }
-            else if(i < 12)
+            for (int i = 0; i < ReviewTexts.Length; i++)
             {
-                ReviewTexts[i].GetComponent<TextMeshProUGUI>().text = "";
-                if(i  == 11)
+                if (i < 3)
+                {
+                    ReviewTexts[i].GetComponent<TextMeshProUGUI>().color = new Color(255, 255, 255, 0);
+                }
+                else if (i < 12)
+                {
+                    ReviewTexts[i].GetComponent<TextMeshProUGUI>().text = "";
+                    if (i == 11)
+                    {
+                        ReviewTexts[i].GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 0);
+                    }
+                }
+                else if (i == 12)
                 {
                     ReviewTexts[i].GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 0);
                 }
             }
-            else if(i == 12)
-            {
-                ReviewTexts[i].GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 0);
-            }
+            transform.parent.GetChild(3).gameObject.SetActive(false);
+            this.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+            this.GetComponent<Button>().interactable = false;
+
+            
+
         }
+        else
+        {
+            transform.parent.gameObject.SetActive(false);
+            for (int i = 0; i < ReviewObjects.Length; i++)
+            {
+                ReviewObjects[i].GetComponent<Image>().color = new Color(ReviewObjects[i].GetComponent<Image>().color.r,
+                    ReviewObjects[i].GetComponent<Image>().color.g,
+                    ReviewObjects[i].GetComponent<Image>().color.b, 0);
+            }
+            for (int i = 0; i < ReviewTexts.Length; i++)
+            {
+                if (i < 3)
+                {
+                    ReviewTexts[i].GetComponent<TextMeshProUGUI>().color = new Color(255, 255, 255, 0);
+                }
+                else if (i < 12)
+                {
+                    ReviewTexts[i].GetComponent<TextMeshProUGUI>().text = "";
+                    if (i == 11)
+                    {
+                        ReviewTexts[i].GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 0);
+                    }
+                }
+                else if (i == 12)
+                {
+                    ReviewTexts[i].GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 0);
+                }
+            }
+            transform.parent.GetChild(3).gameObject.SetActive(false);
+            gameObject.SetActive(false);
+            s.PlayBGM("main");  
+
+        }
+        
+        
     }
 
     public void NextBtn()
     {
+        
         Debug.Log("작동");
         for (int i = 0; i < ReviewObjects.Length; i++)
         {
@@ -105,12 +161,21 @@ public class Hide : MonoBehaviour
         ActionManager am = ActionManager.GetComponent<ActionManager>();
 
         am.StartCoroutine(am.WeekDiary(GameManager.week));
-        
 
 
+        this.GetComponent<Button>().interactable = false;
     }
     public void openSetting()          
     {
         transform.GetChild(0).gameObject.SetActive(true);
+    }
+
+
+    IEnumerator day99()
+    {
+        yield return new WaitForSeconds(3f);
+        DialogueSystem.system.Begin(data.ninetynine[0]);
+        yield return new WaitForSeconds(1f);
+        transform.parent.gameObject.SetActive(false);
     }
 }

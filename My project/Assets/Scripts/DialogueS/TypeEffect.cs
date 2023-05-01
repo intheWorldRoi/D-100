@@ -60,5 +60,11 @@ public class TypeEffect : MonoBehaviour
         
         //s.StopSound();
 
+        if(this.gameObject.name == "content")
+        {
+            
+            gameObject.transform.parent.parent.GetChild(1).gameObject.SetActive(true);
+        }
+
     }
 }

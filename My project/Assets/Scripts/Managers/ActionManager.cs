@@ -254,6 +254,7 @@ public class ActionManager : MonoBehaviour
 
     public void ReviewIndicate(string Dep, string Str, string Lon, string Anx, string Wil, string Joy, string Health, string Money) 
     {
+        s.PlayBGM("review");
         StartCoroutine(Fadein(Review, 0.5f, 0));
         
         StartCoroutine(Fadein(Review.transform.GetChild(0).gameObject, 1.5f, 1f));
@@ -368,7 +369,10 @@ public class ActionManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         s.PlaySound("bororong");
         MoneyEffect.SetMsg("돈이 " + Money + "만큼 증가했습니다.");
-        
+
+        yield return new WaitForSeconds(1f);
+        Review.transform.GetChild(3).gameObject.SetActive(true);
+        Review.transform.GetChild(3).gameObject.GetComponent<Button>().interactable = true;
 
     }
 
@@ -384,6 +388,7 @@ public class ActionManager : MonoBehaviour
         SoundManager.instance.PlaySound("sagaksagak");
         StartCoroutine(TextFadein(notepad.transform.GetChild(1).gameObject, 1.2f));
         notepad.transform.GetChild(1).gameObject.GetComponent<TypeEffect>().SetMsg(data.GetComponent<DialogueData>().diarys[week-2]);
+        
 
     }
 }
