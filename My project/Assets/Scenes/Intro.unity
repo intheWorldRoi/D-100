@@ -2678,6 +2678,7 @@ MonoBehaviour:
   TextBox2: {fileID: 0}
   goActions: {fileID: 0}
   diary: {fileID: 0}
+  ninebackground: {fileID: 0}
 --- !u!4 &993808625
 Transform:
   m_ObjectHideFlags: 0
@@ -3498,6 +3499,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f3448d4c04c586448a567e6c711a311d, type: 3}
   - {fileID: 8300000, guid: 93cff9bf1ee039a409b457a72b398ddd, type: 3}
   - {fileID: 8300000, guid: dd875f67b83cf924d8f6d28c6415969c, type: 3}
+  - {fileID: 8300000, guid: b1bb525d052586f449b7304909d8dede, type: 3}
   audioClip:
   - {fileID: 8300000, guid: a940f842b6ca95c4fa92c9c80c87f448, type: 3}
   - {fileID: 8300000, guid: dd875f67b83cf924d8f6d28c6415969c, type: 3}

@@ -8,6 +8,7 @@ public class DialogueData : MonoBehaviour
 {
     string myname;
 
+    public static DialogueData data;
     Dictionary<int, string[]> TextData;
     
     public List<Dialogue> SuccessBooks;
@@ -40,9 +41,13 @@ public class DialogueData : MonoBehaviour
     public List<Dialogue> Mad;
 
     public List<string> diarys;
+    public List<Dialogue> ninetynine;
 
 
-
+    private void Awake()
+    {
+        data = this;
+    }
     void GenerateData()
     {
         

@@ -9,6 +9,8 @@ using UnityEngine.SceneManagement;
 
 public class DialogueSystem : MonoBehaviour
 {
+
+    public static DialogueSystem system;
     public static bool IsInAction = false;
     public static bool IsSNSAction = false;
     public static bool NewLoop = true;
@@ -25,7 +27,9 @@ public class DialogueSystem : MonoBehaviour
     public GameObject TextBox2;
     public GameObject goActions;
     public GameObject diary;
-    
+
+    public GameObject ninebackground;
+
 
     List<Dialogue> paragragh = new List<Dialogue>();
     int start, end;
@@ -33,8 +37,8 @@ public class DialogueSystem : MonoBehaviour
 
     Queue<string> sentences = new Queue<string>(); //순차적으로 dialogue 클래스에서 문장을 받아 보여줘야하므로 queue 사용
 
-
-
+    bool nine;
+    
     public void Start()
     {
         if (SceneManager.GetActiveScene().name == "Main")
@@ -45,6 +49,8 @@ public class DialogueSystem : MonoBehaviour
         {
             IsMainScene = false;
         }
+
+        nine = true;
     }
     public void StartDialogue(int firstindex, int lastindex, List<Dialogue> para)
     {
@@ -109,7 +115,19 @@ public class DialogueSystem : MonoBehaviour
                 NextSchedule();
                 return;
             }
-            
+            if (SceneManager.GetActiveScene().name == "Main" && GameManager.Day == 99 && nine)
+            {
+                
+                Begin(DialogueData.data.ninetynine[1]);
+                ninebackground.SetActive(true);
+                nine = false;
+            }
+            else if (SceneManager.GetActiveScene().name == "Main" && GameManager.Day == 99 && !nine)
+            {
+                dayplus();
+                GameManager.Ending();
+            }
+
             else
             {
                 End();
@@ -118,7 +136,7 @@ public class DialogueSystem : MonoBehaviour
         }
         else
         {
-            //Debug.Log(sentences.Peek());
+            
             if (sentences.Peek().Contains("아.... 정말 스트레스가..  주체가 안 돼.")) // 폭주 지점 확인
             {     
                 play.mad = true;
@@ -140,7 +158,13 @@ public class DialogueSystem : MonoBehaviour
     }
     private void End()
     {
-        if (IsMainScene && NewLoop)
+        if (!nine && GameManager.Day == 99)
+        {
+            dayplus();
+            GameManager.Ending();
+            nine = true;
+        }
+        else if (IsMainScene && NewLoop)
         {
             diary.SetActive(true);
             diary.GetComponentInParent<Button>().enabled = false;
@@ -152,10 +176,12 @@ public class DialogueSystem : MonoBehaviour
             goActions.transform.GetChild(6).GetComponent<goStory>().DivEpisode();
         }
 
-        if (SceneManager.GetActiveScene().name != "Intro"|| SceneManager.GetActiveScene().name != "Main")
+        if (SceneManager.GetActiveScene().name != "Intro"&& SceneManager.GetActiveScene().name != "Main")
         {
             transform.GetChild(0).gameObject.SetActive(true);
         }
+
+        
     }
 
     
@@ -176,5 +202,11 @@ public class DialogueSystem : MonoBehaviour
         SwitchGoOut = false;
         InPara = false;
         InMad = false;
-}
+        system = this;
+    }
+
+    void dayplus()
+    {
+        GameManager.Day++;
+    }
 }
