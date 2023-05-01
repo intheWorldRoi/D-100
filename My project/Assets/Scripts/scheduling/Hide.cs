@@ -68,6 +68,10 @@ public class Hide : MonoBehaviour
             else if(i < 12)
             {
                 ReviewTexts[i].GetComponent<TextMeshProUGUI>().text = "";
+                if(i  == 11)
+                {
+                    ReviewTexts[i].GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 0);
+                }
             }
             else if(i == 12)
             {

@@ -261,6 +261,7 @@ public class ActionManager : MonoBehaviour
         StartCoroutine(TextFadein(Review.transform.GetChild(0).GetChild(0).gameObject, 1.2f));
         StartCoroutine(TextFadein(Review.transform.GetChild(0).GetChild(2).GetChild(0).gameObject, 1.2f));
         StartCoroutine(TextFadein(Review.transform.GetChild(0).GetChild(2).GetChild(1).gameObject, 1.2f));
+        StartCoroutine(Fadein(Review.transform.GetChild(0).GetChild(3).gameObject, 1.2f, 1f));
 
         StartCoroutine(Reviewsururuk(Dep,Str,Lon,Anx,Wil,Joy, Health, Money));
     }
