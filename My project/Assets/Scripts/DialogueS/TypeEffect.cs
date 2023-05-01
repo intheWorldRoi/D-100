@@ -57,7 +57,7 @@ public class TypeEffect : MonoBehaviour
     private void EffectEnd()
     {
        
-        
+ 
          s.StopSound();
         
         

@@ -135,6 +135,7 @@ public class DialogueSystem : MonoBehaviour
                 Debug.Log("dummysUp ¿€µø");
                 e.badEndingAnimation();
                 dummysUpSwitch = false;
+                TextBox.SetActive(false);
             }
 
             else

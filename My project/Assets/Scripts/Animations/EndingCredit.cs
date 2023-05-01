@@ -33,7 +33,7 @@ public class EndingCredit : MonoBehaviour
     }
     void Start()
     {
-        if (SceneManager.GetActiveScene().name == "Ending_GameOver")
+        if (SceneManager.GetActiveScene().name == "Ending_GameOver"|| DialogueTrigger.endingNum !=8)
         {
             StartCoroutine(Fadein());
             Invoke("replay", 5f);

@@ -12,9 +12,10 @@ public class DialogueTrigger : MonoBehaviour
     public GameObject textBox;
     public GameObject DialogueSystem;
 
-
+    public static int endingNum;
     private void Start()
     {
+        endingNum = -1;
         var system = DialogueSystem.GetComponent<DialogueSystem>();
         
         Scene scene = SceneManager.GetActiveScene();
@@ -28,9 +29,9 @@ public class DialogueTrigger : MonoBehaviour
        
         if (scene.name == "Ending_Nomal" || scene.name == "Ending_Trip")
         {   
-            int num = infoCal(StatusManager.Engknowledge, StatusManager.healthy, StatusManager.innerpeace);
+            endingNum = infoCal(StatusManager.Engknowledge, StatusManager.healthy, StatusManager.innerpeace);
             
-            system.Begin(info[num]);
+            system.Begin(info[endingNum]);
         }
     }
     public void Trigger()

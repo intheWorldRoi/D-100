@@ -48,14 +48,20 @@ public class Ending : MonoBehaviour
             
         }
 
-        StartCoroutine(NextBadDialogue());
+        Invoke("NextBadDialogue", 2f);
+        //StartCoroutine(NextBadDialogue());
 
         
     }
-    IEnumerator NextBadDialogue()
+    /*IEnumerator NextBadDialogue()
     {
         yield return new WaitForSeconds(2f);
         gameObject.transform.parent.GetComponent<DialogueSystem>().Begin(gameObject.transform.GetChild(0).GetComponent<DialogueTrigger>().info[8]);
 
+    }*/
+
+    void NextBadDialogue()
+    {
+        gameObject.transform.parent.GetComponent<DialogueSystem>().Begin(gameObject.transform.GetChild(0).GetComponent<DialogueTrigger>().info[8]);
     }
 }
