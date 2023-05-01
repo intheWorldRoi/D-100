@@ -38,6 +38,8 @@ public class DialogueSystem : MonoBehaviour
     Queue<string> sentences = new Queue<string>(); //순차적으로 dialogue 클래스에서 문장을 받아 보여줘야하므로 queue 사용
 
     bool nine;
+
+    bool dummysUpSwitch;
     
     public void Start()
     {
@@ -127,6 +129,13 @@ public class DialogueSystem : MonoBehaviour
                 dayplus();
                 GameManager.Ending();
             }
+            if (SceneManager.GetActiveScene().name == "Ending_Nomal" && dummysUpSwitch)
+            {
+                Ending e = transform.GetChild(1).GetComponent<Ending>();
+                Debug.Log("dummysUp 작동");
+                e.badEndingAnimation();
+                dummysUpSwitch = false;
+            }
 
             else
             {
@@ -147,7 +156,11 @@ public class DialogueSystem : MonoBehaviour
                 play.mad = true;
                 InMad = true;
             }
-            SoundManager s = SoundManager.instance;
+            else if(sentences.Peek().Contains("힘들다고 여기서 멈추면 정말 돌이킬 수 없을 것 같으니까..."))
+            {
+                dummysUpSwitch = true;
+            }
+            SoundManager s = SoundManager.instance; 
             
             s.PlaySound("tadadada");
             effectTxt.SetMsg(sentences.Dequeue());
