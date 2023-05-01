@@ -12,7 +12,11 @@ public class DialogueTrigger : MonoBehaviour
     public GameObject textBox;
     public GameObject DialogueSystem;
 
-
+    SoundManager s;
+    private void Awake()
+    {
+        s = SoundManager.instance;
+    }
     private void Start()
     {
         var system = DialogueSystem.GetComponent<DialogueSystem>();
@@ -31,6 +35,7 @@ public class DialogueTrigger : MonoBehaviour
             int num = infoCal(StatusManager.Engknowledge, StatusManager.healthy, StatusManager.innerpeace);
             
             system.Begin(info[num]);
+            
         }
     }
     public void Trigger()
@@ -48,7 +53,7 @@ public class DialogueTrigger : MonoBehaviour
         var system = DialogueSystem.GetComponent<DialogueSystem>();
         system.Begin(info[1]);
     }
-    int infoCal(int Eng, int heal, int inner)
+    public static int infoCal(int Eng, int heal, int inner)
     {
         if (Eng > 100 && heal > 100 && inner > 150)
         {
