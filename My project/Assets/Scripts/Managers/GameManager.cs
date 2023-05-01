@@ -22,10 +22,10 @@ public class GameManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Main")
         {
-            Day = 92;
+            Day = 1;
             month = 11;
             monthday = 22;
-            week = 13;
+            week = 5;
 
             money = 30;
         }

@@ -2594,7 +2594,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 991039169}
         m_TargetAssemblyTypeName: Hide, Assembly-CSharp
-        m_MethodName: exitBtn
+        m_MethodName: exit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3501,6 +3501,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: dd875f67b83cf924d8f6d28c6415969c, type: 3}
   - {fileID: 8300000, guid: b1bb525d052586f449b7304909d8dede, type: 3}
   - {fileID: 8300000, guid: 498c7eb80450b1a47a6b15f99adef052, type: 3}
+  - {fileID: 8300000, guid: e28b058fb2775754dbe4335f6f21e1a6, type: 3}
   audioClip:
   - {fileID: 8300000, guid: a940f842b6ca95c4fa92c9c80c87f448, type: 3}
   - {fileID: 8300000, guid: dd875f67b83cf924d8f6d28c6415969c, type: 3}

@@ -170,7 +170,10 @@ public class Hide : MonoBehaviour
         transform.GetChild(0).gameObject.SetActive(true);
     }
 
-
+    public void exit()
+    {
+        transform.parent.gameObject.SetActive(false);
+    }
     IEnumerator day99()
     {
         yield return new WaitForSeconds(3f);

@@ -39,6 +39,7 @@ public class goStory : MonoBehaviour
             {
                 if (episodeChristmas.choice)
                 {                                                  //표구매
+                    SoundManager.instance.PlayBGM("show");
                     transform.GetChild(0).transform.GetChild(1).gameObject.SetActive(false);
                     transform.GetChild(0).transform.GetChild(2).gameObject.SetActive(true);     //연극 보러감
                 }
@@ -53,6 +54,7 @@ public class goStory : MonoBehaviour
             {
                 transform.GetChild(0).transform.GetChild(2).gameObject.SetActive(false);
                 transform.GetChild(0).transform.GetChild(3).gameObject.SetActive(true);
+                SoundManager.instance.PlayBGM("main");
             }
 
         }

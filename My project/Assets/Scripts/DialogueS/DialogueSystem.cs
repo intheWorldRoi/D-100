@@ -84,6 +84,18 @@ public class DialogueSystem : MonoBehaviour
         if (sentences.Count == 0)
         {
 
+            if (InPara)
+            {
+                if (start == end)
+                {
+                    Begin(paragragh[start]);
+                    InPara = false;
+                    return;
+                }
+                Begin(paragragh[start++]);
+                return;
+            }
+
             if (IsMainScene && IsSNSAction && !InMad)
             {
                 play.sns = ActionManager.SNS();
@@ -97,15 +109,7 @@ public class DialogueSystem : MonoBehaviour
                 return;
             }
             
-            else if (InPara)
-            {
-                if (start == end)
-                {
-                    Begin(paragragh[start]);
-                    InPara = false;
-                }
-                Begin(paragragh[start++]);
-            }
+            
             else if (IsMainScene && IsInAction)
             {
                 NextSchedule();

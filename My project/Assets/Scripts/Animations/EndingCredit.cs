@@ -143,8 +143,12 @@ public class EndingCredit : MonoBehaviour
         Invoke("replay", 1f);
     }
     private void replay(){
-        EFF.SetActive(false);
-        texts.SetActive(false);
+        if(SceneManager.GetActiveScene().name != "Ending_GameOver")
+        {
+            EFF.SetActive(false);
+            texts.SetActive(false);
+        }
+        
         StartCoroutine(Up());
     }
     IEnumerator Up()

@@ -3164,6 +3164,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 93cff9bf1ee039a409b457a72b398ddd, type: 3}
   - {fileID: 8300000, guid: b1bb525d052586f449b7304909d8dede, type: 3}
   - {fileID: 8300000, guid: 498c7eb80450b1a47a6b15f99adef052, type: 3}
+  - {fileID: 8300000, guid: e28b058fb2775754dbe4335f6f21e1a6, type: 3}
   audioClip:
   - {fileID: 8300000, guid: a940f842b6ca95c4fa92c9c80c87f448, type: 3}
   - {fileID: 8300000, guid: 7318bf6e433792f4cbc56d07a6c75ed5, type: 3}
