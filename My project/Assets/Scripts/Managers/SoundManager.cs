@@ -39,6 +39,10 @@ public class SoundManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Intro")
             PlayINTRO("introNomal");
+        if(SceneManager.GetActiveScene().name == "Ending_Nomal" && DialogueTrigger.infoCal(StatusManager.Engknowledge, StatusManager.healthy, StatusManager.innerpeace) == 7)
+        {
+            PlayBGM("badEnding");
+        }
     }
     void AwakeAfter()
     {

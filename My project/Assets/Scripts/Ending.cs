@@ -8,10 +8,18 @@ public class Ending : MonoBehaviour
 
     public GameObject[] badDummys;
     public float wait;
+
+    SoundManager s;
     // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
         
+    }
+
+    void Start()
+    {
+        s = SoundManager.instance;
     }
 
     // Update is called once per frame
@@ -30,6 +38,7 @@ public class Ending : MonoBehaviour
         yield return new WaitForSeconds(1f);
         for(int i = 0; i <badDummys.Length; i++)
         {
+            s.PlaySound("chalkak");
             badDummys[i].SetActive(true);
             yield return new WaitForSeconds(wait);
 
