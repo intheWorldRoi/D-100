@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
             monthday = 22;
             week = 13;
 
-            money = 2   30;
+            money = 30;
         }
         
     }
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
         SoundManager s = SoundManager.instance;
         if(StatusManager.Anxiety >= 100 || StatusManager.Depress >= 100 || StatusManager.Stress >= 100 || StatusManager.Lonely >= 100 || money < 0)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("Ending_GameOver");
             s.PlayBGM("BadMad");
 
         }
@@ -49,12 +49,12 @@ public class GameManager : MonoBehaviour
             Debug.Log("day == 100");
             if (money > 200)
             {
-                SceneManager.LoadScene(4);
+                SceneManager.LoadScene("Ending_Trip");
 
             }
             else
             {
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene("Ending_Nomal");
             }
         }
     }

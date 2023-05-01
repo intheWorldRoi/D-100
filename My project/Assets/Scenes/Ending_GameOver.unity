@@ -298,7 +298,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ending - Overwhelming
+  m_text: 'Ending - '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb7a20757c2c66c4fb491a94688211d4, type: 2}
   m_sharedMaterial: {fileID: 9127716317091799496, guid: cb7a20757c2c66c4fb491a94688211d4, type: 2}
@@ -427,241 +427,24 @@ MonoBehaviour:
   info:
   - name: "\uB098"
     sentences:
-    - "\uD734\uD559\uB3D9\uC548 \uBAA9\uD45C\uD588\uB358 \uD63C\uC790\uC11C \uC5EC\uD589\uD558\uAE30\uB97C
-      \uC774\uB904\uB0C8\uB2E4."
-    - "\uB3C8\uC744 \uC5F4\uC2EC\uD788 \uBAA8\uC558\uB354\uB2C8 \uC5EC\uD589\uC790\uAE08\uC774
-      \uC5B4\uB290\uC815\uB3C4 \uB9C8\uB828\uC774 \uB418\uC5C8\uB2E4."
-    - "\uB3C8\uB3C4 \uB354 \uBAA8\uC73C\uACE0, \uC5EC\uD589\uC77C\uC815\uC5D0 \uC5EC\uC720\uB97C
-      \uB450\uAE30 \uC704\uD574 \uBCF5\uD559\uC740 \uD558\uC9C0 \uC54A\uC558\uB2E4."
-    - "\uC774 \uC678\uC758 \uBAA9\uD45C\uB294,"
-    - "\uD1A0\uC775 \uC2DC\uD5D8 \uACB0\uACFC\uB3C4 \uB098\uC058\uC9C0 \uC54A\uC558\uACE0,
-      \uC6B4\uB3D9\uB3C4 \uAFB8\uC900\uD788 \uD574\uC11C \uAC74\uAC15\uD574\uC84C\uB2E4."
-    - "\uB098\uB3C4 \uD55C\uB2E4\uBA74 \uD558\uB294 \uC0AC\uB78C\uC774\uB780 \uAC83\uC744
-      \uC54C\uAC8C \uB418\uC5C8\uB2E4."
-    - "\uB0AF\uC120 \uACF3\uC5D0 \uD63C\uC790 \uC624\uB2C8 \uB9CE\uC740 \uC0DD\uAC01\uC774
-      \uB4E0\uB2E4."
-    - "\uC544\uBB34\uB798\uB3C4 \uC774\uBC29\uC778\uC774\uB77C\uB294 \uC2E0\uBD84\uC740
-      \uD2B9\uBCC4\uD55C \uAC83 \uAC19\uB2E4."
-    - "\uD589\uC704\uC790\uAC00 \uC544\uB2C8\uB77C \uAD00\uCC30\uC790\uC758 \uC2DC\uC810\uC744
-      \uAC00\uC9C0\uAC8C \uB41C\uB2E4."
-    - "\uC77C\uC0C1\uC5D0\uC120 \uD589\uB3D9\uC758 \uC8FC\uCCB4\uB85C\uC11C \uBB34\uC5C7\uC774\uB4E0
-      \uD574\uC57C\uB9CC \uD588\uB2E4."
-    - "\uADF8\uB7EC\uB098 \uC5EC\uD589\uC5D0\uC11C, \uC774\uBC29\uC778\uC73C\uB85C\uC11C
-      \uB098\uB294 \uD589\uB3D9\uC5D0\uC11C \uC790\uC720\uB85C\uC6CC\uC84C\uB2E4."
-    - "\uC0AC\uC2E4 \uAF2D \uBB34\uC5B8\uAC00\uB97C \uD574\uC57C\uB9CC \uD558\uB294
-      \uAC8C \uC544\uB2C8\uB2E4."
-    - "\uC774\uB807\uAC8C \uD55C \uBC1C\uC9DD \uBB3C\uB7EC\uB098\uC11C \uBCF4\uBA74
-      \uBAA8\uB4E0 \uAC74 \uBCC4\uAC70 \uC5C6\uB2E4."
-    - "\uADF8\uD1A0\uB85D \uC5F4\uB9DD\uD588\uB358 \uAC83\uB4E4\uC758 \uAC00\uCE58\uB294
-      \uD55C\uC5C6\uC774 \uAC00\uBCBC\uC6CC\uC9C4\uB2E4."
-    - "\uAC00\uBCBC\uC6CC\uC9C0\uC9C0 \uC54A\uC73C\uBA74 \uCD94\uB77D\uD560 \uAC83\uC774\uB2E4."
-    - "\uD558\uB298\uB85C \uB0A0\uC544\uAC00\uAE30 \uC704\uD574 \uD55C\uC5C6\uC774
-      \uAC00\uBCBC\uC6CC\uC9C0\uACE0 \uC788\uB2E4."
-    - "\uB354 \uAC00\uBCBC\uC6B4 \uB0A0\uAC1C\uC73C\uB85C, \uD558\uB298\uC744 \uD5A5\uD574
-      \uB192\uC774 \uB0A0\uC544\uC624\uB974\uACE0 \uC2F6\uB2E4."
+    - "\uC6D4\uC138 \uB0BC \uB3C8\uB3C4 \uC5C6\uC5B4\uC11C \uAE09\uD558\uAC8C \uC5C4\uB9C8\uC5D0\uAC8C
+      \uB3C8\uC744 \uBE4C\uB838\uB2E4."
+    - "\uC54C\uC544\uC11C \uD55C\uB2E4\uB354\uB2C8 \uB611\uBC14\uB85C \uD558\uB294
+      \uAC8C \uD558\uB098\uB3C4 \uC5C6\uB0D0\uBA70 \uD55C\uC228\uC744 \uC26C\uC168\uB2E4."
   - name: "\uB098"
     sentences:
-    - "\uD734\uD559\uB3D9\uC548 \uBAA9\uD45C\uD588\uB358 \uD63C\uC790\uC11C \uC5EC\uD589\uD558\uAE30\uB97C
-      \uC774\uB904\uB0C8\uB2E4."
-    - "\uB3C8\uC744 \uC5F4\uC2EC\uD788 \uBAA8\uC558\uB354\uB2C8 \uC5EC\uD589\uC790\uAE08\uC774
-      \uC5B4\uB290\uC815\uB3C4 \uB9C8\uB828\uC774 \uB418\uC5C8\uB2E4."
-    - "\uB3C8\uB3C4 \uB354 \uBAA8\uC73C\uACE0, \uC5EC\uD589\uC77C\uC815\uC5D0 \uC5EC\uC720\uB97C
-      \uB450\uAE30 \uC704\uD574 \uBCF5\uD559\uC740 \uD558\uC9C0 \uC54A\uC558\uB2E4."
-    - "\uC774 \uC678\uC758 \uBAA9\uD45C\uB294,"
-    - "\uD1A0\uC775 \uC2DC\uD5D8 \uACB0\uACFC\uB3C4 \uB098\uC058\uC9C0 \uC54A\uC558\uACE0,
-      \uC6B4\uB3D9\uB3C4 \uAFB8\uC900\uD788 \uD574\uC11C \uAC74\uAC15\uD574\uC84C\uB2E4."
-    - "\uB098\uB3C4 \uD55C\uB2E4\uBA74 \uD558\uB294 \uC0AC\uB78C\uC774\uB780 \uAC83\uC744
-      \uC54C\uAC8C \uB418\uC5C8\uB2E4."
-    - "\uC5EC\uD589\uC744 \uC624\uB2C8 \uCC38 \uC88B\uB2E4."
-    - "\uC544\uBB34\uB3C4 \uB0A0 \uBAA8\uB978\uB2E4\uB294 \uAC83\uC774 \uD574\uBC29\uAC10\uC744
-      \uC900\uB2E4."
-    - "\uC228\uB9C9\uD788\uB294 \uACBD\uC7C1\uC5D0\uC11C \uC7A0\uC2DC \uB3C4\uB9DD\uCCD0
-      \uB098\uC640 \uC228\uD1B5\uC774 \uD2B8\uC774\uB294 \uAE30\uBD84\uC774\uB2E4."
-    - "\uB3CC\uC544\uAC00\uBA74 \uB610 \uD560 \uC77C\uB4E4\uC774 \uC0B0\uB354\uBBF8\uCC98\uB7FC
-      \uC313\uC5EC \uC788\uACA0\uC9C0."
-    - "\uD734\uD559\uC744 \uB610 \uD574\uBC84\uB9AC\uB294 \uBC14\uB78C\uC5D0 \uC878\uC5C5\uB3C4
-      \uB2A6\uCDB0\uC84C\uACE0, \uAC71\uC815\uC774 \uD0DC\uC0B0\uC774\uB124\u2026"
-    - "\uB098 \uC544\uC9C1\uB3C4 \uC815\uC2E0\uC744 \uBABB \uCC28\uB9B0 \uAC74\uAC00."
-    - "\uC9C0\uAE08 \uB9D8 \uD3B8\uD558\uAC8C \uB180\uACE0 \uC788\uC744 \uB54C\uAC00
-      \uC544\uB2CC\uAC00."
-    - "\uC9C0\uAE08\uC740 \uB180\uB7EC \uC654\uC73C\uB2C8 \uB098\uC911\uC5D0 \uC0DD\uAC01\uD558\uC790!"
-    - "\uC77C\uB2E8 \uC990\uAE30\uC790! YOLO!"
-  - name: "\uB098"
-    sentences:
-    - "\uD734\uD559\uB3D9\uC548 \uBAA9\uD45C\uD588\uB358 \uD63C\uC790\uC11C \uC5EC\uD589\uD558\uAE30\uB97C
-      \uC774\uB904\uB0C8\uB2E4."
-    - "\uB3C8\uC744 \uC5F4\uC2EC\uD788 \uBAA8\uC558\uB354\uB2C8 \uC5EC\uD589\uC790\uAE08\uC774
-      \uC5B4\uB290\uC815\uB3C4 \uB9C8\uB828\uC774 \uB418\uC5C8\uB2E4."
-    - "\uB3C8\uB3C4 \uB354 \uBAA8\uC73C\uACE0, \uC5EC\uD589\uC77C\uC815\uC5D0 \uC5EC\uC720\uB97C
-      \uB450\uAE30 \uC704\uD574 \uBCF5\uD559\uC740 \uD558\uC9C0 \uC54A\uC558\uB2E4."
-    - "\uC774 \uC678\uC758 \uBAA9\uD45C\uB294,"
-    - "\uAC74\uAC15\uC740 \uADF8\uB2E4\uC9C0 \uBABB \uCC59\uACBC\uC9C0\uB9CC, \uD1A0\uC775
-      \uC810\uC218\uB294 \uC88B\uAC8C \uB098\uC654\uB2E4."
-    - "\uD734\uD559\uB3D9\uC548 \uADF8\uB798\uB3C4 \uB9C8\uB0E5 \uB180\uAE30\uB9CC
-      \uD55C \uAC74 \uC544\uB2C8\uC5B4\uC11C \uB2E4\uD589\uC774\uB2E4."
-    - "\uB0AF\uC120 \uACF3\uC5D0 \uD63C\uC790 \uC624\uB2C8 \uB9CE\uC740 \uC0DD\uAC01\uC774
-      \uB4E0\uB2E4."
-    - "\uC544\uBB34\uB798\uB3C4 \uC774\uBC29\uC778\uC774\uB77C\uB294 \uC2E0\uBD84\uC740
-      \uD2B9\uBCC4\uD55C \uAC83 \uAC19\uB2E4."
-    - "\uD589\uC704\uC790\uAC00 \uC544\uB2C8\uB77C \uAD00\uCC30\uC790\uC758 \uC2DC\uC810\uC744
-      \uAC00\uC9C0\uAC8C \uB41C\uB2E4."
-    - "\uC77C\uC0C1\uC5D0\uC120 \uD589\uB3D9\uC758 \uC8FC\uCCB4\uB85C\uC11C \uBB34\uC5C7\uC774\uB4E0
-      \uD574\uC57C\uB9CC \uD588\uB2E4."
-    - "\uADF8\uB7EC\uB098 \uC5EC\uD589\uC5D0\uC11C, \uC774\uBC29\uC778\uC73C\uB85C\uC11C
-      \uB098\uB294 \uD589\uB3D9\uC5D0\uC11C \uC790\uC720\uB85C\uC6CC\uC84C\uB2E4."
-    - "\uC0AC\uC2E4 \uAF2D \uBB34\uC5B8\uAC00\uB97C \uD574\uC57C\uB9CC \uD558\uB294
-      \uAC8C \uC544\uB2C8\uB2E4."
-    - "\uC774\uB807\uAC8C \uD55C \uBC1C\uC9DD \uBB3C\uB7EC\uB098\uC11C \uBCF4\uBA74
-      \uBAA8\uB4E0 \uAC74 \uBCC4\uAC70 \uC5C6\uB2E4."
-    - "\uADF8\uD1A0\uB85D \uC5F4\uB9DD\uD588\uB358 \uAC83\uB4E4\uC758 \uAC00\uCE58\uB294
-      \uD55C\uC5C6\uC774 \uAC00\uBCBC\uC6CC\uC9C4\uB2E4."
-    - "\uAC00\uBCBC\uC6CC\uC9C0\uC9C0 \uC54A\uC73C\uBA74 \uCD94\uB77D\uD560 \uAC83\uC774\uB2E4."
-    - "\uD558\uB298\uB85C \uB0A0\uC544\uAC00\uAE30 \uC704\uD574 \uD55C\uC5C6\uC774
-      \uAC00\uBCBC\uC6CC\uC9C0\uACE0 \uC788\uB2E4."
-    - "\uB354 \uAC00\uBCBC\uC6B4 \uB0A0\uAC1C\uC9D3\uC73C\uB85C, \uD558\uB298\uC744
-      \uD5A5\uD574 \uB192\uC774 \uB0A0\uC544\uC624\uB974\uACE0 \uC2F6\uB2E4."
-  - name: "\uB098"
-    sentences:
-    - "\uD734\uD559\uB3D9\uC548 \uBAA9\uD45C\uD588\uB358 \uD63C\uC790\uC11C \uC5EC\uD589\uD558\uAE30\uB97C
-      \uC774\uB904\uB0C8\uB2E4."
-    - "\uB3C8\uC744 \uC5F4\uC2EC\uD788 \uBAA8\uC558\uB354\uB2C8 \uC5EC\uD589\uC790\uAE08\uC774
-      \uC5B4\uB290\uC815\uB3C4 \uB9C8\uB828\uC774 \uB418\uC5C8\uB2E4."
-    - "\uB3C8\uB3C4 \uB354 \uBAA8\uC73C\uACE0, \uC5EC\uD589\uC77C\uC815\uC5D0 \uC5EC\uC720\uB97C
-      \uB450\uAE30 \uC704\uD574 \uBCF5\uD559\uC740 \uD558\uC9C0 \uC54A\uC558\uB2E4."
-    - "\uC774 \uC678\uC758 \uBAA9\uD45C\uB294,"
-    - "\uAC74\uAC15\uC740 \uADF8\uB2E4\uC9C0 \uBABB \uCC59\uACBC\uC9C0\uB9CC, \uD1A0\uC775
-      \uC810\uC218\uB294 \uC88B\uAC8C \uB098\uC654\uB2E4."
-    - "\uD734\uD559\uB3D9\uC548 \uADF8\uB798\uB3C4 \uB9C8\uB0E5 \uB180\uAE30\uB9CC
-      \uD55C \uAC74 \uC544\uB2C8\uC5B4\uC11C \uB2E4\uD589\uC774\uB2E4."
-    - "\uC5EC\uD589\uC744 \uC624\uB2C8 \uCC38 \uC88B\uB2E4."
-    - "\uC544\uBB34\uB3C4 \uB0A0 \uBAA8\uB978\uB2E4\uB294 \uAC83\uC774 \uD574\uBC29\uAC10\uC744
-      \uC900\uB2E4."
-    - "\uC228\uB9C9\uD788\uB294 \uACBD\uC7C1\uC5D0\uC11C \uC7A0\uC2DC \uB3C4\uB9DD\uCCD0
-      \uB098\uC640 \uC228\uD1B5\uC774 \uD2B8\uC774\uB294 \uAE30\uBD84\uC774\uB2E4."
-    - "\uB3CC\uC544\uAC00\uBA74 \uB610 \uD560 \uC77C\uB4E4\uC774 \uC0B0\uB354\uBBF8\uCC98\uB7FC
-      \uC313\uC5EC \uC788\uACA0\uC9C0."
-    - "\uD734\uD559\uC744 \uB610 \uD574\uBC84\uB9AC\uB294 \uBC14\uB78C\uC5D0 \uC878\uC5C5\uB3C4
-      \uB2A6\uCDB0\uC84C\uACE0, \uAC71\uC815\uC774 \uD0DC\uC0B0\uC774\uB124\u2026"
-    - "\uB098 \uC544\uC9C1\uB3C4 \uC815\uC2E0\uC744 \uBABB \uCC28\uB9B0 \uAC74\uAC00."
-    - "\uC9C0\uAE08 \uB9D8 \uD3B8\uD558\uAC8C \uB180\uACE0 \uC788\uC744 \uB54C\uAC00
-      \uC544\uB2CC\uAC00."
-    - "\u2026"
-    - "\uC9C0\uAE08\uC740 \uB180\uB7EC \uC654\uC73C\uB2C8 \uB098\uC911\uC5D0 \uC0DD\uAC01\uD558\uC790!"
-    - "\uC77C\uB2E8 \uC990\uAE30\uC790! YOLO!"
-  - name: "\uB098"
-    sentences:
-    - "\uD734\uD559\uB3D9\uC548 \uBAA9\uD45C\uD588\uB358 \uD63C\uC790\uC11C \uC5EC\uD589\uD558\uAE30\uB97C
-      \uC774\uB904\uB0C8\uB2E4."
-    - "\uB3C8\uC744 \uC5F4\uC2EC\uD788 \uBAA8\uC558\uB354\uB2C8 \uC5EC\uD589\uC790\uAE08\uC774
-      \uC5B4\uB290\uC815\uB3C4 \uB9C8\uB828\uC774 \uB418\uC5C8\uB2E4."
-    - "\uB3C8\uB3C4 \uB354 \uBAA8\uC73C\uACE0, \uC5EC\uD589\uC77C\uC815\uC5D0 \uC5EC\uC720\uB97C
-      \uB450\uAE30 \uC704\uD574 \uBCF5\uD559\uC740 \uD558\uC9C0 \uC54A\uC558\uB2E4."
-    - "\uC774 \uC678\uC758 \uBAA9\uD45C\uB294,"
-    - "\uD1A0\uC775 \uC810\uC218\uB294 \uB9CC\uC871\uC2A4\uB7FD\uC9C0 \uC54A\uC558\uC9C0\uB9CC,
-      \uC6B4\uB3D9\uC740 \uAFB8\uC900\uD788 \uD574\uC11C \uAC74\uAC15\uD574\uC84C\uB2E4."
-    - "\uD734\uD559\uB3D9\uC548 \uADF8\uB798\uB3C4 \uB9C8\uB0E5 \uB180\uAE30\uB9CC
-      \uD55C \uAC74 \uC544\uB2C8\uC5B4\uC11C \uB2E4\uD589\uC774\uB2E4."
-    - "\uB0AF\uC120 \uACF3\uC5D0 \uD63C\uC790 \uC624\uB2C8 \uB9CE\uC740 \uC0DD\uAC01\uC774
-      \uB4E0\uB2E4."
-    - "\uC544\uBB34\uB798\uB3C4 \uC774\uBC29\uC778\uC774\uB77C\uB294 \uC2E0\uBD84\uC740
-      \uD2B9\uBCC4\uD55C \uAC83 \uAC19\uB2E4."
-    - "\uD589\uC704\uC790\uAC00 \uC544\uB2C8\uB77C \uAD00\uCC30\uC790\uC758 \uC2DC\uC810\uC744
-      \uAC00\uC9C0\uAC8C \uB41C\uB2E4."
-    - "\uC77C\uC0C1\uC5D0\uC120 \uD589\uB3D9\uC758 \uC8FC\uCCB4\uB85C\uC11C \uBB34\uC5C7\uC774\uB4E0
-      \uD574\uC57C\uB9CC \uD588\uB2E4."
-    - "\uADF8\uB7EC\uB098 \uC5EC\uD589\uC5D0\uC11C, \uC774\uBC29\uC778\uC73C\uB85C\uC11C
-      \uB098\uB294 \uD589\uB3D9\uC5D0\uC11C \uC790\uC720\uB85C\uC6CC\uC84C\uB2E4."
-    - "\uC0AC\uC2E4 \uAF2D \uBB34\uC5B8\uAC00\uB97C \uD574\uC57C\uB9CC \uD558\uB294
-      \uAC8C \uC544\uB2C8\uB2E4."
-    - "\uC774\uB807\uAC8C \uD55C \uBC1C\uC9DD \uBB3C\uB7EC\uB098\uC11C \uBCF4\uBA74
-      \uBAA8\uB4E0 \uAC74 \uBCC4\uAC70 \uC5C6\uB2E4."
-    - "\uADF8\uD1A0\uB85D \uC5F4\uB9DD\uD588\uB358 \uAC83\uB4E4\uC758 \uAC00\uCE58\uB294
-      \uD55C\uC5C6\uC774 \uAC00\uBCBC\uC6CC\uC9C4\uB2E4."
-    - "\uAC00\uBCBC\uC6CC\uC9C0\uC9C0 \uC54A\uC73C\uBA74 \uCD94\uB77D\uD560 \uAC83\uC774\uB2E4."
-    - "\uD558\uB298\uB85C \uB0A0\uC544\uAC00\uAE30 \uC704\uD574 \uD55C\uC5C6\uC774
-      \uAC00\uBCBC\uC6CC\uC9C0\uACE0 \uC788\uB2E4."
-    - "\uB354 \uAC00\uBCBC\uC6B4 \uB0A0\uAC1C\uC9D3\uC73C\uB85C, \uD558\uB298\uC744
-      \uD5A5\uD574 \uB192\uC774 \uB0A0\uC544\uC624\uB974\uACE0 \uC2F6\uB2E4."
-  - name: "\uB098"
-    sentences:
-    - "\uD734\uD559\uB3D9\uC548 \uBAA9\uD45C\uD588\uB358 \uD63C\uC790\uC11C \uC5EC\uD589\uD558\uAE30\uB97C
-      \uC774\uB904\uB0C8\uB2E4."
-    - "\uB3C8\uC744 \uC5F4\uC2EC\uD788 \uBAA8\uC558\uB354\uB2C8 \uC5EC\uD589\uC790\uAE08\uC774
-      \uC5B4\uB290\uC815\uB3C4 \uB9C8\uB828\uC774 \uB418\uC5C8\uB2E4."
-    - "\uB3C8\uB3C4 \uB354 \uBAA8\uC73C\uACE0, \uC5EC\uD589\uC77C\uC815\uC5D0 \uC5EC\uC720\uB97C
-      \uB450\uAE30 \uC704\uD574 \uBCF5\uD559\uC740 \uD558\uC9C0 \uC54A\uC558\uB2E4."
-    - "\uC774 \uC678\uC758 \uBAA9\uD45C\uB294,"
-    - "\uC5EC\uD589\uC744 \uC624\uB2C8 \uCC38 \uC88B\uB2E4."
-    - "\uC544\uBB34\uB3C4 \uB0A0 \uBAA8\uB978\uB2E4\uB294 \uAC83\uC774 \uD574\uBC29\uAC10\uC744
-      \uC900\uB2E4."
-    - "\uC228\uB9C9\uD788\uB294 \uACBD\uC7C1\uC5D0\uC11C \uC7A0\uC2DC \uB3C4\uB9DD\uCCD0
-      \uB098\uC640 \uC228\uD1B5\uC774 \uD2B8\uC774\uB294 \uAE30\uBD84\uC774\uB2E4."
-    - "\uB3CC\uC544\uAC00\uBA74 \uB610 \uD560 \uC77C\uB4E4\uC774 \uC0B0\uB354\uBBF8\uCC98\uB7FC
-      \uC313\uC5EC \uC788\uACA0\uC9C0."
-    - "\uD734\uD559\uC744 \uB610 \uD574\uBC84\uB9AC\uB294 \uBC14\uB78C\uC5D0 \uC878\uC5C5\uB3C4
-      \uB2A6\uCDB0\uC84C\uACE0, \uAC71\uC815\uC774 \uD0DC\uC0B0\uC774\uB124\u2026"
-    - "\uB098 \uC544\uC9C1\uB3C4 \uC815\uC2E0\uC744 \uBABB \uCC28\uB9B0 \uAC74\uAC00."
-    - "\uC9C0\uAE08 \uB9D8 \uD3B8\uD558\uAC8C \uB180\uACE0 \uC788\uC744 \uB54C\uAC00
-      \uC544\uB2CC\uAC00."
-    - "\u2026"
-    - "\uC9C0\uAE08\uC740 \uB180\uB7EC \uC654\uC73C\uB2C8 \uB098\uC911\uC5D0 \uC0DD\uAC01\uD558\uC790!"
-    - "\uC77C\uB2E8 \uC990\uAE30\uC790! YOLO!"
-  - name: "\uB098"
-    sentences:
-    - "\uD734\uD559\uB3D9\uC548 \uBAA9\uD45C\uD588\uB358 \uD63C\uC790\uC11C \uC5EC\uD589\uD558\uAE30\uB97C
-      \uC774\uB904\uB0C8\uB2E4."
-    - "\uB3C8\uC744 \uC5F4\uC2EC\uD788 \uBAA8\uC558\uB354\uB2C8 \uC5EC\uD589\uC790\uAE08\uC774
-      \uC5B4\uB290\uC815\uB3C4 \uB9C8\uB828\uC774 \uB418\uC5C8\uB2E4."
-    - "\uB3C8\uB3C4 \uB354 \uBAA8\uC73C\uACE0, \uC5EC\uD589\uC77C\uC815\uC5D0 \uC5EC\uC720\uB97C
-      \uB450\uAE30 \uC704\uD574 \uBCF5\uD559\uC740 \uD558\uC9C0 \uC54A\uC558\uB2E4."
-    - "\uC774 \uC678\uC758 \uBAA9\uD45C\uB294,"
     - ...
-    - "\uB0AF\uC120 \uACF3\uC5D0 \uD63C\uC790 \uC624\uB2C8 \uB9CE\uC740 \uC0DD\uAC01\uC774
-      \uB4E0\uB2E4."
-    - "\uC544\uBB34\uB798\uB3C4 \uC774\uBC29\uC778\uC774\uB77C\uB294 \uC2E0\uBD84\uC740
-      \uD2B9\uBCC4\uD55C \uAC83 \uAC19\uB2E4."
-    - "\uD589\uC704\uC790\uAC00 \uC544\uB2C8\uB77C \uAD00\uCC30\uC790\uC758 \uC2DC\uC810\uC744
-      \uAC00\uC9C0\uAC8C \uB41C\uB2E4."
-    - "\uC77C\uC0C1\uC5D0\uC120 \uD589\uB3D9\uC758 \uC8FC\uCCB4\uB85C\uC11C \uBB34\uC5C7\uC774\uB4E0
-      \uD574\uC57C\uB9CC \uD588\uB2E4."
-    - "\uADF8\uB7EC\uB098 \uC5EC\uD589\uC5D0\uC11C, \uC774\uBC29\uC778\uC73C\uB85C\uC11C
-      \uB098\uB294 \uD589\uB3D9\uC5D0\uC11C \uC790\uC720\uB85C\uC6CC\uC84C\uB2E4."
-    - "\uC0AC\uC2E4 \uAF2D \uBB34\uC5B8\uAC00\uB97C \uD574\uC57C\uB9CC \uD558\uB294
-      \uAC8C \uC544\uB2C8\uB2E4."
-    - "\uC774\uB807\uAC8C \uD55C \uBC1C\uC9DD \uBB3C\uB7EC\uB098\uC11C \uBCF4\uBA74
-      \uBAA8\uB4E0  \uBCC4\uAC70 \uC5C6\uB2E4."
-    - "\uADF8\uD1A0\uB85D \uC5F4\uB9DD\uD588\uB358 \uAC83\uB4E4\uC758 \uAC00\uCE58\uB294
-      \uD55C\uC5C6\uC774 \uAC00\uBCBC\uC6CC\uC9C4\uB2E4."
-    - "\uAC00\uBCBC\uC6CC\uC9C0\uC9C0 \uC54A\uC73C\uBA74 \uCD94\uB77D\uD560 \uAC83\uC774\uB2E4."
-    - "\uD558\uB298\uB85C \uB0A0\uC544\uAC00\uAE30 \uC704\uD574 \uD55C\uC5C6\uC774
-      \uAC00\uBCBC\uC6CC\uC9C0\uACE0 \uC788\uB2E4."
-    - "\uB354 \uAC00\uBCBC\uC6B4 \uB0A0\uAC1C\uC9D3\uC73C\uB85C, \uD558\uB298\uC744
-      \uD5A5\uD574 \uB192\uC774 \uB0A0\uC544\uC624\uB974\uACE0 \uC2F6\uB2E4"
-  - name: "\uB098"
-    sentences:
-    - "\uD734\uD559\uB3D9\uC548 \uBAA9\uD45C\uD588\uB358 \uD63C\uC790\uC11C \uC5EC\uD589\uD558\uAE30\uB97C
-      \uC774\uB904\uB0C8\uB2E4."
-    - "\uB3C8\uC744 \uC5F4\uC2EC\uD788 \uBAA8\uC558\uB354\uB2C8 \uC5EC\uD589\uC790\uAE08\uC774
-      \uC5B4\uB290\uC815\uB3C4 \uB9C8\uB828\uC774 \uB418\uC5C8\uB2E4."
-    - "\uB3C8\uB3C4 \uB354 \uBAA8\uC73C\uACE0, \uC5EC\uD589\uC77C\uC815\uC5D0 \uC5EC\uC720\uB97C
-      \uB450\uAE30 \uC704\uD574 \uBCF5\uD559\uC740 \uD558\uC9C0 \uC54A\uC558\uB2E4."
-    - "\uC774 \uC678\uC758 \uBAA9\uD45C\uB294,"
-    - ...
-    - "\uC5EC\uD589\uC744 \uC624\uB2C8 \uCC38 \uC88B\uB2E4."
-    - "\uC544\uBB34\uB3C4 \uB0A0 \uBAA8\uB978\uB2E4\uB294 \uAC83\uC774 \uD574\uBC29\uAC10\uC744
-      \uC900\uB2E4."
-    - "\uC228\uB9C9\uD788\uB294 \uACBD\uC7C1\uC5D0\uC11C \uC7A0\uC2DC \uB3C4\uB9DD\uCCD0
-      \uB098\uC640 \uC228\uD1B5\uC774 \uD2B8\uC774\uB294 \uAE30\uBD84\uC774\uB2E4."
-    - "\uB3CC\uC544\uAC00\uBA74 \uB610 \uD560 \uC77C\uB4E4\uC774 \uC0B0\uB354\uBBF8\uCC98\uB7FC
-      \uC313\uC5EC \uC788\uACA0\uC9C0."
-    - "\uD734\uD559\uC744 \uB610 \uD574\uBC84\uB9AC\uB294 \uBC14\uB78C\uC5D0 \uC878\uC5C5\uB3C4
-      \uB2A6\uCDB0\uC84C\uACE0, \uAC71\uC815\uC774 \uD0DC\uC0B0\uC774\uB124\u2026"
-    - "\uB098 \uC544\uC9C1\uB3C4 \uC815\uC2E0\uC744 \uBABB \uCC28\uB9B0 \uAC74\uAC00."
-    - "\uC9C0\uAE08 \uB9D8 \uD3B8\uD558\uAC8C \uB180\uACE0 \uC788\uC744 \uB54C\uAC00
-      \uC544\uB2CC\uAC00."
-    - "\u2026"
-    - "\uC9C0\uAE08\uC740 \uB180\uB7EC \uC654\uC73C\uB2C8 \uB098\uC911\uC5D0 \uC0DD\uAC01\uD558\uC790!"
-    - "\uC77C\uB2E8 \uC990\uAE30\uC790! YOLO!"
+    - "\uB09C \uADF8\uC800 \uC798 \uD574\uBCF4\uB824\uACE0 \uD588\uB358 \uAC74\uB370"
+    - "\uBB58 \uD574\uB3C4 \uC88B\uC544\uC9C0\uC9C0\uAC00 \uC54A\uB294 \uAC83 \uAC19\uC544.."
+    - "\uB098\uB294 \uC65C \uC774\uB7F0 \uAC70\uC9C0?"
+    - "\uBB58 \uD558\uB824\uB294 \uB178\uB825\uC774 \uBB34\uC758\uBBF8\uD574.."
+    - "\uC544\uBB34\uB9AC \uC774\uAC83\uC800\uAC83 \uD558\uBA74\uC11C \uB178\uB825\uD574\uBD10\uB3C4"
+    - "\uB0B4\uAC00 \uC774\uB807\uAC8C \uD798\uB4E0\uB370 \uBB34\uC2A8 \uC18C\uC6A9\uC774\uB0D0\uACE0..."
+    - "\uBAB0\uB77C.. \uBAA8\uB974\uACA0\uC5B4...."
+    - "(\uB098\uB294 \uC2A4\uD2B8\uB808\uC2A4\uB97C \uC8FC\uCCB4\uD558\uC9C0 \uBABB\uD558\uACE0
+      \uB2E4\uC2DC \uC228\uC5B4\uBC84\uB838\uB2E4.)"
+    - "(\uADF8\uB807\uAC8C \uBCF5\uD559\uC5D0 \uC2E4\uD328\uD588\uACE0 \uC740\uB454\uD558\uBA70
+      \uC0B4\uAC8C \uB418\uC5C8\uB2E4..)"
   textBox: {fileID: 1623990178}
   DialogueSystem: {fileID: 758747643}
 --- !u!4 &235149880
@@ -678,167 +461,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &262743605
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 262743608}
-  - component: {fileID: 262743607}
-  - component: {fileID: 262743606}
-  m_Layer: 0
-  m_Name: SoundManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &262743606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 262743605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8674938a52a42e479dc270e91483de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  masterVolumeSFX: 1
-  masterVolumeBGM: 1
-  bgmClip:
-  - {fileID: 8300000, guid: dd1f385bce6258d458f167a6b9830a32, type: 3}
-  - {fileID: 8300000, guid: 8636a5db557b53841bc7aabb0887d158, type: 3}
-  - {fileID: 8300000, guid: a2661c33b9991624699f188a2a3ac240, type: 3}
-  - {fileID: 8300000, guid: eced050d384fb914bbb5c87f622a4e4d, type: 3}
-  - {fileID: 8300000, guid: fa955d3bf0ce6da40905ee80f555d851, type: 3}
-  - {fileID: 8300000, guid: f3448d4c04c586448a567e6c711a311d, type: 3}
-  - {fileID: 8300000, guid: dd875f67b83cf924d8f6d28c6415969c, type: 3}
-  - {fileID: 8300000, guid: 93cff9bf1ee039a409b457a72b398ddd, type: 3}
-  audioClip:
-  - {fileID: 8300000, guid: a940f842b6ca95c4fa92c9c80c87f448, type: 3}
-  - {fileID: 8300000, guid: 7318bf6e433792f4cbc56d07a6c75ed5, type: 3}
-  - {fileID: 8300000, guid: 1cc8299a536bbc843876dc07a8c3bca6, type: 3}
-  - {fileID: 8300000, guid: dd875f67b83cf924d8f6d28c6415969c, type: 3}
-  - {fileID: 8300000, guid: 3562dfae6546ed445bfe0f14e22f5bfd, type: 3}
-  - {fileID: 8300000, guid: 0ba4692b6ab76e149a8bc308b299119e, type: 3}
-  bgmPlayer: {fileID: 0}
-  sfxPlayer: {fileID: 0}
---- !u!82 &262743607
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 262743605}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!4 &262743608
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 262743605}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 552.0077, y: 488.56146, z: -2.4959455}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &451621509
 GameObject:
@@ -938,7 +560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.79607844}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1300,6 +922,167 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1309446103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1309446106}
+  - component: {fileID: 1309446105}
+  - component: {fileID: 1309446104}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1309446104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309446103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8674938a52a42e479dc270e91483de2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterVolumeSFX: 1
+  masterVolumeBGM: 1
+  bgmClip:
+  - {fileID: 8300000, guid: dd1f385bce6258d458f167a6b9830a32, type: 3}
+  - {fileID: 8300000, guid: 8636a5db557b53841bc7aabb0887d158, type: 3}
+  - {fileID: 8300000, guid: a2661c33b9991624699f188a2a3ac240, type: 3}
+  - {fileID: 8300000, guid: eced050d384fb914bbb5c87f622a4e4d, type: 3}
+  - {fileID: 8300000, guid: fa955d3bf0ce6da40905ee80f555d851, type: 3}
+  - {fileID: 8300000, guid: f3448d4c04c586448a567e6c711a311d, type: 3}
+  - {fileID: 8300000, guid: dd875f67b83cf924d8f6d28c6415969c, type: 3}
+  - {fileID: 8300000, guid: 93cff9bf1ee039a409b457a72b398ddd, type: 3}
+  audioClip:
+  - {fileID: 8300000, guid: a940f842b6ca95c4fa92c9c80c87f448, type: 3}
+  - {fileID: 8300000, guid: 7318bf6e433792f4cbc56d07a6c75ed5, type: 3}
+  - {fileID: 8300000, guid: 1cc8299a536bbc843876dc07a8c3bca6, type: 3}
+  - {fileID: 8300000, guid: dd875f67b83cf924d8f6d28c6415969c, type: 3}
+  - {fileID: 8300000, guid: 3562dfae6546ed445bfe0f14e22f5bfd, type: 3}
+  - {fileID: 8300000, guid: 0ba4692b6ab76e149a8bc308b299119e, type: 3}
+  bgmPlayer: {fileID: 0}
+  sfxPlayer: {fileID: 0}
+--- !u!82 &1309446105
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309446103}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1309446106
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309446103}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 552.0077, y: 488.56146, z: -2.4959455}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1320643623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,7 +1366,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1623990179
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1620,7 +1403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5176471}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1759,7 +1542,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 30c2d511e0ffe614cb8aa31f22a36e6b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5572b3d952a076d4c9bdc2e720fb43a9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
