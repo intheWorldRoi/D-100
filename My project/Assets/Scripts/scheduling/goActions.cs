@@ -98,7 +98,7 @@ public class goActions : MonoBehaviour
     {
         if (GameManager.monthday == 10)
         {
-            GameManager.money -= 40;
+            GameManager.money -= 30;
         }
     }
     public void reviewWeek()

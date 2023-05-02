@@ -32,15 +32,15 @@ public class StatusManager : MonoBehaviour
     {
         if(SceneManager.GetActiveScene().name == "Main")
         {
-            Depress = 0;
-            Stress = 0;
-            Lonely = 0;
-            Anxiety = 0;
+            Depress = 50;
+            Stress = 50;
+            Lonely = 50;
+            Anxiety = 50;
             Willingness = 50;
             Joy = 50;
 
-            Engknowledge = 150;
-            innerpeace = 150;
+            Engknowledge = 0;
+            innerpeace = 0;
             healthy = 30;
         }
         
@@ -84,38 +84,38 @@ public class StatusManager : MonoBehaviour
     }
         public static void DayCalculate() //날짜 계산. 월별로 30일 31일 달라서 계산필요 ..
     {
-        if (GameManager.month == 11 && GameManager.monthday < 31)
+        if (GameManager.month == 11 && GameManager.monthday < 30)
         {
             GameManager.monthday++;
         }
-        else if (GameManager.month == 11 && GameManager.monthday > 30)
+        else if (GameManager.month == 11 && GameManager.monthday > 29)
         {
             GameManager.month++;
             GameManager.monthday = 1;
         }
-        else if (GameManager.month == 12 && GameManager.monthday < 32)
+        else if (GameManager.month == 12 && GameManager.monthday < 31)
         {
             GameManager.monthday++;
         }
-        else if (GameManager.month == 12 && GameManager.monthday > 31)
+        else if (GameManager.month == 12 && GameManager.monthday > 30)
         {
             GameManager.month = 1;
             GameManager.monthday = 1;
         }
-        else if (GameManager.month == 1 && GameManager.monthday < 32)
+        else if (GameManager.month == 1 && GameManager.monthday < 31)
         {
             GameManager.monthday++;
         }
-        else if (GameManager.month == 1 && GameManager.monthday > 31)
+        else if (GameManager.month == 1 && GameManager.monthday > 30)
         {
             GameManager.month = 2;
             GameManager.monthday = 1;
         }
-        else if (GameManager.month == 2 && GameManager.monthday < 29)
+        else if (GameManager.month == 2 && GameManager.monthday < 28)
         {
             GameManager.monthday++;
         }
-        else if (GameManager.month == 2 && GameManager.monthday > 28)
+        else if (GameManager.month == 2 && GameManager.monthday > 27)
         {
             GameManager.month++;
             GameManager.monthday = 1;

@@ -167,9 +167,8 @@ public class DialogueSystem : MonoBehaviour
             {
                 EndingSwitch = true;
             }
-            SoundManager s = SoundManager.instance; 
-            
-            s.PlaySound("tadadada");
+
+            SoundManager.instance.PlaySound("tadadada");
             effectTxt.SetMsg(sentences.Dequeue());
             
             

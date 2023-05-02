@@ -22,12 +22,12 @@ public class GameManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Main")
         {
-            Day =92;
+            Day =1;
             month = 11;
             monthday = 22;
             week =1;
 
-            money = 100;
+            money = 30;
         }
         
     }
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         if (Day == 100)
         {
             Debug.Log("day == 100");
-            if (money > 100)
+            if (money > 150)
             {
                 SceneManager.LoadScene("Ending_Trip");
             }
