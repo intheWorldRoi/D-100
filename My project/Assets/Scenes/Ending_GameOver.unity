@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -60}
-  m_SizeDelta: {x: 1449.6781, y: 150}
+  m_AnchoredPosition: {x: 0, y: -180}
+  m_SizeDelta: {x: 1449.6781, y: 1062.4084}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &44792396
 MonoBehaviour:
@@ -181,10 +181,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\n\uC81C\uC791\uC9C4 \n\n\n\uAC1C\uBC1C\n\n\uAE40\uC9C0\uC5B8, \uBC15\uC8FC\uD558\n\n\n\uB514\uC790\uC778\n\n\uC7A5\uD76C\uC8FC,
+  m_text: "\uC81C\uC791\uC9C4 \n\n\n\uAC1C\uBC1C\n\n\uAE40\uC9C0\uC5B8, \uBC15\uC8FC\uD558\n\n\n\uB514\uC790\uC778\n\n\uC7A5\uD76C\uC8FC,
     \uC624\uC2B9\uD76C\n\n\n\n\uC74C\uC6D0 \uCD9C\uCC98(CC BY \uB77C\uC774\uC13C\uC2A4)\n\nE0207_Hopefulness_Two
-    bikes_Piano Electronic Piano_T85\n((\uC7AC)\uC804\uC8FC\uC815\uBCF4\uBB38\uD654\uC0B0\uC5C5\uC9C4\uD765\uC6D0)\n\n\n\n\nThanks
-    for playing ...\n"
+    bikes_Piano Electronic Piano_T85\n((\uC7AC)\uC804\uC8FC\uC815\uBCF4\uBB38\uD654\uC0B0\uC5C5\uC9C4\uD765\uC6D0)\n\n\uC628
+    \uB354 \uD790 \uC624\uB974\uAC04 \uBC84\uC804(On the hill Organ ver.)\n(\uAD8C\uBBFC\uD638,
+    \uC784\uC0DB\uBCC4, \uAE40\uD55C\uC601)\n\nWe Wish You A Merry Christmas(Accordina)\n(\uD55C\uAD6D
+    \uC800\uC791\uAD8C \uC704\uC6D0\uD68C)\n\n\n\n\n\nTry again...\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 13c8a672a5deaf843a07d65e93181496, type: 2}
   m_sharedMaterial: {fileID: -1183395604405038680, guid: 13c8a672a5deaf843a07d65e93181496, type: 2}
@@ -247,7 +249,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -5.02124, y: 0, z: -0.1550293, w: -776.529}
+  m_margin: {x: -5.02124, y: -51.798096, z: -0.1550293, w: 1554.2263}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1367,7 +1369,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1623990179
 RectTransform:
   m_ObjectHideFlags: 0
