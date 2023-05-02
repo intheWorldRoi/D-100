@@ -62,6 +62,9 @@ public class goStory : MonoBehaviour
             if (transform.GetChild(0).transform.GetChild(3).gameObject.activeSelf)
             {
                 transform.GetChild(0).transform.GetChild(3).gameObject.SetActive(false);
+                transform.GetChild(0).gameObject.SetActive(false);
+                DialogueSystem.IsInAction = true;
+                goActions.GetComponent<goActions>().nextPlay();
                 return;
             }
 
@@ -84,6 +87,8 @@ public class goStory : MonoBehaviour
             else if (transform.GetChild(1).transform.GetChild(2).gameObject.activeSelf)
             {
                 transform.GetChild(1).transform.GetChild(2).gameObject.SetActive(false);
+                transform.GetChild(1).gameObject.SetActive(false);
+                goActions.GetComponent<goActions>().nextPlay();
             }
             else if (transform.GetChild(1).gameObject.activeSelf)
             {
@@ -107,10 +112,13 @@ public class goStory : MonoBehaviour
             else if (transform.GetChild(2).transform.GetChild(3).gameObject.activeSelf)
             {
                 transform.GetChild(2).transform.GetChild(3).gameObject.SetActive(false);
+                transform.GetChild(2).gameObject.SetActive(false);
+                goActions.GetComponent<goActions>().nextPlay();
             }
             else if (transform.GetChild(2).gameObject.activeSelf)
             {
                 transform.GetChild(2).transform.GetChild(0).gameObject.SetActive(true);
+                
             }
             else
             {

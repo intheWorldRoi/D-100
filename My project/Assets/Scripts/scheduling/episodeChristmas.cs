@@ -36,7 +36,6 @@ public class episodeChristmas : MonoBehaviour
         }
         else if (gameObject.transform.name == "part4")
         {
-            DialogueSystem.IsInAction = true;
             if (choice)
             {
                 system.GetComponent<DialogueSystem>().Begin(data.EpChrist[33]);
