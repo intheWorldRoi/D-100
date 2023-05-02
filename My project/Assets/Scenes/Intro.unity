@@ -684,7 +684,7 @@ GameObject:
   - component: {fileID: 326317759}
   - component: {fileID: 326317758}
   - component: {fileID: 326317757}
-  - component: {fileID: 326317756}
+  - component: {fileID: 326317760}
   m_Layer: 5
   m_Name: ESC
   m_TagString: Untagged
@@ -712,19 +712,6 @@ RectTransform:
   m_AnchoredPosition: {x: -9, y: -426}
   m_SizeDelta: {x: 50, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &326317756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326317754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d28e011e6e80b4479c6090e449833e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  introVideo: {fileID: 0}
 --- !u!114 &326317757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -768,7 +755,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 326317758}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 326317760}
+        m_TargetAssemblyTypeName: ESC, Assembly-CSharp
+        m_MethodName: ESCGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &326317758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -807,6 +806,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326317754}
   m_CullTransparentMesh: 1
+--- !u!114 &326317760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326317754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a8832f209c7c04e811aa34dd77fe40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &342597261
 GameObject:
   m_ObjectHideFlags: 0

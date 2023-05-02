@@ -47,10 +47,9 @@ public class GameManager : MonoBehaviour
         if (Day == 100)
         {
             Debug.Log("day == 100");
-            if (money > 200)
+            if (money > 300)
             {
                 SceneManager.LoadScene("Ending_Trip");
-
             }
             else
             {

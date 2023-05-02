@@ -34,7 +34,7 @@ public class ActionManager : MonoBehaviour
         if (StatusManager.Depress > 55 && StatusManager.Willingness < 45)      //우울하고 의지 없을 시 SNS
         {
             StatusManager.Lonely += 3;
-            StatusManager.Anxiety += 5;
+            StatusManager.Anxiety += 3;
             StatusManager.innerpeace -= 10;
             return true;
         }
@@ -84,7 +84,7 @@ public class ActionManager : MonoBehaviour
                     StatusManager.innerpeace += 3;
                     if (StatusManager.Willingness < 30)
                     {
-                        StatusManager.Willingness += 20;
+                        StatusManager.Willingness += 25;
                     }
                     break;
                 }
@@ -134,6 +134,7 @@ public class ActionManager : MonoBehaviour
             StatusManager.Depress -= 3;
             StatusManager.Joy += 10;
         }
+        StatusManager.Stress -= 10;
         StatusManager.Anxiety += 3;
         StatusManager.Lonely += 3;
         StatusManager.Willingness -= 3;

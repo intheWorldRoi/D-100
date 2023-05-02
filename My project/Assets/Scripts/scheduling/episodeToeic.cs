@@ -28,11 +28,11 @@ public class episodeToeic : MonoBehaviour
             DialogueSystem.IsInAction = true;
             if (answer == 2)
             {
-                StatusManager.Engknowledge += 20;
+                StatusManager.Engknowledge += 15;
             }
             else if (answer == 1)
             {
-                StatusManager.Engknowledge += 10;
+                StatusManager.Engknowledge += 5;
             }
             system.GetComponent<DialogueSystem>().Begin(data.EpToeic[4]);
             Invoke("closeToeic", 10.0f);

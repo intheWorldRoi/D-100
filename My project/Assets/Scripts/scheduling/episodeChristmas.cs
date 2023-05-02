@@ -31,7 +31,7 @@ public class episodeChristmas : MonoBehaviour
         }
         else if (gameObject.transform.name == "part3")
         {
-            GameManager.money -= 10;
+            GameManager.money -= 5;
             system.GetComponent<DialogueSystem>().StartDialogue(7, 31, data.EpChrist);
         }
         else if (gameObject.transform.name == "part4")
@@ -45,9 +45,9 @@ public class episodeChristmas : MonoBehaviour
             else
             {
                 system.GetComponent<DialogueSystem>().Begin(data.EpChrist[34]);
-                StatusManager.Anxiety += 15;
-                StatusManager.Lonely += 15;
-                StatusManager.Depress += 15;
+                StatusManager.Anxiety += 10;
+                StatusManager.Lonely += 10;
+                StatusManager.Depress += 10;
             }
             Invoke("closeChrist", 10.0f);
         }

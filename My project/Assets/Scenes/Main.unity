@@ -2045,7 +2045,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.9999, y: -122.39905}
+  m_AnchoredPosition: {x: -4.9999, y: -95}
   m_SizeDelta: {x: 1216.265, y: 139.5415}
   m_Pivot: {x: 0.5, y: 0.7641707}
 --- !u!114 &108996903
@@ -2068,9 +2068,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tip 4\n\uC801\uC5B4\uB3C4 \uC774\uD2C0\uC5D0 \uD55C \uBC88\uC740 \uC678\uCD9C\uC744
-    \uD574\uC8FC\uC5B4\uC57C \uC2A4\uD2B8\uB808\uC2A4\uB97C \uC870\uC808\uD560 \uC218
-    \uC788\uC5B4\uC694."
+  m_text: "Tip 4\n\uC801\uC808\uD55C \uD734\uC2DD\uC740 \uD544\uC218!\n\uC801\uC5B4\uB3C4
+    \uC774\uD2C0\uC5D0 \uD55C \uBC88\uC740 \uC678\uCD9C\uC744 \uD574\uC8FC\uC5B4\uC57C
+    \uC678\uB86D\uC9C0 \uC54A\uC544\uC694\u3160\u3160"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 52f204c40bbc5d246a366b3a5802d01f, type: 2}
   m_sharedMaterial: {fileID: 4025274657688529526, guid: 52f204c40bbc5d246a366b3a5802d01f, type: 2}
@@ -5412,7 +5412,7 @@ MonoBehaviour:
       \uC548 \uC0AC\uAC00\uB124?"
     - "\uAC00\uB729\uC774\uB098 \uC678\uB85C\uC6B4 \uC194\uD06C \uC5F0\uADF9\uC774\uB77C\uB3C4
       \uBCF4\uC154\uC694~"
-    - "\uC815\uAC00\uB294 20G\uC778\uB370 10G\uB85C \uB4DC\uB9B4\uAC8C\uC694"
+    - "\uC815\uAC00\uB294 10G\uC778\uB370 5G\uB85C \uB4DC\uB9B4\uAC8C\uC694"
   - name: "\uB098"
     sentences:
     - "\uC57D \uC62C\uB9AC\uB294 \uAC70\uC57C \uBB50\uC57C"
@@ -10015,7 +10015,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: 203}
+  m_AnchoredPosition: {x: -5, y: 208}
   m_SizeDelta: {x: 1216.265, y: 139.5415}
   m_Pivot: {x: 0.5, y: 0.7641707}
 --- !u!114 &537882474
@@ -10039,7 +10039,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Tip 2\n\uC544\uB974\uBC14\uC774\uD2B8\uB97C \uD574\uC11C \uB3C8\uC744
-    \uBC8C\uC5B4\uC57C \uC0DD\uD65C\uC744 \uC601\uC704\uD560 \uC218 \uC788\uC5B4\uC694.\n\uC544\uB974\uBC14\uC774\uD2B8\uB294
+    \uBC8C\uC5B4\uC57C \uC0DD\uD65C\uC744 \uC601\uC704\uD560 \uC218 \uC788\uC5B4\uC694.
+    \uB9E4\uB2EC 10\uC77C\uC5D0 \uC6D4\uC138 30G!\n\uC544\uB974\uBC14\uC774\uD2B8\uB294
     \uD655\uB960\uC801\uC73C\uB85C \uC9C4\uC0C1\uC744 \uB9CC\uB0A0 \uC218 \uC788\uC73C\uB2C8
     \uC870\uC2EC\uD574\uC694."
   m_isRightToLeft: 0
@@ -17953,7 +17954,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: 315.60095}
+  m_AnchoredPosition: {x: -5, y: 311.60095}
   m_SizeDelta: {x: 1216.265, y: 139.5415}
   m_Pivot: {x: 0.5, y: 0.7641707}
 --- !u!114 &889309870
@@ -23873,7 +23874,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.9999, y: -352}
+  m_AnchoredPosition: {x: -4.9999, y: -356}
   m_SizeDelta: {x: 1216.265, y: 139.5415}
   m_Pivot: {x: 0.5, y: 0.7641707}
 --- !u!114 &1178961418
@@ -24368,7 +24369,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.9999, y: 39.600952}
+  m_AnchoredPosition: {x: -4.9999, y: 57}
   m_SizeDelta: {x: 1216.265, y: 139.5415}
   m_Pivot: {x: 0.5, y: 0.7641707}
 --- !u!114 &1242613222
@@ -27197,7 +27198,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.9999, y: -238.39905}
+  m_AnchoredPosition: {x: -4.9999, y: -243}
   m_SizeDelta: {x: 1216.265, y: 139.5415}
   m_Pivot: {x: 0.5, y: 0.7641707}
 --- !u!114 &1401475697
@@ -27221,7 +27222,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Tip 5\n\uC131\uC2E4\uD558\uAC8C \uC6B4\uB3D9\uACFC \uACF5\uBD80\uB97C
-    \uD574\uC57C \uBAA9\uD45C\uB97C \uB2EC\uC131\uD560 \uC218 \uC788\uC5B4\uC694!"
+    \uD574\uC57C \uBAA9\uD45C\uB97C \uB2EC\uC131\uD560 \uC218 \uC788\uC5B4\uC694!
+    \uB3C8\uC744 \uBAA8\uC544 \uC5EC\uD589\uC744 \uB5A0\uB098\uC694."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 52f204c40bbc5d246a366b3a5802d01f, type: 2}
   m_sharedMaterial: {fileID: 4025274657688529526, guid: 52f204c40bbc5d246a366b3a5802d01f, type: 2}

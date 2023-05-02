@@ -103,7 +103,7 @@ public class goActions : MonoBehaviour
     {
         Review.SetActive(true);
         actionmanager.ReviewIndicate(PlusMinus(StatusManager.Depress, preDep), PlusMinus(StatusManager.Stress, preStr), PlusMinus(StatusManager.Lonely, preLon),
-            PlusMinus(StatusManager.Anxiety, preAnx), PlusMinus(StatusManager.Willingness, preWil), PlusMinus(StatusManager.Joy, prejoy), PlusMinus(StatusManager.healthy, preHealthy), PlusMinus(GameManager.money, preMoney));
+        PlusMinus(StatusManager.Anxiety, preAnx), PlusMinus(StatusManager.Willingness, preWil), PlusMinus(StatusManager.Joy, prejoy), PlusMinus(StatusManager.healthy, preHealthy), PlusMinus(GameManager.money, preMoney));
 
         
     }
