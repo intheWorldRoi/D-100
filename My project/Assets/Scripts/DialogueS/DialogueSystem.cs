@@ -131,7 +131,7 @@ public class DialogueSystem : MonoBehaviour
                 nine = false;
             }
             
-            if (SceneManager.GetActiveScene().name == "Ending_Nomal" && dummysUpSwitch)
+            else if (SceneManager.GetActiveScene().name == "Ending_Nomal" && dummysUpSwitch)
             {
                 Ending e = transform.GetChild(1).GetComponent<Ending>();
                 Debug.Log("dummysUp 작동");
@@ -183,7 +183,7 @@ public class DialogueSystem : MonoBehaviour
             Debug.Log("dayplus작동");
             dayplus();
             GameManager.Ending();
-            nine = true;
+            //nine = true;
         }
         else if (IsMainScene && NewLoop && GameManager.Day != 99)
         {
