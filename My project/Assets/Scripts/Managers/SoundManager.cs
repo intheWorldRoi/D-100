@@ -92,7 +92,10 @@ public class SoundManager : MonoBehaviour
     }
     public void StopSound()
     {
-        sfxPlayer.Stop();
+        
+            sfxPlayer.Stop();
+        
+            
     }
     public void SetVolumeSound(float a_volume)
     {

@@ -35,7 +35,15 @@ public class DialogueTrigger : MonoBehaviour
         if (scene.name == "Ending_Nomal" || scene.name == "Ending_Trip")
         {   
             endingNum = infoCal(StatusManager.Engknowledge, StatusManager.healthy, StatusManager.innerpeace);
-            SoundManager.instance.PlayBGM("show");
+            if(endingNum == 7)
+            {
+                SoundManager.instance.PlayBGM("badEnding");
+            }
+            else
+            {
+                SoundManager.instance.PlayBGM("show");
+            }
+            
             system.Begin(info[endingNum]);
         
         }

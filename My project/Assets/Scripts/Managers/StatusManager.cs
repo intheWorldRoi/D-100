@@ -32,12 +32,12 @@ public class StatusManager : MonoBehaviour
     {
         if(SceneManager.GetActiveScene().name == "Main")
         {
-            Depress = 0;
-            Stress = 0;
-            Lonely = 0;
-            Anxiety = 0;
-            Willingness = 80;
-            Joy = 80;
+            Depress = 50;
+            Stress = 50;
+            Lonely = 50;
+            Anxiety = 50;
+            Willingness = 50;
+            Joy = 50;
 
             Engknowledge = 0;
             innerpeace = 0;

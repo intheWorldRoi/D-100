@@ -76,10 +76,12 @@ public class goActions : MonoBehaviour
             DialogueSystem.IsInAction = false;
             DialogueSystem.NewLoop = true;
             
+            /*
             if (SoundManager.instance.bgmPlayer.clip != SoundManager.instance.bgmClipsDic["main"] && SceneManager.GetActiveScene().name == "Main")
             {
                 SoundManager.instance.PlayBGM("main");
             }
+            */
             return;
         }
 
@@ -96,7 +98,7 @@ public class goActions : MonoBehaviour
     {
         if (GameManager.monthday == 10)
         {
-            GameManager.money -= 30;
+            GameManager.money -= 40;
         }
     }
     public void reviewWeek()

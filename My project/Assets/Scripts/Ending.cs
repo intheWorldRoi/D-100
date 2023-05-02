@@ -38,8 +38,13 @@ public class Ending : MonoBehaviour
         yield return new WaitForSeconds(1f);
         for(int i = 0; i <badDummys.Length; i++)
         {
-            s.PlaySound("chalkak");
+
+            
+           
             badDummys[i].SetActive(true);
+            yield return new WaitForSeconds(0.01f);
+            s.PlaySound("chalkak");
+
             yield return new WaitForSeconds(wait);
 
         }

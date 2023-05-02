@@ -39,6 +39,7 @@ public class DialogueSystem : MonoBehaviour
 
     bool nine;
 
+    bool EndingSwitch;
     bool dummysUpSwitch;
     
     public void Start()
@@ -53,6 +54,7 @@ public class DialogueSystem : MonoBehaviour
         }
 
         nine = true;
+        EndingSwitch = false;
     }
     public void StartDialogue(int firstindex, int lastindex, List<Dialogue> para)
     {
@@ -123,16 +125,12 @@ public class DialogueSystem : MonoBehaviour
             }
             if (SceneManager.GetActiveScene().name == "Main" && GameManager.Day == 99 && nine)
             {
-                
+                Debug.Log("nine false 작동");
                 Begin(DialogueData.data.ninetynine[1]);
                 ninebackground.SetActive(true);
                 nine = false;
             }
-            else if (SceneManager.GetActiveScene().name == "Main" && GameManager.Day == 99 && !nine)
-            {
-                dayplus();
-                GameManager.Ending();
-            }
+            
             if (SceneManager.GetActiveScene().name == "Ending_Nomal" && dummysUpSwitch)
             {
                 Ending e = transform.GetChild(1).GetComponent<Ending>();
@@ -165,6 +163,10 @@ public class DialogueSystem : MonoBehaviour
             {
                 dummysUpSwitch = true;
             }
+            else if (sentences.Peek().Contains("당신의 마음은 안녕하십니까?"))
+            {
+                EndingSwitch = true;
+            }
             SoundManager s = SoundManager.instance; 
             
             s.PlaySound("tadadada");
@@ -176,13 +178,14 @@ public class DialogueSystem : MonoBehaviour
     }
     private void End()
     {
-        if (!nine && GameManager.Day == 99)
+        if (!nine && GameManager.Day == 99 && EndingSwitch)
         {
+            Debug.Log("dayplus작동");
             dayplus();
             GameManager.Ending();
             nine = true;
         }
-        else if (IsMainScene && NewLoop)
+        else if (IsMainScene && NewLoop && GameManager.Day != 99)
         {
             diary.SetActive(true);
             diary.GetComponentInParent<Button>().enabled = false;
