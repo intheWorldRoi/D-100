@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
             Day =1;
             month = 11;
             monthday = 21;
-            week =0;
+            week =1;
 
             money = 30;
         }

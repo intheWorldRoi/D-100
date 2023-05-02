@@ -38,7 +38,7 @@ public class episodeNewYear : MonoBehaviour
                 StatusManager.Stress += 20;
                 StatusManager.Depress += 15;
             }
-            //Invoke("closeNewYear", 10.0f);
+            Invoke("closeNewYear", 10.0f);
         }
 
     }
@@ -64,8 +64,8 @@ public class episodeNewYear : MonoBehaviour
     {
         transform.GetChild(0).gameObject.SetActive(true);
     }*/
-    /*public void closeNewYear()
+    public void closeNewYear()
     {
         transform.parent.gameObject.SetActive(false);
-    }*/
+    }
 }

@@ -88,7 +88,6 @@ public class goStory : MonoBehaviour
             {
                 transform.GetChild(1).transform.GetChild(2).gameObject.SetActive(false);
                 transform.GetChild(1).gameObject.SetActive(false);
-                goActions.GetComponent<goActions>().nextPlay();
             }
             else if (transform.GetChild(1).gameObject.activeSelf)
             {
