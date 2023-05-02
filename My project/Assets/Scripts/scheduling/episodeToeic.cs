@@ -17,7 +17,6 @@ public class episodeToeic : MonoBehaviour
         if (gameObject.transform.name == "ToeicTest")
         {
             system.GetComponent<DialogueSystem>().Begin(data.EpToeic[0]);
-            Invoke("goToeicPart1", 8.5f);
         }
         else if (gameObject.transform.name == "part1")
         {
@@ -35,7 +34,7 @@ public class episodeToeic : MonoBehaviour
                 StatusManager.Engknowledge += 5;
             }
             system.GetComponent<DialogueSystem>().Begin(data.EpToeic[4]);
-            Invoke("closeToeic", 10.0f);
+            
         }
 
     }
@@ -44,7 +43,7 @@ public class episodeToeic : MonoBehaviour
         answer++;
         data = dataManager.GetComponent<DialogueData>();
         DialogueSystem system = DialogSystem.GetComponent<DialogueSystem>();
-        gameObject.transform.parent.gameObject.SetActive(false);
+
         if (gameObject.transform.name == "LCposi")
         {
             system.GetComponent<DialogueSystem>().Begin(data.EpToeic[2]);
@@ -58,7 +57,7 @@ public class episodeToeic : MonoBehaviour
     {
         data = dataManager.GetComponent<DialogueData>();
         DialogueSystem system = DialogSystem.GetComponent<DialogueSystem>();
-        gameObject.transform.parent.gameObject.SetActive(false);
+        
         if(gameObject.transform.name == "LCnega")
         {
             system.GetComponent<DialogueSystem>().Begin(data.EpToeic[2]);
@@ -69,10 +68,10 @@ public class episodeToeic : MonoBehaviour
         }
     }
 
-    public void goToeicPart1()
+    /*public void goToeicPart1()
     {
         transform.GetChild(0).gameObject.SetActive(true);
-    }
+    }*/
     public void closeToeic()
     {
         transform.parent.gameObject.SetActive(false);

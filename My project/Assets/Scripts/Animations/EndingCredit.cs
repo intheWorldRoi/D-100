@@ -26,14 +26,14 @@ public class EndingCredit : MonoBehaviour
         videoAlpha = 0.1f;
         alphaT = new float[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
         alpha = 0.1f;
-        y = -60f;
+        y = -180f;
         transform.GetComponent<Image>().color = new Color(0, 0, 0, 0);
         transform.GetChild(0).GetComponent<RectTransform>().anchoredPosition = new Vector2(0, y);
 
     }
     void Start()
     {
-        if (SceneManager.GetActiveScene().name == "Ending_GameOver"|| DialogueTrigger.endingNum !=8)
+        if (SceneManager.GetActiveScene().name == "Ending_GameOver"|| DialogueTrigger.endingNum ==7)
         {
             StartCoroutine(Fadein());
             Invoke("replay", 5f);
@@ -153,7 +153,7 @@ public class EndingCredit : MonoBehaviour
     }
     IEnumerator Up()
     {
-        while (y <= transform.GetChild(0).GetComponent<RectTransform>().rect.height)
+        while (y <= 180)//y <= transform.GetChild(0).GetComponent<RectTransform>().rect.height
         {
             yield return new WaitForSeconds(0.1f);
             transform.GetChild(0).GetComponent<RectTransform>().anchoredPosition = new Vector2(0, y);

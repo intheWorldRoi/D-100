@@ -49,7 +49,7 @@ public class episodeChristmas : MonoBehaviour
                 StatusManager.Lonely += 10;
                 StatusManager.Depress += 10;
             }
-            Invoke("closeChrist", 10.0f);
+            //Invoke("closeChrist", 10.0f);
         }
 
     }
@@ -71,9 +71,10 @@ public class episodeChristmas : MonoBehaviour
 
     }
 
-    public void closeChrist()
+    /*public void closeChrist()
     {
+        PhoneWidget.GetComponent<Button>().enabled = true;
         transform.parent.gameObject.SetActive(false);
         SoundManager.instance.PlayBGM("main");
-    }
+    }*/
 }

@@ -33,7 +33,7 @@ public class DialogueTrigger : MonoBehaviour
         }
        
         if (scene.name == "Ending_Nomal" || scene.name == "Ending_Trip")
-        {   
+        {
             endingNum = infoCal(StatusManager.Engknowledge, StatusManager.healthy, StatusManager.innerpeace);
             if(endingNum == 7)
             {
@@ -45,7 +45,7 @@ public class DialogueTrigger : MonoBehaviour
             }
             
             system.Begin(info[endingNum]);
-        
+
         }
     }
     public void Trigger()

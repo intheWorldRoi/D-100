@@ -18,7 +18,6 @@ public class episodeNewYear : MonoBehaviour
         if (gameObject.transform.name == "NewYear")
         {
             system.GetComponent<DialogueSystem>().Begin(data.EpNewYear[0]);
-            Invoke("goNewYearPart1", 4.5f);
         }
         else if (gameObject.transform.name == "part1")
         {
@@ -39,7 +38,7 @@ public class episodeNewYear : MonoBehaviour
                 StatusManager.Stress += 20;
                 StatusManager.Depress += 15;
             }
-            Invoke("closeNewYear", 10.0f);
+            //Invoke("closeNewYear", 10.0f);
         }
 
     }
@@ -61,12 +60,12 @@ public class episodeNewYear : MonoBehaviour
 
     }
 
-    public void goNewYearPart1()
+    /*public void goNewYearPart1()
     {
         transform.GetChild(0).gameObject.SetActive(true);
-    }
-    public void closeNewYear()
+    }*/
+    /*public void closeNewYear()
     {
         transform.parent.gameObject.SetActive(false);
-    }
+    }*/
 }

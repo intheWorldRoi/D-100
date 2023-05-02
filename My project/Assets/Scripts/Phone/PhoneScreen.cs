@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PhoneScreen : MonoBehaviour
 {
@@ -55,10 +56,11 @@ public class PhoneScreen : MonoBehaviour
             DialogueSystem system = dialog.GetComponent<DialogueSystem>();
             system.Begin(data.EpChrist[1]);
             Count = 0;
-            gameObject.SetActive(false);
+            transform.gameObject.SetActive(false);
+            gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.parent.gameObject.GetComponent<Button>().enabled = false;
             gameObject.transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
             GetComponent<RectTransform>().position += Vector3.down * 650 * 3;
-            Invoke("goChristPart1", 3.5f);
+            Invoke("goChristPart1", 4f);
         }
         if(Count >= 3)
         {

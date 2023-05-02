@@ -22,22 +22,21 @@ public class GameManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Main")
         {
-            Day = 1;
+            Day =92;
             month = 11;
             monthday = 22;
-            week = 1;
+            week =1;
 
-            money = 30;
+            money = 100;
         }
         
     }
     public static void EndingCheck()
     {
-        SoundManager s = SoundManager.instance;
         if(StatusManager.Anxiety >= 100 || StatusManager.Depress >= 100 || StatusManager.Stress >= 100 || StatusManager.Lonely >= 100 || money < 0)
         {
             SceneManager.LoadScene("Ending_GameOver");
-            s.PlayBGM("BadMad");
+            SoundManager.instance.PlayBGM("BadMad");
 
         }
     }
@@ -47,7 +46,7 @@ public class GameManager : MonoBehaviour
         if (Day == 100)
         {
             Debug.Log("day == 100");
-            if (money > 300)
+            if (money > 100)
             {
                 SceneManager.LoadScene("Ending_Trip");
             }
