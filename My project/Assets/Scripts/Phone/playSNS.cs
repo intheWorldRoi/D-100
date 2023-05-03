@@ -29,6 +29,7 @@ public class playSNS : MonoBehaviour
                 DialogueSystem.IsInAction = false;
                 system.GetComponent<DialogueSystem>().Begin(data.SNS[randomNum]);
                 phonebody.transform.parent.GetComponent<BuffAnim>().enabled = true;          //transform.parent.gameObject.GetComponent<BuffAnim>().enabled;
+
             }
             else if ((transform.GetSiblingIndex() == 1)) //
             {
@@ -37,6 +38,7 @@ public class playSNS : MonoBehaviour
                 system.GetComponent<DialogueSystem>().Begin(data.SNS[randomNum]);
                 phonebody.transform.parent.GetComponent<BuffAnim>().enabled = true;
             }
+            phonebody.transform.parent.GetComponent<Button>().interactable = true;
             DialogueSystem.IsSNSAction = false;
             
         }

@@ -30,7 +30,7 @@ public class StatusManager : MonoBehaviour
 
     private void Awake()
     {
-        if(SceneManager.GetActiveScene().name == "Main")
+        if (SceneManager.GetActiveScene().name == "Main")
         {
             Depress = 50;
             Stress = 50;

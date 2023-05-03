@@ -48,7 +48,7 @@ public class episodeChristmas : MonoBehaviour
                 StatusManager.Lonely += 10;
                 StatusManager.Depress += 10;
             }
-            //Invoke("closeChrist", 10.0f);
+            PhoneWidget.GetComponent<Button>().interactable = true;
         }
 
     }

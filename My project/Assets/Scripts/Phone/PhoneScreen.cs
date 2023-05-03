@@ -57,7 +57,6 @@ public class PhoneScreen : MonoBehaviour
             system.Begin(data.EpChrist[1]);
             Count = 0;
             transform.gameObject.SetActive(false);
-            gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.parent.gameObject.GetComponent<Button>().enabled = false;
             gameObject.transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
             GetComponent<RectTransform>().position += Vector3.down * 650 * 3;
             Invoke("goChristPart1", 4f);
@@ -78,6 +77,7 @@ public class PhoneScreen : MonoBehaviour
     }
     void goChristPart1()
     {
+        gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = false;
         christmas.transform.GetChild(0).gameObject.SetActive(true);
     }
 }
