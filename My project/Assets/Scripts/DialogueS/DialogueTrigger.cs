@@ -65,31 +65,31 @@ public class DialogueTrigger : MonoBehaviour
     }
     public static int infoCal(int Eng, int heal, int inner)
     {
-        if (Eng > 100 && heal > 100 && inner > 150)
+        if (Eng > 100 && heal > 80 && inner > 150)
         {
             return 0;
         }
-        else if (Eng > 100 && heal > 100 && inner < 150)
+        else if (Eng > 100 && heal > 80 && inner < 150)
         {
             return 1;
         }
-        else if (Eng > 100 && heal < 100 && inner > 150)
+        else if (Eng > 100 && heal < 80 && inner > 150)
         {
             return 2;
         }
-        else if (Eng > 100 && heal < 100 && inner < 150)
+        else if (Eng > 100 && heal < 80 && inner < 150)
         {
             return 3;
         }
-        else if (Eng < 100 && heal > 100 && inner > 150)
+        else if (Eng < 100 && heal > 80 && inner > 150)
         {
             return 4;
         }
-        else if (Eng < 100 && heal > 100 && inner < 150)
+        else if (Eng < 100 && heal > 80 && inner < 150)
         {
             return 5;
         }
-        else if (Eng < 100 && heal < 100 && inner > 150)
+        else if (Eng < 100 && heal < 80 && inner > 150)
         {
             return 6;
         }
