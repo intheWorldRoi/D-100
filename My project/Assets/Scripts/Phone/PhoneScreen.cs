@@ -77,6 +77,7 @@ public class PhoneScreen : MonoBehaviour
     }
     void goChristPart1()
     {
+
         gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.parent.gameObject.GetComponent<Button>().interactable = false;
         christmas.transform.GetChild(0).gameObject.SetActive(true);
     }
