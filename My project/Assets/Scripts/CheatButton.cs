@@ -55,4 +55,17 @@ public class CheatButton : MonoBehaviour
     {
         StatusManager.innerpeace -= 10;
     }
+
+    public void WeekPlus()
+    {
+        GameManager.Day += 7;
+        GameManager.week += 1;
+    }
+
+    public void WeekMinus()
+    {
+        GameManager.Day -= 7;
+        GameManager.week -= 1;
+    }
+
 }
