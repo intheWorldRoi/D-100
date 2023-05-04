@@ -12,6 +12,8 @@ public class DialogueTrigger : MonoBehaviour
     public GameObject textBox;
     public GameObject DialogueSystem;
 
+    
+
     public static int endingNum;
     SoundManager s;
     private void Awake()
@@ -38,6 +40,7 @@ public class DialogueTrigger : MonoBehaviour
             if(endingNum == 7 && scene.name == "Ending_Nomal")
             {
                 SoundManager.instance.PlayBGM("badEnding");
+                
             }
             else
             {

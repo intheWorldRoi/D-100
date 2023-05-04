@@ -527,6 +527,7 @@ MonoBehaviour:
     - "\uC77C\uB2E8 \uC990\uAE30\uC790! YOLO!"
   textBox: {fileID: 1623990178}
   DialogueSystem: {fileID: 758747643}
+  Background: {fileID: 1624291546}
 --- !u!4 &235149880
 Transform:
   m_ObjectHideFlags: 0
